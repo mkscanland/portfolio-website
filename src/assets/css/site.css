@@ -1,0 +1,288 @@
+@media all and (min-width: 900px) {
+  .navbar .nav-item .dropdown-menu {
+    display: none;
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar .nav-item .dropdown-menu {
+    margin-top: 0;
+  }
+}
+
+.blue {
+  color: skyblue;
+}
+
+.blue.textBorder {
+  color: skyblue;
+  font-weight: bold;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.ulShadow {
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.mainWrapper {
+  flex-direction: column !important;
+  min-height: calc(100vh - 56px) !important;
+  display: flex !important;
+  background-color: #212529;
+}
+
+.projectImg {
+  min-height: 20em;
+  max-height: 30em;
+}
+
+body {
+  background-color: #212529;
+  height: 100%;
+}
+
+.bg-lightGrey {
+  --bs-bg-opacity: 1;
+  background: #e9ecef url('@/assets/images/overlay.png');
+}
+
+.bg-orange {
+  --bs-bg-opacity: 1;
+  background: #e97770 url('@/assets/images/overlay.png');
+}
+
+.wrapperSection {
+  padding-top: 5em;
+  padding-bottom: 10em;
+}
+
+.wrapperSection.bg-orange {
+  --bs-bg-opacity: 1;
+  background: #e97770 url('@/assets/images/overlay.png');
+}
+
+.wrapperSection.bg-light {
+  --bs-bg-opacity: 1;
+  background: #ffffff url('@/assets/images/overlay.png');
+}
+
+.wrapperSection.bg-dark {
+  --bs-bg-opacity: 1;
+  background: #212529 url('@/assets/images/overlay.png');
+}
+
+.wrapperSection.bg-grey {
+  --bs-bg-opacity: 1;
+  background: #f3f3f3 url('@/assets/images/overlay.png');
+}
+
+.wrapperSection.bg-lightGrey {
+  --bs-bg-opacity: 1;
+  background: #e9ecef url('@/assets/images/overlay.png');
+}
+
+.wrapperSection.bg-spotlight {
+  background: url('@/assets/images/banner.jpg') center center;
+  background-size: auto;
+  background-size: cover;
+}
+
+.wrapperSection.bg-lightbulb {
+  background: url('@/assets/images/lightbulb-bg.jpg') center center;
+  background-size: auto;
+  background-size: cover;
+}
+
+.wrapperSection.bg-computer {
+  background: url('@/assets/images/computer-bg.jpg') center center;
+  background-size: auto;
+  background-size: cover;
+}
+
+/*Bootstrap Additions*/
+.bottom-20 {
+  bottom: 20% !important;
+}
+
+.whiteBox {
+  padding: 2em;
+  border-radius: 0.35em;
+  box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+/*Titles*/
+.title {
+  font-size: 0.9em;
+  width: 25em;
+  height: 3.25em;
+  top: -3.25em;
+  line-height: 3.25em;
+  margin-bottom: -3.25em;
+  margin-left: -12.5em;
+  padding-top: 0.5em;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+}
+.bg-orange .title {
+  --bs-bg-opacity: 1;
+  background: #e97770 url('@/assets/images/overlay.png');
+  color: #fff;
+}
+
+.bg-dark .title {
+  --bs-bg-opacity: 1;
+  background: #212529 url('@/assets/images/overlay.png');
+  color: #fff;
+}
+
+.bg-light .title {
+  --bs-bg-opacity: 1;
+  background: #f8f9fa url('@/assets/images/overlay.png');
+  color: #000;
+}
+
+.bg-grey .title {
+  --bs-bg-opacity: 1;
+  background: #f3f3f3 url('@/assets/images/overlay.png');
+  color: #000;
+}
+
+.bg-lightGrey .title {
+  --bs-bg-opacity: 1;
+  background: #e9ecef url('@/assets/images/overlay.png');
+  color: #000;
+}
+
+.title:before,
+.wrapper .title:after {
+  height: 15px;
+  bottom: -15px;
+  background-size: 100% 100%;
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  bottom: -38px;
+  left: -35px;
+  width: 35px;
+  height: 38px;
+  background-image: url('@/assets/images/shadow.png');
+}
+
+.title::after {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  content: '';
+  position: absolute;
+  bottom: -38px;
+  right: -35px;
+  width: 35px;
+  height: 38px;
+  background-image: url('@/assets/images/shadow.png');
+}
+
+/*Overlayed Images*/
+.projectContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 400px;
+  max-height: 400px;
+}
+
+.projectContainer.hasMore {
+  cursor: pointer;
+}
+
+.projectContainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(30%);
+}
+
+.projectContainer a {
+  color: lightblue;
+}
+
+.projectContainer p {
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.projectContainer .projectTitle {
+  color: skyblue;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.projectContainer .overlay {
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  width: 100%;
+  z-index: 5;
+}
+
+.projectContainer .overlay::before {
+  content: '';
+  background: #000;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  bottom: -500px;
+  z-index: -2;
+  opacity: 0.5;
+  transition: all 0.3s ease-out;
+}
+
+.projectContainer:hover .overlay::before {
+  bottom: 0px;
+}
+
+.projectContainer:hover .overlay::after {
+  position: absolute;
+  bottom: 0;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.projectContainer.hasMore:hover .overlay::after {
+  color: skyblue;
+  content: 'Click for More';
+}
+
+.modal-body img {
+  max-width: 80%;
+  max-height: 40vh;
+  object-fit: cover;
+}
+
+.modal-body img:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.75);
+}
