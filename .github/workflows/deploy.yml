@@ -42,35 +42,6 @@ jobs:
             --delete \
             --exact-timestamps
 
-      - name: Fix Content-Type on S3 for problem assets
-        run: |
-          set -euo pipefail
-          BUCKET="${{ secrets.S3_BUCKET }}"
-          find ./dist -type f -print0 | while IFS= read -r -d '' f; do
-            key=${f#./dist/}
-            ext="${f##*.}"
-            ext_lower=$(echo "${ext}" | tr '[:upper:]' '[:lower:]')
-            ct=''
-            case "$ext_lower" in
-              woff)    ct='application/font-woff' ;;
-              woff2)   ct='application/font-woff2' ;;
-              *)       ct='' ;;
-            esac
-
-            if [ -n "$ct" ]; then
-              echo "Updating $key -> Content-Type: $ct"
-              # Preserve existing Cache-Control header where present
-              cache_control=$(aws s3api head-object --bucket "$BUCKET" --key "$key" --query 'CacheControl' --output text 2>/dev/null || echo "")
-              cache_args=()
-              if [ -n "$cache_control" ] && [ "$cache_control" != "None" ]; then
-                cache_args+=(--cache-control "$cache_control")
-              fi
-              aws s3 cp "$f" "s3://$BUCKET/$key" --content-type "$ct" "${cache_args[@]}" --metadata-directive REPLACE
-            else
-              echo "Skipping $key (no mapped Content-Type)"
-            fi
-          done
-
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
