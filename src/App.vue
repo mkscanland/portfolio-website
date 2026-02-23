@@ -2,7 +2,6 @@
 import { RouterView } from 'vue-router'
 import NavBar from './components/NavBar.vue'
 import SiteFooter from './components/SiteFooter.vue'
-import '@fortawesome/fontawesome-free/js/all.js'
 </script>
 
 <template>
