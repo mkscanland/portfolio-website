@@ -8,12 +8,9 @@
           For any questions feel free to <a href="/#contact">Contact Me</a>.
         </p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <a class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold" href="#significantProjects"
-            >My Portfolio</a
-          >
-          <a class="btn btn-outline-light btn-lg px-4" href="/files/Scanland-Matthew_Resume.pdf"
-            ><i class="fa fa-file-pdf"></i> Resume</a
-          >
+          <a class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold" href="#significantProjects">My Portfolio</a>
+          <a class="btn btn-outline-light btn-lg px-4" href="/files/Scanland-Matthew_Resume.pdf"><i
+              class="fa fa-file-pdf"></i> Resume</a>
         </div>
       </div>
     </div>
@@ -22,16 +19,15 @@
     <div class="title">Career</div>
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto whiteBox">
-        <h1>Software Engineer - Sonic Automotive</h1>
+        <h1>Software Engineer</h1>
         <p class="lead mb-2">
-          Software engineer - 6+ years building back-end systems and leading cross-functional teams.
+          6+ years building back-end systems and leading cross-functional teams.
         </p>
         <p>
           <span class="small">Bachelor's degree in Computer Science from Virginia Tech</span>
         </p>
-        <a class="btn btn-outline-light btn-lg px-4" href="/files/Scanland-Matthew_Resume.pdf"
-          ><i class="fa fa-file-pdf"></i> Resume</a
-        >
+        <a class="btn btn-outline-light btn-lg px-4" href="/files/Scanland-Matthew_Resume.pdf"><i
+            class="fa fa-file-pdf"></i> Resume</a>
       </div>
     </div>
   </div>
@@ -39,20 +35,13 @@
     <div class="title">About Me</div>
     <div class="row py-lg-5">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <img
-          src="~@/assets/images/scanland_matthew.jpg"
-          class="img-fluid rounded mx-auto d-block"
-          alt="Headshot of Matthew Scanland"
-        />
-
-        <p class="lead text-muted pt-3 mx-5">
-          Software engineer with 6+ years building backend systems, APIs, and leading small
-          technical teams.
-        </p>
+        <img src="~@/assets/images/scanland_matthew.jpg" class="img-fluid rounded mx-auto d-block"
+          alt="Headshot of Matthew Scanland" />
+        <br />
         <ul class="text-muted list-unstyled mx-5">
           <li>
-            <strong>Core strengths:</strong> backend architecture, API design, and pragmatic problem
-            solving.
+            <strong>Core strengths:</strong> backend architecture, API design, and translating business needs into
+            technical solutions.
           </li>
           <li>
             <strong>Leadership:</strong> technical lead on the
@@ -71,7 +60,7 @@
           features). I try to lend a hand to anyone that is struggling and explain any topics they
           might be having trouble with. As technical lead of the
           <a href="/rulesengine">Rules Engine project</a>, I design services and APIs consumed by
-          multiple teams, and I contribute to initiatives for the
+          multiple teams. I also contribute to initiatives for the
           <a href="/dap">Digital Appraisals Platform</a>. Some significant projects are showcased on
           this site - if you'd like more details, <a href="#contact">reach out</a>.
         </p>
@@ -95,7 +84,7 @@
               <div>
                 <h2><i class="fa fa-server small"></i> Internal Website Rebuild</h2>
                 <p>
-                  <span class="small">Sep 2019 – Now</span><br />
+                  <span class="small">Sep 2019 - Now</span><br />
                   A complete overhaul of a previous version of the internal support website and
                   continued development. This website is designed to help our students, faculty,
                   staff, and visiting scholars access information and communicate with each other
@@ -109,7 +98,7 @@
               <div>
                 <h2><i class="fa fa-calendar small"></i> Lab Validation System</h2>
                 <p>
-                  <span class="small">Aug 2019 – Dec 2019</span><br />
+                  <span class="small">Aug 2019 - Dec 2019</span><br />
                   Complete build of the internal Lab Validation System. This system tracks student
                   hours, accounts, holidays, vacations, and other facets. An interface for admin
                   staff allows the manipulation of data, view of statistics, export of data, etc.
@@ -121,7 +110,7 @@
               <div>
                 <h2><i class="fa fa-book-open small"></i> Other Web Applications</h2>
                 <p>
-                  <span class="small">April 2019 – Now</span><br />
+                  <span class="small">April 2019 - Now</span><br />
                   Throughout my time at CPES I have created several requested web apps. These
                   include: Purchasing, Lab Validations, Internal Vacations, Conference Room
                   Reservations, and more.
@@ -146,7 +135,7 @@
               <div>
                 <h2><i class="fa fa-brain small"></i> Self Improvement</h2>
                 <p>
-                  This website is a pet project to learn AWS, Azure, and Vue. I'll be updating it
+                  This website is a pet project to learn AWS and Vue. I'll be updating it
                   when I have the time.<br />
                   I also research various IT and software subjects for my job. Most of the time I
                   try to learn best practices before I contribute to any projects. Preparing for
@@ -254,11 +243,8 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 text-dark">
               <div class="col">
                 <div class="card shadow-sm">
-                  <img
-                    src="~@/assets/images/problem-solving.png"
-                    class="img-fluid"
-                    alt="Problem solving illustration"
-                  />
+                  <img src="~@/assets/images/problem-solving.png" class="img-fluid"
+                    alt="Problem solving illustration" />
                   <div class="card-body">
                     <p class="card-text">
                       <b>Problem Solving</b><br />
@@ -274,11 +260,7 @@
               </div>
               <div class="col">
                 <div class="card shadow-sm">
-                  <img
-                    src="~@/assets/images/marble.png"
-                    class="img-fluid"
-                    alt="Attention to detail illustration"
-                  />
+                  <img src="~@/assets/images/marble.png" class="img-fluid" alt="Attention to detail illustration" />
                   <div class="card-body">
                     <p class="card-text">
                       <b>Attention to Detail</b><br />
@@ -293,11 +275,7 @@
               </div>
               <div class="col">
                 <div class="card shadow-sm">
-                  <img
-                    src="~@/assets/images/analysis.png"
-                    class="img-fluid"
-                    alt="Analysis illustration"
-                  />
+                  <img src="~@/assets/images/analysis.png" class="img-fluid" alt="Analysis illustration" />
                   <div class="card-body">
                     <p class="card-text">
                       <b>Analysis</b><br />
@@ -312,11 +290,8 @@
               </div>
               <div class="col">
                 <div class="card shadow-sm">
-                  <img
-                    src="~@/assets/images/reactiveness-hand.png"
-                    class="img-fluid"
-                    alt="Responsiveness illustration"
-                  />
+                  <img src="~@/assets/images/reactiveness-hand.png" class="img-fluid"
+                    alt="Responsiveness illustration" />
                   <div class="card-body">
                     <p class="card-text">
                       <b>Usability</b><br />
@@ -334,11 +309,7 @@
               </div>
               <div class="col">
                 <div class="card shadow-sm">
-                  <img
-                    src="~@/assets/images/ux-feeling.png"
-                    class="img-fluid"
-                    alt="Patterns illustration"
-                  />
+                  <img src="~@/assets/images/ux-feeling.png" class="img-fluid" alt="Patterns illustration" />
                   <div class="card-body">
                     <p class="card-text">
                       <b>Patterns</b><br />
@@ -354,11 +325,8 @@
               </div>
               <div class="col">
                 <div class="card shadow-sm">
-                  <img
-                    src="~@/assets/images/usability-coming-together.png"
-                    class="img-fluid"
-                    alt="Usability and responsiveness illustration"
-                  />
+                  <img src="~@/assets/images/usability-coming-together.png" class="img-fluid"
+                    alt="Usability and responsiveness illustration" />
                   <div class="card-body">
                     <p class="card-text">
                       <b>Responsiveness</b><br />
@@ -388,9 +356,8 @@
             <div class="col d-flex align-items-start">
               <div>
                 <h4 class="fw-bold mb-0">
-                  <a href="https://www.linkedin.com/in/matthew-scanland/"
-                    ><i class="fa-brands fa-linkedin small"></i> LinkedIn</a
-                  >
+                  <a href="https://www.linkedin.com/in/matthew-scanland/"><i class="fa-brands fa-linkedin small"></i>
+                    LinkedIn</a>
                 </h4>
               </div>
             </div>
@@ -420,12 +387,3 @@
     </div>
   </div>
 </template>
-
-<script>
-/*export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}*/
-</script>
