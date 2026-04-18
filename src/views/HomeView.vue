@@ -61,12 +61,12 @@
           might be having trouble with. As technical lead of the
           <a href="/rulesengine">Rules Engine project</a>, I design services and APIs consumed by
           multiple teams. I also contribute to initiatives for the
-          <a href="/dap">Digital Appraisals Platform</a>. Some significant projects are showcased on
+          <a href="/appraisals">Appraisals API</a>. Some significant projects are showcased on
           this site - if you'd like more details, <a href="#contact">reach out</a>.
         </p>
 
         <p class="text-muted mx-5" style="font-weight: bold">
-          I'm updating this site as part of a CI/CD initiative to reflect recent work; new content
+          I'm updating this site to practice CI/CD and to reflect recent work; new content
           will be added soon. I apologize for any outdated information or broken links!
         </p>
       </div>
@@ -78,11 +78,11 @@
     <div class="row py-lg-5">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="container px-4">
-          <h2 class="pb-2 border-bottom">Web Applications</h2>
+          <h2 class="pb-2 border-bottom">Backend Development</h2>
           <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
             <div class="col d-flex align-items-start">
               <div>
-                <h2><i class="fa fa-server small"></i> Internal Website Rebuild</h2>
+                <h2><i class="fa fa-server small"></i> PROJECT 1</h2>
                 <p>
                   <span class="small">Sep 2019 - Now</span><br />
                   A complete overhaul of a previous version of the internal support website and
@@ -96,7 +96,7 @@
             </div>
             <div class="col d-flex align-items-start">
               <div>
-                <h2><i class="fa fa-calendar small"></i> Lab Validation System</h2>
+                <h2><i class="fa fa-calendar small"></i> PROJECT 2</h2>
                 <p>
                   <span class="small">Aug 2019 - Dec 2019</span><br />
                   Complete build of the internal Lab Validation System. This system tracks student
@@ -110,13 +110,13 @@
               <div>
                 <h2><i class="fa fa-book-open small"></i> Other Web Applications</h2>
                 <p>
-                  <span class="small">April 2019 - Now</span><br />
-                  Throughout my time at CPES I have created several requested web apps. These
+                  <span class="small">Ongoing</span><br />
+                  Throughout my career I have created several applications and projects. These
                   include: Purchasing, Lab Validations, Internal Vacations, Conference Room
                   Reservations, and more.
                 </p>
                 <a href="/webapps" class="btn btn-info">
-                  See all other Support Website applications
+                  See all other projects
                 </a>
               </div>
             </div>
@@ -129,7 +129,7 @@
     <div class="row py-lg-5">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="container px-4">
-          <h2 class="pb-2 border-bottom">Current Projects</h2>
+          <h2 class="pb-2 border-bottom">Current Goals</h2>
           <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
             <div class="col d-flex align-items-start">
               <div>
@@ -148,12 +148,14 @@
             </div>
             <div class="col d-flex align-items-start">
               <div>
-                <h2><i class="fa fa-object-group small"></i> Tie the Support Back-end Together</h2>
+                <h2><i class="fa fa-object-group small"></i> DAP Improvements</h2>
                 <p>
-                  As I develop more applications on the support, CPES internal, website the back-end
-                  is beginning to grow exponentially. While designing these applications I have been
-                  accounting for this growth by looking for ways to tie these systems together when
-                  applicable.
+                  Along with other projects, I contribute and help lead the Digital Appraisals Platform (DAP) project.
+                  This is a large initiative to modernize and unify our appraisal systems, to price vehicles. I am
+                  currently working on a refactor of the <a href="/rulesengine">DAP Rules Engine</a>, which is a our
+                  final step in obtaining the price of a vehicle. This refactor will improve the maintainability and
+                  scalability of the system, and allow for easier integration with other components of the DAP
+                  ecosystem.
                 </p>
               </div>
             </div>
@@ -166,7 +168,7 @@
                   many of the systems I worked on were on-prem or in Azure. At Sonic, the main
                   projects I work on are also on-prem or in Azure. We have initiatives moving to
                   AWS, so I expect to gain hands-on AWS experience as well.<br />
-                  <b>Personal:</b> I plan on using a few PaaS/SaaS resources to build my
+                  <b>Personal:</b> I plan on creating a few PaaS/SaaS resources to build my
                   portfolio.<br />
                   I'm currently designing a PVP/PVE game involving dice rolls that will integrate
                   with Twitch.
@@ -225,9 +227,11 @@
                   As AI (machine learning) becomes more prevelant in my career I try to stay
                   up-to-date on the latest developments. I believe that AI is a good <b>tool</b> to
                   use in certain situations. I mainly use AI for boilerplate, proofreading, finding
-                  functionality in documentation, and brainstorming. I feel that blindly accepting
+                  functionality in documentation, and high-level reviews. I feel that blindly accepting
                   what AI generates leads to skill loss and, in most situations, isn't the best
-                  solution considering the various nuances that arise in my field.
+                  solution considering the various nuances that arise in my field. With that said, AI is a powerful tool
+                  that can be used to increase productivity and efficiency when used correctly. I try to use it as a
+                  tool to assist me in my work, rather than relying on it completely.
                 </p>
               </div>
             </div>
