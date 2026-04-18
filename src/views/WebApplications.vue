@@ -2,12 +2,108 @@
   <div class="wrapperSection bg-lightbulb text-secondary px-4 text-center position-relative">
     <div class="py-5">
       <div class="col-lg-6 mx-auto position-absolute bottom-20 start-50 translate-middle-x">
-        <h1 class="display-5 fw-bold text-white">Web Applications</h1>
+        <h1 class="display-5 fw-bold text-white">Web Applications Archive</h1>
+      </div>
+    </div>
+  </div>
+  <div class="wrapperSection py-0 pb-5 bg-white position-relative text-secondary px-4">
+    <div class="title">Key Current Projects</div>
+    <div class="row pt-5 pb-3">
+      <div class="col-lg-12 col-md-12 mx-auto text-center">
+        <p>
+          Showcasing my current and recent projects that demonstrate my latest expertise and technical capabilities.
+        </p>
+      </div>
+    </div>
+    <div class="row py-0">
+      <div class="col-lg-12 col-md-12 mx-auto">
+        <div class="album py-5">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-3 text-dark">
+            <div class="col">
+              <div class="projectContainer">
+                <img src="~@/assets/images/placeholder.png" class="img-fluid rounded"
+                  alt="Placeholder for current project" />
+                <div class="overlay">
+                  <p class="small">Technology Stack - TBD</p>
+                  <p class="h4 projectTitle">Project Title</p>
+                  <p>
+                    [Project description to be added]
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="projectContainer">
+                <img src="~@/assets/images/placeholder.png" class="img-fluid rounded"
+                  alt="Placeholder for current project" />
+                <div class="overlay">
+                  <p class="small">Technology Stack - TBD</p>
+                  <p class="h4 projectTitle">Project Title</p>
+                  <p>
+                    [Project description to be added]
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="wrapperSection py-0 pb-5 bg-lightGrey position-relative text-secondary px-4">
-    <div class="title">Projects</div>
+    <div class="title">Key CPES Projects</div>
+    <div class="row pt-5 pb-3">
+      <div class="col-lg-12 col-md-12 mx-auto text-center">
+        <p>
+          The following are the two most significant projects I worked on at CPES. These projects showcase
+          my ability to design and develop complex systems from the ground up.
+        </p>
+      </div>
+    </div>
+    <div class="row py-0">
+      <div class="col-lg-12 col-md-12 mx-auto">
+        <div class="album py-5">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-3 text-dark">
+            <div class="col">
+              <div class="projectContainer hasMore" id="internalRebuild" data-bs-toggle="modal"
+                data-bs-target="#infoModal">
+                <img src="~@/assets/images/internal-rebuild-hero.jpg" class="img-fluid rounded"
+                  alt="Internal Website Rebuild" />
+                <div class="overlay">
+                  <p class="small">Architecture, Leadership, API Design</p>
+                  <p class="h4 projectTitle">Internal Website Rebuild</p>
+                  <p>
+                    A complete overhaul and continued development of the internal support website. This system is
+                    designed to help students, faculty, staff, and visiting scholars access information and communicate
+                    more efficiently. It houses multiple web applications that coordinate purchases, leave requests, and
+                    administrative workflows.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="projectContainer hasMore" id="labValidation" data-bs-toggle="modal"
+                data-bs-target="#infoModal">
+                <img src="~@/assets/images/lab-validation-hero.jpg" class="img-fluid rounded"
+                  alt="Lab Validation System" />
+                <div class="overlay">
+                  <p class="small">Full-Stack Development, Database Design</p>
+                  <p class="h4 projectTitle">Lab Validation System</p>
+                  <p>
+                    Complete build of the internal Lab Validation System. This system tracks student hours, accounts,
+                    holidays, vacations, and other administrative facets. An administrator interface allows manipulation
+                    of data, statistical analysis, data export, and comprehensive reporting.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapperSection py-0 pb-5 bg-grey position-relative text-secondary px-4">
+    <div class="title">Other Projects</div>
     <div class="row pt-5 pb-3">
       <div class="col-lg-12 col-md-12 mx-auto text-center">
         <p>
@@ -21,17 +117,9 @@
         <div class="album py-5">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 text-dark">
             <div class="col">
-              <div
-                class="projectContainer hasMore"
-                id="leave"
-                data-bs-toggle="modal"
-                data-bs-target="#infoModal"
-              >
-                <img
-                  src="~@/assets/images/internal-leave-calendar.png"
-                  class="img-fluid rounded"
-                  alt="Internal Leave Calendar"
-                />
+              <div class="projectContainer hasMore" id="leave" data-bs-toggle="modal" data-bs-target="#infoModal">
+                <img src="~@/assets/images/internal-leave-calendar.png" class="img-fluid rounded"
+                  alt="Internal Leave Calendar" />
                 <div class="overlay">
                   <p class="small">SQL, PHP, JS, JQuery</p>
                   <p class="h4 projectTitle">Internal Leave</p>
@@ -46,17 +134,8 @@
               </div>
             </div>
             <div class="col">
-              <div
-                class="projectContainer hasMore"
-                id="checkout"
-                data-bs-toggle="modal"
-                data-bs-target="#infoModal"
-              >
-                <img
-                  src="~@/assets/images/checkout-forms.png"
-                  class="img-fluid rounded"
-                  alt="Forms checkout tracker"
-                />
+              <div class="projectContainer hasMore" id="checkout" data-bs-toggle="modal" data-bs-target="#infoModal">
+                <img src="~@/assets/images/checkout-forms.png" class="img-fluid rounded" alt="Forms checkout tracker" />
                 <div class="overlay">
                   <p class="small">SQL, PHP, JS, JQuery</p>
                   <p class="h4 projectTitle">Checkout Tracker</p>
@@ -71,17 +150,8 @@
               </div>
             </div>
             <div class="col">
-              <div
-                class="projectContainer hasMore"
-                id="purchasing"
-                data-bs-toggle="modal"
-                data-bs-target="#infoModal"
-              >
-                <img
-                  src="~@/assets/images/purchasing-tracker.png"
-                  class="img-fluid rounded"
-                  alt="purchasing tracker"
-                />
+              <div class="projectContainer hasMore" id="purchasing" data-bs-toggle="modal" data-bs-target="#infoModal">
+                <img src="~@/assets/images/purchasing-tracker.png" class="img-fluid rounded" alt="purchasing tracker" />
                 <div class="overlay">
                   <p class="small">SQL, PHP, JS, JQuery</p>
                   <p class="h4 projectTitle">Purchasing/Reimbursements</p>
@@ -97,17 +167,10 @@
               </div>
             </div>
             <div class="col">
-              <div
-                class="projectContainer hasMore"
-                id="reservations"
-                data-bs-toggle="modal"
-                data-bs-target="#infoModal"
-              >
-                <img
-                  src="~@/assets/images/room-reservations.png"
-                  class="img-fluid rounded"
-                  alt="reservations calendar"
-                />
+              <div class="projectContainer hasMore" id="reservations" data-bs-toggle="modal"
+                data-bs-target="#infoModal">
+                <img src="~@/assets/images/room-reservations.png" class="img-fluid rounded"
+                  alt="reservations calendar" />
                 <div class="overlay">
                   <p class="small">SQL, PHP, JS, JQuery</p>
                   <p class="h4 projectTitle">Room/HPC Reservations</p>
@@ -124,17 +187,8 @@
               </div>
             </div>
             <div class="col">
-              <div
-                class="projectContainer hasMore"
-                id="uploading"
-                data-bs-toggle="modal"
-                data-bs-target="#infoModal"
-              >
-                <img
-                  src="~@/assets/images/upload-archives.png"
-                  class="img-fluid rounded"
-                  alt="upload archives"
-                />
+              <div class="projectContainer hasMore" id="uploading" data-bs-toggle="modal" data-bs-target="#infoModal">
+                <img src="~@/assets/images/upload-archives.png" class="img-fluid rounded" alt="upload archives" />
                 <div class="overlay">
                   <p class="small">SQL, PHP, JS, JQuery</p>
                   <p class="h4 projectTitle">Uploading System</p>
@@ -149,17 +203,8 @@
               </div>
             </div>
             <div class="col">
-              <div
-                class="projectContainer hasMore"
-                id="documents"
-                data-bs-toggle="modal"
-                data-bs-target="#infoModal"
-              >
-                <img
-                  src="~@/assets/images/documents-mariadb.png"
-                  class="img-fluid rounded"
-                  alt="upload archives"
-                />
+              <div class="projectContainer hasMore" id="documents" data-bs-toggle="modal" data-bs-target="#infoModal">
+                <img src="~@/assets/images/documents-mariadb.png" class="img-fluid rounded" alt="upload archives" />
                 <div class="overlay">
                   <p class="small">SQL, PHP, JS, JQuery</p>
                   <p class="h4 projectTitle">Document Retrieval and Insertion</p>
@@ -177,23 +222,12 @@
     </div>
   </div>
   <!-- Modal -->
-  <div
-    class="modal fade"
-    id="infoModal"
-    tabindex="-1"
-    aria-labelledby="infoModalTitle"
-    aria-hidden="true"
-  >
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h3 class="modal-title" id="infoModalTitle"></h3>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" id="infoModalBody">
           <img class="img-fluid ulShadow mx-auto d-block" />
@@ -209,6 +243,18 @@
 import $ from 'jquery'
 
 const infoBodies = {
+  internalRebuild: {
+    intro:
+      'A complete overhaul and continued development of the internal support website. This system is designed to help students, faculty, staff, and visiting scholars access information and communicate more efficiently. It houses multiple web applications that coordinate purchases, leave requests, and administrative workflows.',
+    details:
+      "This is a comprehensive platform built over multiple years with continuous expansion and improvement. The system integrates numerous applications including Internal Leave, Purchasing/Reimbursements, Room Reservations, and more. As the technical lead, I designed the backend architecture and APIs consumed by multiple teams. The platform has evolved from legacy systems into a modern, scalable solution serving hundreds of daily users. Key responsibilities included system design, mentoring team members, facilitating cross-functional collaboration, and ensuring code quality and maintainability across all integrated applications.",
+  },
+  labValidation: {
+    intro:
+      'Complete build of the internal Lab Validation System. This system tracks student hours, accounts, holidays, vacations, and other administrative facets. An administrator interface allows manipulation of data, statistical analysis, data export, and comprehensive reporting.',
+    details:
+      "This system was built from the ground up as a comprehensive solution for managing lab administration. It tracks multiple data facets including student hours, account information, holiday schedules, vacation requests, and other administrative requirements. The system features a robust administrator interface that provides data manipulation capabilities, detailed statistical analysis, and flexible data export functionality. The architecture ensures data integrity through relational database design and provides role-based access control for different user types. This project demonstrated my ability to analyze requirements, design complete systems, and deliver a fully functional application that improved administrative efficiency.",
+  },
   leave: {
     intro:
       'The Internal Leave system allows students to quickly input vacation and business travel requests for advisor approval. Once approved, staff can search, sort, modify, and delete any requests without page reloads. The system also calculates individual leave for each student and determines if they are over their maximum allowed leave for that leave period.',
@@ -247,17 +293,21 @@ const infoBodies = {
   },
 }
 
-$('.projectContainer.hasMore')
-  .not('a')
-  .on('click', function () {
-    var imgSrc = $(this).find('img').attr('src')
-    var projectTitle = $(this).find('.projectTitle').text()
-    var projectId = $(this).attr('id')
-    $('#infoModalTitle').html(projectTitle)
-    $('#infoModal .modal-body .intro').html(infoBodies[projectId]['intro'].replace(/\n/g, '<br>'))
-    $('#infoModal .modal-body .details').html(
-      infoBodies[projectId]['details'].replace(/\n/g, '<br>'),
-    )
-    $('#infoModalBody img').attr('src', imgSrc)
-  })
+export default {
+  mounted() {
+    $('.projectContainer.hasMore')
+      .not('a')
+      .on('click', function () {
+        var imgSrc = $(this).find('img').attr('src')
+        var projectTitle = $(this).find('.projectTitle').text()
+        var projectId = $(this).attr('id')
+        $('#infoModalTitle').html(projectTitle)
+        $('#infoModal .modal-body .intro').html(infoBodies[projectId]['intro'].replace(/\n/g, '<br>'))
+        $('#infoModal .modal-body .details').html(
+          infoBodies[projectId]['details'].replace(/\n/g, '<br>'),
+        )
+        $('#infoModalBody img').attr('src', imgSrc)
+      })
+  },
+}
 </script>
