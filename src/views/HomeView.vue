@@ -65,10 +65,6 @@
           this site - if you'd like more details, <a href="#contact">reach out</a>.
         </p>
 
-        <p class="text-muted mx-5" style="font-weight: bold">
-          I'm updating this site to practice CI/CD and to reflect recent work; new content
-          will be added soon. I apologize for any outdated information or broken links!
-        </p>
       </div>
     </div>
   </div>
@@ -82,42 +78,37 @@
           <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
             <div class="col d-flex align-items-start">
               <div>
-                <h2><i class="fa fa-server small"></i> PROJECT 1</h2>
+                <h2><i class="fa fa-server small"></i> Digital Appraisals Platform</h2>
                 <p>
-                  <span class="small">Sep 2019 - Now</span><br />
-                  A complete overhaul of a previous version of the internal support website and
-                  continued development. This website is designed to help our students, faculty,
-                  staff, and visiting scholars access information and communicate with each other
-                  more efficiently. It houses several web apps that help coordinate purchases,
-                  internal leave, and other administrative workflows.
+                  <span class="small">Aug 2023 - Present</span><br />
+                  A vehicle-pricing platform that provides contractual offers from a VIN and selected vehicle information.
+                  I help lead the platform and work across FastAPI, Python, Azure API Management, Cosmos DB, Azure
+                  Functions, Terraform, and CI/CD.
                 </p>
-                <a href="/rebuild" class="btn btn-info"> Read More </a>
+                <a href="/appraisals" class="btn btn-info"> Read More </a>
               </div>
             </div>
             <div class="col d-flex align-items-start">
               <div>
-                <h2><i class="fa fa-calendar small"></i> PROJECT 2</h2>
+                <h2><i class="fa fa-object-group small"></i> Rules Engine / Self Service</h2>
                 <p>
-                  <span class="small">Aug 2019 - Dec 2019</span><br />
-                  Complete build of the internal Lab Validation System. This system tracks student
-                  hours, accounts, holidays, vacations, and other facets. An interface for admin
-                  staff allows the manipulation of data, view of statistics, export of data, etc.
+                  <span class="small">Aug 2023 - Present</span><br />
+                  I lead the Rules Engine work and its evolution into Self Service. The work includes modernizing legacy
+                  .NET and SQL systems, improving the UI and search experience, and moving rule management toward a more
+                  maintainable architecture.
                 </p>
-                <a href="/validations" class="btn btn-info"> Read More </a>
+                <a href="/rulesengine" class="btn btn-info"> Read More </a>
               </div>
             </div>
             <div class="col d-flex align-items-start">
               <div>
-                <h2><i class="fa fa-book-open small"></i> Other Web Applications</h2>
+                <h2><i class="fa fa-book-open small"></i> CPES Projects</h2>
                 <p>
-                  <span class="small">Ongoing</span><br />
-                  Throughout my career I have created several applications and projects. These
-                  include: Purchasing, Lab Validations, Internal Vacations, Conference Room
-                  Reservations, and more.
+                  <span class="small">2019 - 2023</span><br />
+                  Earlier full-stack and infrastructure work at Virginia Tech, including the internal website rebuild,
+                  Lab Validations, and administrative applications.
                 </p>
-                <a href="/webapps" class="btn btn-info">
-                  See all other projects
-                </a>
+                <a href="/webapps" class="btn btn-info"> See CPES archive </a>
               </div>
             </div>
           </div>
@@ -150,12 +141,10 @@
               <div>
                 <h2><i class="fa fa-object-group small"></i> DAP Improvements</h2>
                 <p>
-                  Along with other projects, I contribute and help lead the Digital Appraisals Platform (DAP) project.
-                  This is a large initiative to modernize and unify our appraisal systems, to price vehicles. I am
-                  currently working on a refactor of the <a href="/rulesengine">DAP Rules Engine</a>, which is a our
-                  final step in obtaining the price of a vehicle. This refactor will improve the maintainability and
-                  scalability of the system, and allow for easier integration with other components of the DAP
-                  ecosystem.
+                  I help lead the Digital Appraisals Platform (DAP) and lead the Rules Engine work that supports it.
+                  DAP provides contractual vehicle offers from a VIN and selected vehicle information. We are moving
+                  pricing logic from DAP into the Rules Engine, where rule management and Azure Storage Table
+                  integrations provide a clearer and more maintainable path for consuming systems.
                 </p>
               </div>
             </div>

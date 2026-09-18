@@ -3,7 +3,7 @@
     <div class="py-5">
       <h1 class="display-5 fw-bold text-white">Internal Website Rebuild</h1>
       <div class="col-lg-6 mx-auto">
-        <p class="fs-5 mb-4">Helping the staff, students, and Faculty</p>
+        <p class="fs-5 mb-4">Supporting CPES staff, students, and faculty</p>
       </div>
     </div>
   </div>
@@ -22,22 +22,15 @@
       </div>
       <div class="col-lg-12 mx-auto">
         <p class="lead mb-4">
-          The internal support site at CPES started from a simple html website to house forms. In
-          2016 the former CPES webmaster improved upon it by adding in Google Script functionality.
-          The website and CPES personnel evolved more needs and she began adding simple programs.<br />
-          After I took over thier position at CPES I imported the main website (cpes.vt.edu) core
-          code and modified it to suit our needs for the support website. I implemented a MySQL
-          database along with PHP, JQuery, and javascript. I then re-built the previous code to suit
-          the new site. To keep everything under our control I also removed all Google Script
-          functionality.<br />
-          As things usually go, CPES personnel's needs continued to grow and I enjoy coding so my
-          supervisor gave the green light to do whatever I wanted. With the help from students,
-          faculty, and some staff I found several weak points in our operations and created some web
-          apps to solve those needs.<br />
-          To increase security I implemented a 2-factor PHPCas system that is tied into Virginia
-          Tech. The support site is now an interconnected web application that is tied together on
-          various levels. I continue to work with some fantastic coworkers to add new functionality
-          and hopefully make everyone's job easier.
+          From 2019 to 2023, I designed and expanded this internal support website for CPES at Virginia Tech. It
+          began as a simple HTML site for housing forms. I imported the core code from the main CPES website and
+          modified it for the support site, implementing a MySQL database along with PHP, jQuery, and JavaScript. I
+          also rebuilt the existing functionality and removed the Google Apps Script dependencies.<br />
+          As CPES personnel's needs grew, I worked with students, faculty, and staff to identify weak points in
+          operations and create web applications to address them.<br />
+          To increase security, I implemented a two-factor phpCAS system tied to Virginia Tech. The support site
+          became an interconnected web application with functionality for purchases, leave requests, reservations,
+          and other administrative workflows.
         </p>
       </div>
     </div>
@@ -47,10 +40,9 @@
           <div class="p-4 mb-3 bg-light rounded">
             <h4 class="fst-italic">Development</h4>
             <p>
-              The internal support website is currently developed on an Apache server using a MySQL
-              database that interacts with a PHP sql connection. Design is left to a base Bootstrap
-              3 css and some custom elements that the team created. UI elements are controlled by
-              JQuery and Javascript.
+              The internal support website was developed on an Apache server using a MySQL database
+              that interacted with a PHP SQL connection. The design used a base Bootstrap 3 CSS and
+              custom elements created by the team. UI elements were controlled by jQuery and JavaScript.
             </p>
           </div>
           <div class="p-4 mb-3 bg-light rounded">
@@ -93,16 +85,16 @@
           </div>
           <div class="p-4 border-bottom bg-light rounded">
             <p>
-              <b>Forward compatability</b><br />
-              I've kept in mind that many systems will change over time. I hope that the systems
-              will be able to last as long as we need them with few modifications.
+              <b>Forward compatibility</b><br />
+              I designed the systems with future changes in mind so that they could last as long as
+              CPES needed them with few modifications.
             </p>
           </div>
           <div class="p-4 border-bottom bg-light rounded">
             <p>
-              <b>Future</b><br />
-              The future of the support website seems bright. I will continue to add functionality
-              and tie the systems together.
+              <b>Project Outcome</b><br />
+              The support website connected the applications and made it easier for CPES personnel to
+              complete common administrative tasks.
             </p>
           </div>
         </div>
@@ -128,10 +120,9 @@
             </div>
           </div>
           <p class="pt-4">
-            The website is built similar to any other, see the censored image above. It has a
-            navigational menu at the top that will take you to different sections. Under each page
-            there are different applications or information. The design was made to be simple and
-            intuitive while also providing a powerful functionality for each page.
+            The website was built similarly to other web applications, as shown in the censored image above. It had
+            a navigational menu at the top that took users to different sections. Each page contained applications or
+            information. The design was made to be simple and intuitive while still providing powerful functionality.
           </p>
           <hr />
           <h3>Functionality</h3>

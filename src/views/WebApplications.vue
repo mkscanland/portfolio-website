@@ -21,26 +21,30 @@
           <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-3 text-dark">
             <div class="col">
               <div class="projectContainer">
-                <img src="~@/assets/images/placeholder.png" class="img-fluid rounded"
-                  alt="Placeholder for current project" />
+                <img src="~@/assets/images/computer-bg.jpg" class="img-fluid rounded"
+                  alt="Digital Appraisals Platform" />
                 <div class="overlay">
-                  <p class="small">Technology Stack - TBD</p>
-                  <p class="h4 projectTitle">Project Title</p>
+                  <p class="small">FastAPI, Python, Azure App Service, API Management, Cosmos DB, Azure Functions, Terraform</p>
+                  <p class="h4 projectTitle">Digital Appraisals Platform</p>
                   <p>
-                    [Project description to be added]
+                    A vehicle-pricing platform that provides contractual offers from a VIN and selected vehicle
+                    information. I help lead the platform and work across FastAPI, Python, Azure API Management, Cosmos
+                    DB, Azure Functions, Terraform, and CI/CD.
                   </p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="projectContainer">
-                <img src="~@/assets/images/placeholder.png" class="img-fluid rounded"
-                  alt="Placeholder for current project" />
+                <img src="~@/assets/images/lightbulb-bg.jpg" class="img-fluid rounded"
+                  alt="Rules Engine and Self Service" />
                 <div class="overlay">
-                  <p class="small">Technology Stack - TBD</p>
-                  <p class="h4 projectTitle">Project Title</p>
+                  <p class="small">.NET Core, SQL Server, IIS, Azure Functions, Vue, Azure Storage Tables</p>
+                  <p class="h4 projectTitle">Rules Engine / Self Service</p>
                   <p>
-                    [Project description to be added]
+                    I lead the Rules Engine work and its evolution into Self Service. The work includes modernizing
+                    legacy .NET and SQL systems, improving the UI and search experience, and moving rule management
+                    toward a more maintainable architecture.
                   </p>
                 </div>
               </div>
@@ -55,8 +59,8 @@
     <div class="row pt-5 pb-3">
       <div class="col-lg-12 col-md-12 mx-auto text-center">
         <p>
-          The following are the two most significant projects I worked on at CPES. These projects showcase
-          my ability to design and develop complex systems from the ground up.
+          The following are two significant projects I worked on while at CPES from 2019 through 2023. These projects
+          showcase my ability to design and develop complex systems from the ground up.
         </p>
       </div>
     </div>
@@ -73,10 +77,10 @@
                   <p class="small">Architecture, Leadership, API Design</p>
                   <p class="h4 projectTitle">Internal Website Rebuild</p>
                   <p>
-                    A complete overhaul and continued development of the internal support website. This system is
-                    designed to help students, faculty, staff, and visiting scholars access information and communicate
-                    more efficiently. It houses multiple web applications that coordinate purchases, leave requests, and
-                    administrative workflows.
+                    From 2019 to 2023, I designed and expanded this internal support website for CPES. It helped
+                    students, faculty, staff, and visiting scholars access information and communicate more efficiently.
+                    It housed multiple web applications that coordinated purchases, leave requests, and administrative
+                    workflows.
                   </p>
                 </div>
               </div>
@@ -156,12 +160,11 @@
                   <p class="small">SQL, PHP, JS, JQuery</p>
                   <p class="h4 projectTitle">Purchasing/Reimbursements</p>
                   <p>
-                    The Purchasing system currently has three functionalities: Purchases,
-                    Reimbursements, and Travel Reimbursements. Each system is similarly built. The
-                    user inputs a request for one of the previously mentioned functions and that
-                    requests goes through a chain of approvals. The tracker for each function has
-                    several stages that a request can be at. These requests can be searched and
-                    sorted. The system processes over 10k requests a year.
+                    The Purchasing system included three functionalities: Purchases, Reimbursements,
+                    and Travel Reimbursements. Each system was similarly built. Users submitted requests
+                    that went through a chain of approvals. The tracker for each function had several
+                    stages that a request could be at. These requests could be searched and sorted. The
+                    system processed over 10k requests a year.
                   </p>
                 </div>
               </div>
@@ -245,9 +248,9 @@ import $ from 'jquery'
 const infoBodies = {
   internalRebuild: {
     intro:
-      'A complete overhaul and continued development of the internal support website. This system is designed to help students, faculty, staff, and visiting scholars access information and communicate more efficiently. It houses multiple web applications that coordinate purchases, leave requests, and administrative workflows.',
+      'From 2019 to 2023, I designed and expanded this internal support website for CPES. It helped students, faculty, staff, and visiting scholars access information and communicate more efficiently. It housed multiple web applications that coordinated purchases, leave requests, and administrative workflows.',
     details:
-      "This is a comprehensive platform built over multiple years with continuous expansion and improvement. The system integrates numerous applications including Internal Leave, Purchasing/Reimbursements, Room Reservations, and more. As the technical lead, I designed the backend architecture and APIs consumed by multiple teams. The platform has evolved from legacy systems into a modern, scalable solution serving hundreds of daily users. Key responsibilities included system design, mentoring team members, facilitating cross-functional collaboration, and ensuring code quality and maintainability across all integrated applications.",
+      "This platform was built and expanded over multiple years. It integrated applications including Internal Leave, Purchasing/Reimbursements, Room Reservations, and more. I worked independently on system design, backend architecture, APIs, and maintenance while coordinating requirements with CPES students, faculty, and staff.",
   },
   labValidation: {
     intro:

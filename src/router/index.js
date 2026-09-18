@@ -10,6 +10,16 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: '/appraisals',
+      name: 'appraisals',
+      component: () => import('../views/DigitalAppraisals.vue'),
+    },
+    {
+      path: '/rulesengine',
+      name: 'rulesengine',
+      component: () => import('../views/RulesEngine.vue'),
+    },
+    {
       path: '/webapps',
       name: 'webapps',
       component: () => import('../views/WebApplications.vue'),
