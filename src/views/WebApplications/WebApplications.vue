@@ -1,262 +1,29 @@
-<template>
-  <div class="wrapperSection bg-lightbulb text-secondary px-4 text-center position-relative">
-    <div class="py-5">
-      <div class="col-lg-6 mx-auto position-absolute bottom-20 start-50 translate-middle-x">
-        <h1 class="display-5 fw-bold text-white">Web Applications Archive</h1>
-      </div>
-    </div>
-  </div>
-  <div class="wrapperSection py-0 pb-5 bg-white position-relative text-secondary px-4">
-    <div class="title">Key Current Projects</div>
-    <div class="row pt-5 pb-3">
-      <div class="col-lg-12 col-md-12 mx-auto text-center">
-        <p>
-          Showcasing my current and recent projects that demonstrate my latest expertise and technical capabilities.
-        </p>
-      </div>
-    </div>
-    <div class="row py-0">
-      <div class="col-lg-12 col-md-12 mx-auto">
-        <div class="album py-5">
-          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-3 text-dark">
-            <div class="col">
-              <div class="projectContainer">
-                <img src="~@/assets/images/computer-bg.jpg" class="img-fluid rounded"
-                  alt="Digital Appraisals Platform" />
-                <div class="overlay">
-                  <p class="small">FastAPI, Python, Azure App Service, API Management, Cosmos DB, Azure Functions, Terraform</p>
-                  <p class="h4 projectTitle">Digital Appraisals Platform</p>
-                  <p>
-                    A vehicle-pricing platform that provides contractual offers from a VIN and selected vehicle
-                    information. I help lead the platform and work across FastAPI, Python, Azure API Management, Cosmos
-                    DB, Azure Functions, Terraform, and CI/CD.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="projectContainer">
-                <img src="~@/assets/images/lightbulb-bg.jpg" class="img-fluid rounded"
-                  alt="Rules Engine and Self Service" />
-                <div class="overlay">
-                  <p class="small">.NET Core, SQL Server, IIS, Azure Functions, Vue, Azure Storage Tables</p>
-                  <p class="h4 projectTitle">Rules Engine / Self Service</p>
-                  <p>
-                    I lead the Rules Engine work and its evolution into Self Service. The work includes modernizing
-                    legacy .NET and SQL systems, improving the UI and search experience, and moving rule management
-                    toward a more maintainable architecture.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="wrapperSection py-0 pb-5 bg-lightGrey position-relative text-secondary px-4">
-    <div class="title">Key CPES Projects</div>
-    <div class="row pt-5 pb-3">
-      <div class="col-lg-12 col-md-12 mx-auto text-center">
-        <p>
-          The following are two significant projects I worked on while at CPES from 2019 through 2023. These projects
-          showcase my ability to design and develop complex systems from the ground up.
-        </p>
-      </div>
-    </div>
-    <div class="row py-0">
-      <div class="col-lg-12 col-md-12 mx-auto">
-        <div class="album py-5">
-          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-3 text-dark">
-            <div class="col">
-              <div class="projectContainer hasMore" id="internalRebuild" data-bs-toggle="modal"
-                data-bs-target="#infoModal">
-                <img src="~@/assets/images/internal-rebuild-hero.jpg" class="img-fluid rounded"
-                  alt="Internal Website Rebuild" />
-                <div class="overlay">
-                  <p class="small">Architecture, Leadership, API Design</p>
-                  <p class="h4 projectTitle">Internal Website Rebuild</p>
-                  <p>
-                    From 2019 to 2023, I designed and expanded this internal support website for CPES. It helped
-                    students, faculty, staff, and visiting scholars access information and communicate more efficiently.
-                    It housed multiple web applications that coordinated purchases, leave requests, and administrative
-                    workflows.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="projectContainer hasMore" id="labValidation" data-bs-toggle="modal"
-                data-bs-target="#infoModal">
-                <img src="~@/assets/images/lab-validation-hero.jpg" class="img-fluid rounded"
-                  alt="Lab Validation System" />
-                <div class="overlay">
-                  <p class="small">Full-Stack Development, Database Design</p>
-                  <p class="h4 projectTitle">Lab Validation System</p>
-                  <p>
-                    Complete build of the internal Lab Validation System. This system tracks student hours, accounts,
-                    holidays, vacations, and other administrative facets. An administrator interface allows manipulation
-                    of data, statistical analysis, data export, and comprehensive reporting.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="wrapperSection py-0 pb-5 bg-grey position-relative text-secondary px-4">
-    <div class="title">Other Projects</div>
-    <div class="row pt-5 pb-3">
-      <div class="col-lg-12 col-md-12 mx-auto text-center">
-        <p>
-          Please enjoy various web applications that I've created throughout the years! If you have
-          any further questions please feel free to <a href="/#contact">Contact me</a>.
-        </p>
-      </div>
-    </div>
-    <div class="row py-0">
-      <div class="col-lg-12 col-md-12 mx-auto">
-        <div class="album py-5">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 text-dark">
-            <div class="col">
-              <div class="projectContainer hasMore" id="leave" data-bs-toggle="modal" data-bs-target="#infoModal">
-                <img src="~@/assets/images/internal-leave-calendar.png" class="img-fluid rounded"
-                  alt="Internal Leave Calendar" />
-                <div class="overlay">
-                  <p class="small">SQL, PHP, JS, JQuery</p>
-                  <p class="h4 projectTitle">Internal Leave</p>
-                  <p>
-                    The Internal Leave system allows students to quickly input vacation and business
-                    travel requests for advisor approval. Once approved, staff can search, sort,
-                    modify, and delete any requests without page reloads. The system also calculates
-                    individual leave for each student and determines if they are over their maximum
-                    allowed leave for that leave period.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="projectContainer hasMore" id="checkout" data-bs-toggle="modal" data-bs-target="#infoModal">
-                <img src="~@/assets/images/checkout-forms.png" class="img-fluid rounded" alt="Forms checkout tracker" />
-                <div class="overlay">
-                  <p class="small">SQL, PHP, JS, JQuery</p>
-                  <p class="h4 projectTitle">Checkout Tracker</p>
-                  <p>
-                    The Checkout Tracker allows staff and faculty an instant view of where a student
-                    is in the process of leaving CPES. Some necessary information from the student
-                    is collected upon submission. The system is simple and checks the latest status
-                    of a checkout to show which step it is on. A query to the model shows if a
-                    student has submitted their Thesis/Dissertation to the uploading system.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="projectContainer hasMore" id="purchasing" data-bs-toggle="modal" data-bs-target="#infoModal">
-                <img src="~@/assets/images/purchasing-tracker.png" class="img-fluid rounded" alt="purchasing tracker" />
-                <div class="overlay">
-                  <p class="small">SQL, PHP, JS, JQuery</p>
-                  <p class="h4 projectTitle">Purchasing/Reimbursements</p>
-                  <p>
-                    The Purchasing system included three functionalities: Purchases, Reimbursements,
-                    and Travel Reimbursements. Each system was similarly built. Users submitted requests
-                    that went through a chain of approvals. The tracker for each function had several
-                    stages that a request could be at. These requests could be searched and sorted. The
-                    system processed over 10k requests a year.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="projectContainer hasMore" id="reservations" data-bs-toggle="modal"
-                data-bs-target="#infoModal">
-                <img src="~@/assets/images/room-reservations.png" class="img-fluid rounded"
-                  alt="reservations calendar" />
-                <div class="overlay">
-                  <p class="small">SQL, PHP, JS, JQuery</p>
-                  <p class="h4 projectTitle">Room/HPC Reservations</p>
-                  <p>
-                    Room Reservations and HPC Reservations both use the FullCalendar Event Calendar.
-                    Users can reserve a time in a conference room or time on our HPCs (High
-                    Performance Computers). A user can reserve a single day, or recurring days for a
-                    specific time period. All reservations are stored in the database and pulled
-                    dynamically depending on which date is selected. If the Zoom Room (143) is
-                    selected a meeting link is added to the Zoom Room Google Calendar to easily
-                    start the meeting.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="projectContainer hasMore" id="uploading" data-bs-toggle="modal" data-bs-target="#infoModal">
-                <img src="~@/assets/images/upload-archives.png" class="img-fluid rounded" alt="upload archives" />
-                <div class="overlay">
-                  <p class="small">SQL, PHP, JS, JQuery</p>
-                  <p class="h4 projectTitle">Uploading System</p>
-                  <p>
-                    Students and Faculty can upload their publications to the uploading system for
-                    easy archiving. Once uploaded any user can view the archives by using the search
-                    functionality. Using a fuzzy search the user can select any date, category, or
-                    specific metadata to fine tune their search. If a user makes a mistake and needs
-                    to re-upload a document, that can be done on any individual archive page.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="projectContainer hasMore" id="documents" data-bs-toggle="modal" data-bs-target="#infoModal">
-                <img src="~@/assets/images/documents-mariadb.png" class="img-fluid rounded" alt="upload archives" />
-                <div class="overlay">
-                  <p class="small">SQL, PHP, JS, JQuery</p>
-                  <p class="h4 projectTitle">Document Retrieval and Insertion</p>
-                  <p>
-                    Document info is uploaded via XMLHttpRequests which is handeled by common PHP
-                    and JS classes for all documents on the Support website. These documents are
-                    retrieved and served via PHP after checking user authentication.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal -->
-  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalTitle" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="infoModalTitle"></h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" id="infoModalBody">
-          <img class="img-fluid ulShadow mx-auto d-block" />
-          <p class="intro mt-5"></p>
-          <b>Details:</b>
-          <p class="details mt-1"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-<script>
-import $ from 'jquery'
+<script setup>
+import { ref } from 'vue'
+import ProjectCard from '@/components/ProjectCard/ProjectCard.vue'
+import computerBgImage from '@/assets/images/computer-bg.jpg'
+import lightbulbBgImage from '@/assets/images/lightbulb-bg.jpg'
+import internalRebuildHeroImage from '@/assets/images/internal-rebuild-hero.jpg'
+import labValidationHeroImage from '@/assets/images/lab-validation-hero.jpg'
+import internalLeaveCalendarImage from '@/assets/images/internal-leave-calendar.png'
+import checkoutFormsImage from '@/assets/images/checkout-forms.png'
+import purchasingTrackerImage from '@/assets/images/purchasing-tracker.png'
+import roomReservationsImage from '@/assets/images/room-reservations.png'
+import uploadArchivesImage from '@/assets/images/upload-archives.png'
+import documentsMariadbImage from '@/assets/images/documents-mariadb.png'
 
 const infoBodies = {
   internalRebuild: {
     intro:
       'From 2019 to 2023, I designed and expanded this internal support website for CPES. It helped students, faculty, staff, and visiting scholars access information and communicate more efficiently. It housed multiple web applications that coordinated purchases, leave requests, and administrative workflows.',
     details:
-      "This platform was built and expanded over multiple years. It integrated applications including Internal Leave, Purchasing/Reimbursements, Room Reservations, and more. I worked independently on system design, backend architecture, APIs, and maintenance while coordinating requirements with CPES students, faculty, and staff.",
+      'This platform was built and expanded over multiple years. It integrated applications including Internal Leave, Purchasing/Reimbursements, Room Reservations, and more. I worked independently on system design, backend architecture, APIs, and maintenance while coordinating requirements with CPES students, faculty, and staff.',
   },
   labValidation: {
     intro:
       'Complete build of the internal Lab Validation System. This system tracks student hours, accounts, holidays, vacations, and other administrative facets. An administrator interface allows manipulation of data, statistical analysis, data export, and comprehensive reporting.',
     details:
-      "This system was built from the ground up as a comprehensive solution for managing lab administration. It tracks multiple data facets including student hours, account information, holiday schedules, vacation requests, and other administrative requirements. The system features a robust administrator interface that provides data manipulation capabilities, detailed statistical analysis, and flexible data export functionality. The architecture ensures data integrity through relational database design and provides role-based access control for different user types. This project demonstrated my ability to analyze requirements, design complete systems, and deliver a fully functional application that improved administrative efficiency.",
+      'This system was built from the ground up as a comprehensive solution for managing lab administration. It tracks multiple data facets including student hours, account information, holiday schedules, vacation requests, and other administrative requirements. The system features a robust administrator interface that provides data manipulation capabilities, detailed statistical analysis, and flexible data export functionality. The architecture ensures data integrity through relational database design and provides role-based access control for different user types. This project demonstrated my ability to analyze requirements, design complete systems, and deliver a fully functional application that improved administrative efficiency.',
   },
   leave: {
     intro:
@@ -296,21 +63,342 @@ const infoBodies = {
   },
 }
 
-export default {
-  mounted() {
-    $('.projectContainer.hasMore')
-      .not('a')
-      .on('click', function () {
-        var imgSrc = $(this).find('img').attr('src')
-        var projectTitle = $(this).find('.projectTitle').text()
-        var projectId = $(this).attr('id')
-        $('#infoModalTitle').html(projectTitle)
-        $('#infoModal .modal-body .intro').html(infoBodies[projectId]['intro'].replace(/\n/g, '<br>'))
-        $('#infoModal .modal-body .details').html(
-          infoBodies[projectId]['details'].replace(/\n/g, '<br>'),
-        )
-        $('#infoModalBody img').attr('src', imgSrc)
-      })
-  },
+const selectedProject = ref(null)
+
+function selectProject(id, { title, image }) {
+  const details = infoBodies[id]
+  selectedProject.value = {
+    title,
+    image,
+    intro: details.intro,
+    details: details.details.replace(/<q>(.*?)<\/q>/g, '“$1”'),
+  }
 }
 </script>
+
+
+
+<template>
+  <div class="wrapperSection bg-lightbulb text-secondary px-4 text-center position-relative">
+    <div class="py-5">
+      <div class="col-lg-6 mx-auto position-absolute bottom-20 start-50 translate-middle-x">
+        <h1 class="display-5 fw-bold text-white">Web Applications Archive</h1>
+      </div>
+    </div>
+  </div>
+  <div class="wrapperSection py-0 pb-5 bg-white position-relative text-secondary px-4">
+    <div class="title">Key Current Projects</div>
+    <div class="row pt-5 pb-3">
+      <div class="col-lg-12 col-md-12 mx-auto text-center">
+        <p>
+          Showcasing my current and recent projects that demonstrate my latest expertise and
+          technical capabilities.
+        </p>
+      </div>
+    </div>
+    <div class="row py-0">
+      <div class="col-lg-12 col-md-12 mx-auto">
+        <div class="album py-5">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-3 text-dark">
+            <div class="col">
+              <ProjectCard
+                :image="computerBgImage"
+                alt="Digital Appraisals Platform"
+                title="Digital Appraisals Platform"
+              >
+                <template #meta>
+                  <p class="small">
+                    FastAPI, Python, Azure App Service, API Management, Cosmos DB, Azure Functions,
+                    Terraform
+                  </p>
+                </template>
+                <p>
+                  A vehicle-pricing platform that provides contractual offers from a VIN and
+                  selected vehicle information. I help lead the platform and work across FastAPI,
+                  Python, Azure API Management, Cosmos DB, Azure Functions, Terraform, and CI/CD.
+                </p>
+              </ProjectCard>
+            </div>
+            <div class="col">
+              <ProjectCard
+                :image="lightbulbBgImage"
+                alt="Rules Engine and Self Service"
+                title="Rules Engine / Self Service"
+              >
+                <template #meta>
+                  <p class="small">
+                    .NET Core, SQL Server, IIS, Azure Functions, Vue, Azure Storage Tables
+                  </p>
+                </template>
+                <p>
+                  I lead the Rules Engine work and its evolution into Self Service. The work
+                  includes modernizing legacy .NET and SQL systems, improving the UI and search
+                  experience, and moving rule management toward a more maintainable architecture.
+                </p>
+              </ProjectCard>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapperSection py-0 pb-5 bg-lightGrey position-relative text-secondary px-4">
+    <div class="title">Key CPES Projects</div>
+    <div class="row pt-5 pb-3">
+      <div class="col-lg-12 col-md-12 mx-auto text-center">
+        <p>
+          The following are two significant projects I worked on while at CPES from 2019 through
+          2023. These projects showcase my ability to design and develop complex systems from the
+          ground up.
+        </p>
+      </div>
+    </div>
+    <div class="row py-0">
+      <div class="col-lg-12 col-md-12 mx-auto">
+        <div class="album py-5">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-3 text-dark">
+            <div class="col">
+              <ProjectCard
+                id="internalRebuild"
+                :image="internalRebuildHeroImage"
+                alt="Internal Website Rebuild"
+                title="Internal Website Rebuild"
+                interactive
+                data-bs-toggle="modal"
+                data-bs-target="#infoModal"
+                @select="selectProject('internalRebuild', $event)"
+              >
+                <template #meta>
+                  <p class="small">Architecture, Leadership, API Design</p>
+                </template>
+                <p>
+                  From 2019 to 2023, I designed and expanded this internal support website for CPES.
+                  It helped students, faculty, staff, and visiting scholars access information and
+                  communicate more efficiently. It housed multiple web applications that coordinated
+                  purchases, leave requests, and administrative workflows.
+                </p>
+              </ProjectCard>
+            </div>
+            <div class="col">
+              <ProjectCard
+                id="labValidation"
+                :image="labValidationHeroImage"
+                alt="Lab Validation System"
+                title="Lab Validation System"
+                interactive
+                data-bs-toggle="modal"
+                data-bs-target="#infoModal"
+                @select="selectProject('labValidation', $event)"
+              >
+                <template #meta>
+                  <p class="small">Full-Stack Development, Database Design</p>
+                </template>
+                <p>
+                  Complete build of the internal Lab Validation System. This system tracks student
+                  hours, accounts, holidays, vacations, and other administrative facets. An
+                  administrator interface allows manipulation of data, statistical analysis, data
+                  export, and comprehensive reporting.
+                </p>
+              </ProjectCard>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapperSection py-0 pb-5 bg-grey position-relative text-secondary px-4">
+    <div class="title">Other Projects</div>
+    <div class="row pt-5 pb-3">
+      <div class="col-lg-12 col-md-12 mx-auto text-center">
+        <p>
+          Please enjoy various web applications that I've created throughout the years! If you have
+          any further questions please feel free to <a href="/#contact">Contact me</a>.
+        </p>
+      </div>
+    </div>
+    <div class="row py-0">
+      <div class="col-lg-12 col-md-12 mx-auto">
+        <div class="album py-5">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 text-dark">
+            <div class="col">
+              <ProjectCard
+                id="leave"
+                :image="internalLeaveCalendarImage"
+                alt="Internal Leave Calendar"
+                title="Internal Leave"
+                interactive
+                data-bs-toggle="modal"
+                data-bs-target="#infoModal"
+                @select="selectProject('leave', $event)"
+              >
+                <template #meta>
+                  <p class="small">SQL, PHP, JS, JQuery</p>
+                </template>
+                <p>
+                  The Internal Leave system allows students to quickly input vacation and business
+                  travel requests for advisor approval. Once approved, staff can search, sort,
+                  modify, and delete any requests without page reloads. The system also calculates
+                  individual leave for each student and determines if they are over their maximum
+                  allowed leave for that leave period.
+                </p>
+              </ProjectCard>
+            </div>
+            <div class="col">
+              <ProjectCard
+                id="checkout"
+                :image="checkoutFormsImage"
+                alt="Forms checkout tracker"
+                title="Checkout Tracker"
+                interactive
+                data-bs-toggle="modal"
+                data-bs-target="#infoModal"
+                @select="selectProject('checkout', $event)"
+              >
+                <template #meta>
+                  <p class="small">SQL, PHP, JS, JQuery</p>
+                </template>
+                <p>
+                  The Checkout Tracker allows staff and faculty an instant view of where a student
+                  is in the process of leaving CPES. Some necessary information from the student is
+                  collected upon submission. The system is simple and checks the latest status of a
+                  checkout to show which step it is on. A query to the model shows if a student has
+                  submitted their Thesis/Dissertation to the uploading system.
+                </p>
+              </ProjectCard>
+            </div>
+            <div class="col">
+              <ProjectCard
+                id="purchasing"
+                :image="purchasingTrackerImage"
+                alt="purchasing tracker"
+                title="Purchasing/Reimbursements"
+                interactive
+                data-bs-toggle="modal"
+                data-bs-target="#infoModal"
+                @select="selectProject('purchasing', $event)"
+              >
+                <template #meta>
+                  <p class="small">SQL, PHP, JS, JQuery</p>
+                </template>
+                <p>
+                  The Purchasing system included three functionalities: Purchases, Reimbursements,
+                  and Travel Reimbursements. Each system was similarly built. Users submitted
+                  requests that went through a chain of approvals. The tracker for each function had
+                  several stages that a request could be at. These requests could be searched and
+                  sorted. The system processed over 10k requests a year.
+                </p>
+              </ProjectCard>
+            </div>
+            <div class="col">
+              <ProjectCard
+                id="reservations"
+                :image="roomReservationsImage"
+                alt="reservations calendar"
+                title="Room/HPC Reservations"
+                interactive
+                data-bs-toggle="modal"
+                data-bs-target="#infoModal"
+                @select="selectProject('reservations', $event)"
+              >
+                <template #meta>
+                  <p class="small">SQL, PHP, JS, JQuery</p>
+                </template>
+                <p>
+                  Room Reservations and HPC Reservations both use the FullCalendar Event Calendar.
+                  Users can reserve a time in a conference room or time on our HPCs (High
+                  Performance Computers). A user can reserve a single day, or recurring days for a
+                  specific time period. All reservations are stored in the database and pulled
+                  dynamically depending on which date is selected. If the Zoom Room (143) is
+                  selected a meeting link is added to the Zoom Room Google Calendar to easily start
+                  the meeting.
+                </p>
+              </ProjectCard>
+            </div>
+            <div class="col">
+              <ProjectCard
+                id="uploading"
+                :image="uploadArchivesImage"
+                alt="upload archives"
+                title="Uploading System"
+                interactive
+                data-bs-toggle="modal"
+                data-bs-target="#infoModal"
+                @select="selectProject('uploading', $event)"
+              >
+                <template #meta>
+                  <p class="small">SQL, PHP, JS, JQuery</p>
+                </template>
+                <p>
+                  Students and Faculty can upload their publications to the uploading system for
+                  easy archiving. Once uploaded any user can view the archives by using the search
+                  functionality. Using a fuzzy search the user can select any date, category, or
+                  specific metadata to fine tune their search. If a user makes a mistake and needs
+                  to re-upload a document, that can be done on any individual archive page.
+                </p>
+              </ProjectCard>
+            </div>
+            <div class="col">
+              <ProjectCard
+                id="documents"
+                :image="documentsMariadbImage"
+                alt="Document archive"
+                title="Document Retrieval and Insertion"
+                interactive
+                data-bs-toggle="modal"
+                data-bs-target="#infoModal"
+                @select="selectProject('documents', $event)"
+              >
+                <template #meta>
+                  <p class="small">SQL, PHP, JS, JQuery</p>
+                </template>
+                <p>
+                  Document info is uploaded via XMLHttpRequests which is handeled by common PHP and
+                  JS classes for all documents on the Support website. These documents are retrieved
+                  and served via PHP after checking user authentication.
+                </p>
+              </ProjectCard>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal fade"
+    id="infoModal"
+    tabindex="-1"
+    aria-labelledby="infoModalTitle"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="infoModalTitle">{{ selectedProject?.title }}</h3>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body" id="infoModalBody">
+          <img
+            v-if="selectedProject"
+            :src="selectedProject.image"
+            :alt="selectedProject.title"
+            class="img-fluid ulShadow mx-auto d-block"
+          />
+          <p class="intro mt-5">{{ selectedProject?.intro }}</p>
+          <b>Details:</b>
+          <p class="details mt-1">{{ selectedProject?.details }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.details {
+  white-space: pre-line;
+}
+</style>

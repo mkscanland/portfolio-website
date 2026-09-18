@@ -206,6 +206,11 @@ body {
   cursor: pointer;
 }
 
+.projectContainer.hasMore:focus-visible {
+  outline: 3px solid skyblue;
+  outline-offset: 3px;
+}
+
 .projectContainer img {
   height: 100%;
   width: 100%;
@@ -271,7 +276,7 @@ body {
     1px 1px 0 #000;
 }
 
-.projectContainer.hasMore:hover .overlay::after {
+.projectContainer.hasMore:is(:hover, :focus-visible) .overlay::after {
   color: skyblue;
   content: 'Click for More';
 }
