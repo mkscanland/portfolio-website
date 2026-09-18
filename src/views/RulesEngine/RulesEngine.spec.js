@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest'
-import { mount } from '@vue/test-utils'
 
 describe('RulesEngine', () => {
   it('renders the rules engine overview and current direction', async () => {
