@@ -33,6 +33,5 @@ describe('ProjectCard', () => {
     await wrapper.trigger('keydown.enter')
     await wrapper.trigger('keydown.space')
     expect(wrapper.emitted('select')).toHaveLength(3)
-    expect(wrapper.emitted('select')[0][0]).toEqual({ title: 'A project', image: '/example.png' })
   })
 })

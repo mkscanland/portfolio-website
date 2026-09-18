@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   image: {
     type: String,
     required: true,
@@ -21,7 +21,7 @@ const props = defineProps({
 const emit = defineEmits(['select'])
 
 function select() {
-  emit('select', { title: props.title, image: props.image })
+  emit('select')
 }
 
 function activateFromKeyboard(event) {
