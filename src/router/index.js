@@ -12,7 +12,7 @@ const router = createRouter({
     {
       path: '/appraisals',
       name: 'appraisals',
-      component: () => import('../views/Appraisals.vue'),
+      component: () => import('../views/DigitalAppraisals.vue'),
     },
     {
       path: '/rulesengine',
