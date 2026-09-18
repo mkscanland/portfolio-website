@@ -101,10 +101,9 @@
           </div>
           <div class="p-4 border-bottom bg-light rounded">
             <p>
-              <b>Future</b><br />
-              The system in constantly being improved and modified to suit the always changing needs
-              at CPES. As new systems are built they are almost always tied back to the Lab
-              Validation system.
+              <b>Project Outcome</b><br />
+              The system connected Lab Validation data with other CPES applications. I added
+              functionality as the project's requirements evolved.
             </p>
           </div>
         </div>
@@ -144,8 +143,8 @@
             facets are shown on the <q>Statistics/Sheets</q> section.
           </p>
           <p>
-            The Student and Faculty design/functionality is minimal so I will focus on the Staff
-            side of things below.
+            The Student and Faculty design/functionality is minimal, so the Staff side of the system
+            is described below.
           </p>
           <hr />
           <h3>Design</h3>

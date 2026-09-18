@@ -25,6 +25,10 @@
               Portfolio
             </a>
             <div class="dropdown-menu">
+              <a class="dropdown-item" href="/appraisals">Digital Appraisals Platform</a>
+              <a class="dropdown-item" href="/rulesengine">Rules Engine / Self Service</a>
+              <div class="dropdown-divider"></div>
+              <h6 class="dropdown-header">Earlier Work</h6>
               <a class="dropdown-item" href="/rebuild">Internal Website Rebuild</a>
               <a class="dropdown-item" href="/randomforest">Random Forest</a>
               <a class="dropdown-item" href="/validations">Lab Validations</a>
