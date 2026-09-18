@@ -1,6 +1,17 @@
-# portfolio-website
+# Portfolio website
 
-This template should help get you started developing with Vue 3 in Vite.
+Matthew Scanland's portfolio website, built with Vue 3 and Vite.
+
+## Repository guide
+
+Start with the guide relevant to your change:
+
+- [Architecture](docs/architecture.md): entry points, routes, pages, shared components, assets, and deployment.
+- [Conventions](docs/conventions.md): Vue patterns, content accuracy, linting, and branch names.
+- [Workflow](docs/workflow.md): how to make a change and verify it before finishing.
+- [References](docs/references.md): official guidance behind these decisions.
+
+The root [AGENTS.md](AGENTS.md) is only an entry point. Keep detailed guidance in `docs/` and update it when the project structure or commands change. Repository-specific Codex skills can be added under [`.agents/skills/`](.agents/skills/) when a repeatable workflow warrants one; that directory currently contains no skills.
 
 ## Recommended IDE Setup
 
@@ -48,3 +59,5 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+`npm run lint` applies available fixes. To check without changing files, run `npm run lint:check`.

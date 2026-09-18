@@ -4,6 +4,7 @@
 
 - Keep a route view or shared component with its `.spec.js` in a directory of the same name. Use the current JavaScript single-file component style; prefer `<script setup>` for new component logic when it fits. Do not rewrite an existing Options API component solely for consistency.
 - Reuse the existing Bootstrap utilities and `src/assets/css/site.css` before adding CSS. Keep component-specific rules scoped when appropriate, as in `src/App/App.vue`.
+- When creating reusable UI that needs caller-supplied markup, use slots where possible instead of hard-coding that content. For example, a future `ProjectPanel` can render `<section><slot /></section>`, and its caller can supply `<ProjectPanel><h2>Rules Engine</h2></ProjectPanel>`. This repo does not use slots yet.
 - Use `RouterLink` for new links between routes and ordinary `<a>` links for external URLs and static downloads. For example: `<RouterLink to="/rulesengine">Rules Engine</RouterLink>` and `<a href="/files/Scanland-Matthew_Resume.pdf">Resume</a>`.
 - Follow Vue's essential style rules for templates, props, and lists. For example, use a stable key: `<li v-for="project in projects" :key="project.id">{{ project.name }}</li>`.
 - Keep portfolio claims factual and in the owner's voice. Check existing content and user-provided references before updating a role, result, date, or metric. If a needed fact is uncertain, use an explicit placeholder and ask for the fact instead of inventing it.
