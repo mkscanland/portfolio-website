@@ -27,4 +27,15 @@ describe('WebApplications', () => {
       wrapper.unmount()
     }
   })
+
+  it('updates modal content for keyboard selection and renders details as text', async () => {
+    const wrapper = mount(WebApplications)
+
+    await wrapper.get('#checkout').trigger('keydown.enter')
+
+    expect(wrapper.get('#infoModalTitle').text()).toBe('Checkout Tracker')
+    expect(wrapper.get('#infoModalBody img').attributes('alt')).toBe('Checkout Tracker')
+    expect(wrapper.get('#infoModal .details').text()).toContain('“status”')
+    expect(wrapper.find('#infoModal q').exists()).toBe(false)
+  })
 })
