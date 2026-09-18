@@ -15,12 +15,16 @@ describe('WebApplications', () => {
   })
 
   it('populates the project details modal when an archived project is selected', async () => {
-    const wrapper = mount(WebApplications)
+    const wrapper = mount(WebApplications, { attachTo: document.body })
 
-    await wrapper.get('#internalRebuild').trigger('click')
+    try {
+      await wrapper.get('#internalRebuild').trigger('click')
 
-    expect(wrapper.get('#infoModalTitle').text()).toBe('Internal Website Rebuild')
-    expect(wrapper.get('#infoModal .intro').text()).toContain('From 2019 to 2023')
-    expect(wrapper.get('#infoModal .details').text()).toContain('This platform was built')
+      expect(wrapper.get('#infoModalTitle').text()).toBe('Internal Website Rebuild')
+      expect(wrapper.get('#infoModal .intro').text()).toContain('From 2019 to 2023')
+      expect(wrapper.get('#infoModal .details').text()).toContain('This platform was built')
+    } finally {
+      wrapper.unmount()
+    }
   })
 })
