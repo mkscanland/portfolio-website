@@ -36,6 +36,9 @@ jobs:
       - name: Run unit tests
         run: npm run test:unit -- --run
 
+      - name: Check lint
+        run: npm run lint:check
+
   deploy:
     needs: build-and-test
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
