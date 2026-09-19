@@ -28,13 +28,6 @@
   box-shadow: 0 8px 6px -6px black;
 }
 
-.mainWrapper {
-  flex-direction: column !important;
-  min-height: calc(100vh - 56px) !important;
-  display: flex !important;
-  background-color: #212529;
-}
-
 .projectImg {
   min-height: 20em;
   max-height: 30em;
@@ -118,20 +111,38 @@ body {
 .title {
   font-size: 0.9em;
   width: 25em;
+  max-width: calc(100% - 70px);
   height: 3.25em;
   top: -3.25em;
   line-height: 3.25em;
   margin-bottom: -3.25em;
-  margin-left: -12.5em;
+  margin-left: 0;
   padding-top: 0.5em;
   position: absolute;
   left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   text-transform: uppercase;
   display: block;
   font-weight: 700;
   letter-spacing: 0.25em;
+  white-space: nowrap;
 }
+
+@media all and (max-width: 400px) {
+  .title {
+    font-size: 0.75em;
+    letter-spacing: 0.15em;
+  }
+}
+
+@media all and (max-width: 340px) {
+  .title {
+    font-size: 0.7em;
+    letter-spacing: 0.1em;
+  }
+}
+
 .bg-orange .title {
   --bs-bg-opacity: 1;
   background: #e97770 url('@/assets/images/overlay.png');
