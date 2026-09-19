@@ -12,6 +12,21 @@
 - Keep portfolio claims factual and in the owner's voice. Check existing content and user-provided references before updating a role, result, date, or metric. If a needed fact is uncertain, use an explicit placeholder and ask for the fact instead of inventing it.
 - Test observable behavior or important rendered content with Vitest and Vue Test Utils. For example, a view test can assert its heading and project link; a button test can trigger a click and assert the result. Avoid tests that only mirror implementation details or static icon files.
 
+## Responsive CSS
+
+- Prefer Bootstrap's existing grid and responsive utilities before custom layout rules. Keep component-specific styling in its single-file component when appropriate; use `src/assets/css/site.css` for shared global styling.
+- Choose units by intent; do not mechanically convert `px` to relative units.
+
+| Need | Preferred approach |
+| --- | --- |
+| Available layout space | Use flex/grid and constraints such as `min()`, `max()`, `clamp()`, `max-width`, and `min-width`. |
+| Text or spacing that should scale with its context | Use `em` or `rem`. |
+| Exact visual details | Keep `px` for one-pixel borders, outlines, shadows, fixed image decorations, and other deliberate pixel dimensions. |
+| A viewport-specific layout change | Add a focused media query. Keep the surrounding unit convention unless a different unit communicates the requirement more clearly. |
+
+- Diagnose the element creating overflow before changing global constraints. Do not use `overflow-x: hidden` or `overflow-x: clip` to conceal a layout bug.
+- For responsive changes, test the affected route at narrow mobile, standard mobile, tablet, and desktop widths.
+
 ## Linting and formatting
 
 The existing ESLint flat config uses `eslint-plugin-vue`'s `flat/essential` rules, the Vitest plugin for colocated `src/**/*.spec.js` files, and `eslint-config-prettier`. Oxlint checks correctness and Vue/Vitest patterns; Prettier uses `.prettierrc.json` (`singleQuote`, no semicolons, 100-character print width). Follow these repository settings rather than imposing a new style.
