@@ -1,13 +1,28 @@
 @media all and (min-width: 900px) {
   .navbar .nav-item .dropdown-menu {
     display: none;
+    margin-top: 0;
   }
+
   .navbar .nav-item:hover .dropdown-menu {
     display: block;
   }
-  .navbar .nav-item .dropdown-menu {
-    margin-top: 0;
-  }
+}
+
+html {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+body {
+  min-width: 0;
+  min-height: 100%;
+  background-color: #212529;
+}
+
+img,
+svg {
+  max-width: 100%;
 }
 
 .blue {
@@ -29,13 +44,9 @@
 }
 
 .projectImg {
-  min-height: 20em;
+  width: 100%;
   max-height: 30em;
-}
-
-body {
-  background-color: #212529;
-  height: 100%;
+  object-fit: contain;
 }
 
 .bg-lightGrey {
@@ -49,8 +60,12 @@ body {
 }
 
 .wrapperSection {
-  padding-top: 5em;
-  padding-bottom: 10em;
+  padding-block: clamp(3.5rem, 8vw, 10rem);
+}
+
+.wrapperSection > :not(.title) {
+  max-width: 1320px;
+  margin-inline: auto;
 }
 
 .wrapperSection.bg-orange {
@@ -79,68 +94,47 @@ body {
 }
 
 .wrapperSection.bg-spotlight {
-  background: url('@/assets/images/banner.jpg') center center;
-  background-size: auto;
-  background-size: cover;
+  background: url('@/assets/images/banner.jpg') center / cover;
 }
 
 .wrapperSection.bg-lightbulb {
-  background: url('@/assets/images/lightbulb-bg.jpg') center center;
-  background-size: auto;
-  background-size: cover;
+  background: url('@/assets/images/lightbulb-bg.jpg') center / cover;
 }
 
 .wrapperSection.bg-computer {
-  background: url('@/assets/images/computer-bg.jpg') center center;
-  background-size: auto;
-  background-size: cover;
+  background: url('@/assets/images/computer-bg.jpg') center / cover;
 }
 
-/*Bootstrap Additions*/
+/* Bootstrap additions */
 .bottom-20 {
   bottom: 20% !important;
 }
 
 .whiteBox {
-  padding: 2em;
+  padding: clamp(1.25rem, 4vw, 2rem);
   border-radius: 0.35em;
-  box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.25);
 }
 
-/*Titles*/
+/* Section titles remain in document flow so any title can wrap safely. */
 .title {
-  font-size: 0.9em;
-  width: 25em;
-  max-width: calc(100% - 70px);
-  height: 3.25em;
-  top: -3.25em;
-  line-height: 3.25em;
-  margin-bottom: -3.25em;
-  margin-left: 0;
-  padding-top: 0.5em;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(25em, calc(100% - 4.5rem));
+  min-height: 3.25em;
+  margin: 0 auto 1rem;
+  padding: 0.75em 1em;
+  transform: translateY(-50%);
+  font-size: clamp(0.7rem, 0.62rem + 0.35vw, 0.9rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: clamp(0.08em, 0.04em + 0.35vw, 0.25em);
   text-align: center;
   text-transform: uppercase;
-  display: block;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  white-space: nowrap;
-}
-
-@media all and (max-width: 400px) {
-  .title {
-    font-size: 0.75em;
-    letter-spacing: 0.15em;
-  }
-}
-
-@media all and (max-width: 340px) {
-  .title {
-    font-size: 0.7em;
-    letter-spacing: 0.1em;
-  }
+  text-wrap: balance;
 }
 
 .bg-orange .title {
@@ -173,44 +167,33 @@ body {
   color: #000;
 }
 
-.title:before,
-.wrapper .title:after {
-  height: 15px;
-  bottom: -15px;
-  background-size: 100% 100%;
+.title::before,
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -38px;
+  width: 35px;
+  height: 38px;
+  background-image: url('@/assets/images/shadow.png');
 }
 
 .title::before {
-  content: '';
-  position: absolute;
-  bottom: -38px;
   left: -35px;
-  width: 35px;
-  height: 38px;
-  background-image: url('@/assets/images/shadow.png');
 }
 
 .title::after {
-  -moz-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  transform: scaleX(-1);
-  content: '';
-  position: absolute;
-  bottom: -38px;
   right: -35px;
-  width: 35px;
-  height: 38px;
-  background-image: url('@/assets/images/shadow.png');
+  transform: scaleX(-1);
 }
 
-/*Overlayed Images*/
+/* Project cards grow with their content instead of relying on a fixed height. */
 .projectContainer {
   position: relative;
+  display: grid;
   width: 100%;
+  min-height: clamp(22rem, 42vw, 25rem);
+  height: 100%;
   overflow: hidden;
-  height: 400px;
-  max-height: 400px;
 }
 
 .projectContainer.hasMore {
@@ -222,9 +205,14 @@ body {
   outline-offset: 3px;
 }
 
+.projectContainer img,
+.projectContainer .overlay {
+  grid-area: 1 / 1;
+}
+
 .projectContainer img {
-  height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   filter: brightness(30%);
 }
@@ -252,34 +240,34 @@ body {
 }
 
 .projectContainer .overlay {
-  position: absolute;
-  bottom: 0;
-  padding: 15px;
-  width: 100%;
-  z-index: 5;
+  position: relative;
+  z-index: 1;
+  align-self: end;
+  min-width: 0;
+  padding: clamp(0.75rem, 3vw, 1rem);
 }
 
 .projectContainer .overlay::before {
   content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
   background: #000;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  bottom: -500px;
-  z-index: -2;
+  opacity: 0;
+  transform: translateY(100%);
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.3s ease-out;
+}
+
+.projectContainer:is(:hover, :focus-visible) .overlay::before {
   opacity: 0.5;
-  transition: all 0.3s ease-out;
+  transform: translateY(0);
 }
 
-.projectContainer:hover .overlay::before {
-  bottom: 0px;
-}
-
-.projectContainer:hover .overlay::after {
-  position: absolute;
-  bottom: 0;
+.projectContainer.hasMore:is(:hover, :focus-visible) .overlay::after {
+  color: skyblue;
+  content: 'Click for More';
   text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
@@ -287,18 +275,51 @@ body {
     1px 1px 0 #000;
 }
 
-.projectContainer.hasMore:is(:hover, :focus-visible) .overlay::after {
-  color: skyblue;
-  content: 'Click for More';
+.modal-body {
+  overflow: hidden;
 }
 
 .modal-body img {
-  max-width: 80%;
+  max-width: 100%;
   max-height: 40vh;
-  object-fit: cover;
+  object-fit: contain;
 }
 
-.modal-body img:hover {
-  transition: all 0.3s ease-in-out;
-  transform: scale(1.75);
+@media (hover: hover) and (pointer: fine) {
+  .modal-body img:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.25);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .wrapperSection {
+    padding-inline: 1rem !important;
+  }
+
+  .wrapperSection .container {
+    padding-inline: 0 !important;
+  }
+
+  .projectContainer {
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+
+  .projectContainer .overlay {
+    position: static;
+    grid-area: auto;
+    background: #212529;
+  }
+
+  .projectContainer .overlay::before {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projectContainer .overlay::before,
+  .modal-body img {
+    transition: none;
+  }
 }
