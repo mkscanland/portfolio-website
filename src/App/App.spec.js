@@ -9,7 +9,7 @@ describe('App', () => {
   it('renders the site shell around routed content', () => {
     const wrapper = shallowMount(App)
 
-    expect(wrapper.get('#app').exists()).toBe(true)
+    expect(wrapper.get('.app-shell').exists()).toBe(true)
     expect(wrapper.findComponent(NavBar).exists()).toBe(true)
     expect(wrapper.find('main').exists()).toBe(true)
     expect(wrapper.findComponent(SiteFooter).exists()).toBe(true)

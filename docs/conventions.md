@@ -2,7 +2,7 @@
 
 ## Vue and content
 
-- Keep a route view or shared component with its `.spec.js` in a directory of the same name. Use the current JavaScript single-file component style; prefer `<script setup>` for new component logic when it fits. Do not rewrite an existing Options API component solely for consistency.
+- Keep a route view or shared component with its unit `.spec.js` in a directory of the same name. Put browser regression tests in `tests/` and keep them focused on user-visible behavior at the affected viewport. Use the current JavaScript single-file component style; prefer `<script setup>` for new component logic when it fits. Do not rewrite an existing Options API component solely for consistency.
 - Reuse the existing Bootstrap utilities and `src/assets/css/site.css` before adding CSS. Keep component-specific rules scoped when appropriate, as in `src/App/App.vue`.
 - Use props for simple component values and slots for caller-supplied markup. `ProjectDetailLayout` uses named slots for subtitle, intro, and sidebar content and its default slot for the article; `ProjectCard` uses a named metadata slot and a default description slot. Keep page-specific article content in each view so project-specific claims are easy to review.
 - Store repeated static page content in `src/content/` and render it with `v-for` using a stable item key. A card and its modal should consume the same project object rather than keeping separate copies of the text.
@@ -11,6 +11,21 @@
 - Follow Vue's essential style rules for templates, props, and lists. For example, use a stable key: `<li v-for="project in projects" :key="project.id">{{ project.name }}</li>`.
 - Keep portfolio claims factual and in the owner's voice. Check existing content and user-provided references before updating a role, result, date, or metric. If a needed fact is uncertain, use an explicit placeholder and ask for the fact instead of inventing it.
 - Test observable behavior or important rendered content with Vitest and Vue Test Utils. For example, a view test can assert its heading and project link; a button test can trigger a click and assert the result. Avoid tests that only mirror implementation details or static icon files.
+
+## Responsive CSS
+
+- Prefer Bootstrap's existing grid and responsive utilities before custom layout rules. Keep component-specific styling in its single-file component when appropriate; use `src/assets/css/site.css` for shared global styling.
+- Choose units by intent; do not mechanically convert `px` to relative units.
+
+| Need | Preferred approach |
+| --- | --- |
+| Available layout space | Use flex/grid and constraints such as `min()`, `max()`, `clamp()`, `max-width`, and `min-width`. |
+| Text or spacing that should scale with its context | Use `em` or `rem`. |
+| Exact visual details | Keep `px` for one-pixel borders, outlines, shadows, fixed image decorations, and other deliberate pixel dimensions. |
+| A viewport-specific layout change | Add a focused media query. Keep the surrounding unit convention unless a different unit communicates the requirement more clearly. |
+
+- Diagnose the element creating overflow before changing global constraints. Do not use `overflow-x: hidden` or `overflow-x: clip` to conceal a layout bug.
+- For responsive changes, test the affected route at narrow mobile, standard mobile, tablet, and desktop widths.
 
 ## Linting and formatting
 
