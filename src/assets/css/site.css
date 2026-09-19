@@ -1,4 +1,4 @@
-@media all and (min-width: 900px) {
+@media all and (min-width: 56.25rem) {
   .navbar .nav-item .dropdown-menu {
     display: none;
   }
@@ -10,6 +10,13 @@
   }
 }
 
+html,
+body,
+#app {
+  width: 100%;
+  max-width: 100%;
+}
+
 .blue {
   color: skyblue;
 }
@@ -18,21 +25,14 @@
   color: skyblue;
   font-weight: bold;
   text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    -0.0625em -0.0625em 0 #000,
+    0.0625em -0.0625em 0 #000,
+    -0.0625em 0.0625em 0 #000,
+    0.0625em 0.0625em 0 #000;
 }
 
 .ulShadow {
-  box-shadow: 0 8px 6px -6px black;
-}
-
-.mainWrapper {
-  flex-direction: column !important;
-  min-height: calc(100vh - 56px) !important;
-  display: flex !important;
-  background-color: #212529;
+  box-shadow: 0 0.5rem 0.375rem -0.375rem black;
 }
 
 .projectImg {
@@ -87,23 +87,20 @@ body {
 
 .wrapperSection.bg-spotlight {
   background: url('@/assets/images/banner.jpg') center center;
-  background-size: auto;
   background-size: cover;
 }
 
 .wrapperSection.bg-lightbulb {
   background: url('@/assets/images/lightbulb-bg.jpg') center center;
-  background-size: auto;
   background-size: cover;
 }
 
 .wrapperSection.bg-computer {
   background: url('@/assets/images/computer-bg.jpg') center center;
-  background-size: auto;
   background-size: cover;
 }
 
-/*Bootstrap Additions*/
+/* Bootstrap additions */
 .bottom-20 {
   bottom: 20% !important;
 }
@@ -111,27 +108,36 @@ body {
 .whiteBox {
   padding: 2em;
   border-radius: 0.35em;
-  box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 0.0625rem 0.0625rem rgba(255, 255, 255, 0.25);
 }
 
-/*Titles*/
+/* Titles */
 .title {
   font-size: 0.9em;
-  width: 25em;
+  width: min(25em, calc(100% - 5.5rem));
   height: 3.25em;
   top: -3.25em;
   line-height: 3.25em;
   margin-bottom: -3.25em;
-  margin-left: -12.5em;
+  margin-left: 0;
   padding-top: 0.5em;
   position: absolute;
   left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   text-transform: uppercase;
   display: block;
   font-weight: 700;
   letter-spacing: 0.25em;
 }
+
+@media all and (max-width: 30rem) {
+  .title {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+  }
+}
+
 .bg-orange .title {
   --bs-bg-opacity: 1;
   background: #e97770 url('@/assets/images/overlay.png');
@@ -162,20 +168,13 @@ body {
   color: #000;
 }
 
-.title:before,
-.wrapper .title:after {
-  height: 15px;
-  bottom: -15px;
-  background-size: 100% 100%;
-}
-
 .title::before {
   content: '';
   position: absolute;
-  bottom: -38px;
-  left: -35px;
-  width: 35px;
-  height: 38px;
+  bottom: -2.75em;
+  left: -2.5em;
+  width: 2.5em;
+  height: 2.75em;
   background-image: url('@/assets/images/shadow.png');
 }
 
@@ -186,20 +185,20 @@ body {
   transform: scaleX(-1);
   content: '';
   position: absolute;
-  bottom: -38px;
-  right: -35px;
-  width: 35px;
-  height: 38px;
+  bottom: -2.75em;
+  right: -2.5em;
+  width: 2.5em;
+  height: 2.75em;
   background-image: url('@/assets/images/shadow.png');
 }
 
-/*Overlayed Images*/
+/* Overlayed images */
 .projectContainer {
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 400px;
-  max-height: 400px;
+  height: 25rem;
+  max-height: 25rem;
 }
 
 .projectContainer.hasMore {
@@ -207,8 +206,8 @@ body {
 }
 
 .projectContainer.hasMore:focus-visible {
-  outline: 3px solid skyblue;
-  outline-offset: 3px;
+  outline: 0.1875rem solid skyblue;
+  outline-offset: 0.1875rem;
 }
 
 .projectContainer img {
@@ -225,25 +224,25 @@ body {
 .projectContainer p {
   color: white;
   text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    -0.0625em -0.0625em 0 #000,
+    0.0625em -0.0625em 0 #000,
+    -0.0625em 0.0625em 0 #000,
+    0.0625em 0.0625em 0 #000;
 }
 
 .projectContainer .projectTitle {
   color: skyblue;
   text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    -0.0625em -0.0625em 0 #000,
+    0.0625em -0.0625em 0 #000,
+    -0.0625em 0.0625em 0 #000,
+    0.0625em 0.0625em 0 #000;
 }
 
 .projectContainer .overlay {
   position: absolute;
   bottom: 0;
-  padding: 15px;
+  padding: 0.9375rem;
   width: 100%;
   z-index: 5;
 }
@@ -256,24 +255,24 @@ body {
   z-index: 1;
   position: absolute;
   left: 0;
-  bottom: -500px;
+  bottom: -31.25rem;
   z-index: -2;
   opacity: 0.5;
   transition: all 0.3s ease-out;
 }
 
 .projectContainer:hover .overlay::before {
-  bottom: 0px;
+  bottom: 0;
 }
 
 .projectContainer:hover .overlay::after {
   position: absolute;
   bottom: 0;
   text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    -0.0625em -0.0625em 0 #000,
+    0.0625em -0.0625em 0 #000,
+    -0.0625em 0.0625em 0 #000,
+    0.0625em 0.0625em 0 #000;
 }
 
 .projectContainer.hasMore:is(:hover, :focus-visible) .overlay::after {
