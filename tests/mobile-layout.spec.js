@@ -1,39 +1,74 @@
 import { expect, test } from '@playwright/test'
 
-const titleText = 'Important Practices & Goals'
+const viewports = [
+  { name: 'narrow mobile', width: 320, height: 900 },
+  { name: 'mobile', width: 375, height: 900 },
+  { name: 'Bootstrap sm', width: 576, height: 900 },
+  { name: 'Bootstrap md', width: 768, height: 900 },
+  { name: 'desktop', width: 1280, height: 900 },
+]
 
-for (const width of [320, 360]) {
-  test(`${titleText} stays on one line at ${width}px`, async ({ page }) => {
-    await page.setViewportSize({ width, height: 900 })
-    await page.goto('/')
+const routes = ['/', '/webapps', '/appraisals']
 
-    const title = page.locator('.title').filter({ hasText: titleText })
+for (const viewport of viewports) {
+  for (const route of routes) {
+    test(`${route} fits the ${viewport.name} viewport`, async ({ page }) => {
+      await page.setViewportSize(viewport)
+      await page.goto(route)
 
-    await expect(title).toHaveCSS('white-space', 'nowrap')
+      const layout = await page.evaluate(() => {
+        const viewportWidth = document.documentElement.clientWidth
+        const titles = [...document.querySelectorAll('.title')].map((element) => {
+          const rect = element.getBoundingClientRect()
 
-    const layout = await title.evaluate((element) => {
-      const titleRect = element.getBoundingClientRect()
-      const textRange = document.createRange()
-      textRange.selectNodeContents(element)
+          return {
+            text: element.textContent.trim(),
+            left: rect.left,
+            right: rect.right,
+            height: rect.height,
+            scrollHeight: element.scrollHeight,
+          }
+        })
 
-      const textRects = [...textRange.getClientRects()]
+        return {
+          viewportWidth,
+          documentWidth: document.documentElement.scrollWidth,
+          titles,
+        }
+      })
 
-      return {
-        documentWidth: document.documentElement.scrollWidth,
-        titleRect: {
-          left: titleRect.left,
-          right: titleRect.right,
-        },
-        textRects: textRects.map((rect) => ({
-          left: rect.left,
-          right: rect.right,
-        })),
+      expect(layout.documentWidth).toBeLessThanOrEqual(layout.viewportWidth)
+
+      for (const title of layout.titles) {
+        expect(title.left, `${title.text} starts outside the viewport`).toBeGreaterThanOrEqual(0)
+        expect(title.right, `${title.text} ends outside the viewport`).toBeLessThanOrEqual(
+          layout.viewportWidth,
+        )
+        expect(title.height, `${title.text} clips vertically`).toBeGreaterThanOrEqual(
+          title.scrollHeight,
+        )
       }
     })
-
-    expect(layout.textRects).toHaveLength(1)
-    expect(layout.textRects[0].left).toBeGreaterThanOrEqual(layout.titleRect.left)
-    expect(layout.textRects[0].right).toBeLessThanOrEqual(layout.titleRect.right)
-    expect(layout.documentWidth).toBeLessThanOrEqual(width)
-  })
+  }
 }
+
+test('mobile project cards expose all content without a fixed-height crop', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 900 })
+  await page.goto('/webapps')
+
+  const cards = page.locator('.projectContainer')
+  await expect(cards.first()).toBeVisible()
+
+  const cardLayouts = await cards.evaluateAll((elements) =>
+    elements.map((element) => ({
+      height: element.getBoundingClientRect().height,
+      scrollHeight: element.scrollHeight,
+      overlayPosition: getComputedStyle(element.querySelector('.overlay')).position,
+    })),
+  )
+
+  for (const card of cardLayouts) {
+    expect(card.height).toBeGreaterThanOrEqual(card.scrollHeight)
+    expect(card.overlayPosition).toBe('static')
+  }
+})
