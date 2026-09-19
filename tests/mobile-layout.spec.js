@@ -5,10 +5,21 @@ const viewports = [
   { name: 'mobile', width: 375, height: 900 },
   { name: 'Bootstrap sm', width: 576, height: 900 },
   { name: 'Bootstrap md', width: 768, height: 900 },
+  { name: 'Bootstrap lg', width: 992, height: 900 },
   { name: 'desktop', width: 1280, height: 900 },
 ]
 
-const routes = ['/', '/webapps', '/appraisals']
+const routes = [
+  '/',
+  '/appraisals',
+  '/rulesengine',
+  '/webapps',
+  '/randomforest',
+  '/validations',
+  '/itsystems',
+  '/rebuild',
+  '/annualreports',
+]
 
 for (const viewport of viewports) {
   for (const route of routes) {
@@ -69,6 +80,16 @@ for (const viewport of viewports) {
     })
   }
 }
+
+test('collapsed navigation opens dropdowns below the Bootstrap lg breakpoint', async ({ page }) => {
+  await page.setViewportSize({ width: 991, height: 900 })
+  await page.goto('/')
+
+  await page.getByRole('button', { name: 'Toggle navigation' }).click()
+  await page.getByRole('link', { name: 'Portfolio', exact: true }).click()
+
+  await expect(page.getByRole('link', { name: 'Digital Appraisals Platform' })).toBeVisible()
+})
 
 test('mobile project cards expose all content without a fixed-height crop', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 900 })
