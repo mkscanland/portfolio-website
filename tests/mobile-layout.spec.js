@@ -13,7 +13,7 @@ const routes = ['/', '/webapps', '/appraisals']
 for (const viewport of viewports) {
   for (const route of routes) {
     test(`${route} fits the ${viewport.name} viewport`, async ({ page }) => {
-      await page.setViewportSize(viewport)
+      await page.setViewportSize({ width: viewport.width, height: viewport.height })
       await page.goto(route)
 
       const layout = await page.evaluate(() => {
