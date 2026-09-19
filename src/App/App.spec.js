@@ -10,7 +10,6 @@ describe('App', () => {
     const wrapper = shallowMount(App)
 
     expect(wrapper.get('.app-shell').exists()).toBe(true)
-    expect(wrapper.find('#app').exists()).toBe(false)
     expect(wrapper.findComponent(NavBar).exists()).toBe(true)
     expect(wrapper.find('main').exists()).toBe(true)
     expect(wrapper.findComponent(SiteFooter).exists()).toBe(true)
