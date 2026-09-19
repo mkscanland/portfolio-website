@@ -2,7 +2,7 @@
 
 ## Vue and content
 
-- Keep a route view or shared component with its `.spec.js` in a directory of the same name. Use the current JavaScript single-file component style; prefer `<script setup>` for new component logic when it fits. Do not rewrite an existing Options API component solely for consistency.
+- Keep a route view or shared component with its unit `.spec.js` in a directory of the same name. Put browser regression tests in `tests/` and keep them focused on user-visible behavior at the affected viewport. Use the current JavaScript single-file component style; prefer `<script setup>` for new component logic when it fits. Do not rewrite an existing Options API component solely for consistency.
 - Reuse the existing Bootstrap utilities and `src/assets/css/site.css` before adding CSS. Keep component-specific rules scoped when appropriate, as in `src/App/App.vue`.
 - Use props for simple component values and slots for caller-supplied markup. `ProjectDetailLayout` uses named slots for subtitle, intro, and sidebar content and its default slot for the article; `ProjectCard` uses a named metadata slot and a default description slot. Keep page-specific article content in each view so project-specific claims are easy to review.
 - Store repeated static page content in `src/content/` and render it with `v-for` using a stable item key. A card and its modal should consume the same project object rather than keeping separate copies of the text.
