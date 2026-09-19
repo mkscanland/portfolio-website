@@ -136,6 +136,13 @@ body {
   }
 }
 
+@media all and (max-width: 340px) {
+  .title {
+    font-size: 0.7em;
+    letter-spacing: 0.1em;
+  }
+}
+
 .bg-orange .title {
   --bs-bg-opacity: 1;
   background: #e97770 url('@/assets/images/overlay.png');
