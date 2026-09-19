@@ -126,9 +126,10 @@ body {
   display: block;
   font-weight: 700;
   letter-spacing: 0.25em;
+  white-space: nowrap;
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 400px) {
   .title {
     font-size: 0.75em;
     letter-spacing: 0.15em;
