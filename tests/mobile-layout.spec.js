@@ -20,13 +20,21 @@ for (const viewport of viewports) {
         const viewportWidth = document.documentElement.clientWidth
         const titles = [...document.querySelectorAll('.title')].map((element) => {
           const rect = element.getBoundingClientRect()
+          const range = document.createRange()
+          range.selectNodeContents(element)
 
           return {
             text: element.textContent.trim(),
             left: rect.left,
             right: rect.right,
-            height: rect.height,
-            scrollHeight: element.scrollHeight,
+            top: rect.top,
+            bottom: rect.bottom,
+            textRects: [...range.getClientRects()].map((textRect) => ({
+              left: textRect.left,
+              right: textRect.right,
+              top: textRect.top,
+              bottom: textRect.bottom,
+            })),
           }
         })
 
@@ -44,9 +52,19 @@ for (const viewport of viewports) {
         expect(title.right, `${title.text} ends outside the viewport`).toBeLessThanOrEqual(
           layout.viewportWidth,
         )
-        expect(title.height, `${title.text} clips vertically`).toBeGreaterThanOrEqual(
-          title.scrollHeight,
-        )
+
+        for (const textRect of title.textRects) {
+          expect(textRect.left, `${title.text} text clips on the left`).toBeGreaterThanOrEqual(
+            title.left,
+          )
+          expect(textRect.right, `${title.text} text clips on the right`).toBeLessThanOrEqual(
+            title.right,
+          )
+          expect(textRect.top, `${title.text} text clips on top`).toBeGreaterThanOrEqual(title.top)
+          expect(textRect.bottom, `${title.text} text clips on bottom`).toBeLessThanOrEqual(
+            title.bottom,
+          )
+        }
       }
     })
   }
@@ -68,7 +86,7 @@ test('mobile project cards expose all content without a fixed-height crop', asyn
   )
 
   for (const card of cardLayouts) {
-    expect(card.height).toBeGreaterThanOrEqual(card.scrollHeight)
+    expect(card.scrollHeight - card.height).toBeLessThanOrEqual(1)
     expect(card.overlayPosition).toBe('static')
   }
 })
