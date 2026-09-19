@@ -5,7 +5,7 @@ import SiteFooter from '../components/SiteFooter/SiteFooter.vue'
 </script>
 
 <template>
-  <div id="app">
+  <div class="app-shell">
     <NavBar />
 
     <main>
@@ -17,13 +17,17 @@ import SiteFooter from '../components/SiteFooter/SiteFooter.vue'
 </template>
 
 <style scoped>
-#app {
+.app-shell {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
+  min-width: 0;
 }
+
 main {
   flex: 1 1 auto;
   width: 100%;
+  min-width: 0;
 }
 </style>
