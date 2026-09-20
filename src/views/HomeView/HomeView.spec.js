@@ -11,6 +11,8 @@ describe('HomeView', () => {
     expect(wrapper.text()).toContain('Software Engineer')
     expect(wrapper.text()).toContain('Digital Appraisals Platform')
     expect(wrapper.text()).toContain('Rules Engine / Self Service')
+    expect(wrapper.text()).toContain('working toward a senior engineering role')
+    expect(wrapper.text()).toContain('Vice President at Sonic Automotive')
     expect(wrapper.find('a[href="/appraisals"]').exists()).toBe(true)
     expect(wrapper.find('a[href="/rulesengine"]').exists()).toBe(true)
   })
