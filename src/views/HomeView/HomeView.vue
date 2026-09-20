@@ -132,6 +132,10 @@
                   try to learn best practices before I contribute to any projects. Preparing for
                   most situations and truly learning a subject before implementing a new system has
                   saved a lot of time and man-hours in the future.<br />
+                  I am working toward a senior engineering role with guidance from my direct
+                  supervisor, a Vice President at Sonic Automotive. I am building that experience
+                  by gaining exposure to more architecture, contributing more actively in architecture
+                  design meetings, and collaborating more closely with other teams.<br />
                   Having a good life outside of work is also important. I try to learn a new skill
                   every year and spend as much time with my loved ones as I can.
                 </p>
