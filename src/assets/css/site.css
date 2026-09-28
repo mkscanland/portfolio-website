@@ -280,6 +280,13 @@ body {
   pointer-events: auto !important;
 }
 
+/* Bootstrap's dropdown script added this spacer when a mobile submenu opened. */
+@media (max-width: 899px) {
+  .navbar .dropdown-menu.show {
+    margin-top: var(--bs-dropdown-spacer);
+  }
+}
+
 /* Reka's menu root and list wrapper must not add boxes inside the Bootstrap navbar layout. */
 .nav-menu-root,
 .nav-menu-root > div {
