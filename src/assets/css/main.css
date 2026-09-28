@@ -7,6 +7,15 @@
 @import 'bootstrap/dist/css/bootstrap.min.css' layer(legacy);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
+/* Keep Bootstrap's three-column width exact; Tailwind's CSS optimizer rounds its percentage. */
+@layer legacy {
+  @media (min-width: 768px) {
+    .row-cols-md-3 > * {
+      width: calc(100% / var(--bs-three, 3));
+    }
+  }
+}
+
 @theme {
   --breakpoint-*: initial;
   --breakpoint-sm: 576px;
