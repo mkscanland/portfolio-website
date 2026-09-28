@@ -563,7 +563,7 @@ Make the script executable with `chmod +x scripts/visual-compare.sh` and commit 
 ### 3.10 Done when
 
 - The checks in 0.5 pass.
-- The compare script reports **35 passed**: 27 page screenshots and 8 interactive-state screenshots.
+- The compare script reports **32 passed**: 27 full-page tests and 5 interactive-state tests (33 screenshot assertions, because the mobile menu test takes two).
 - The CI **Visual regression** job is green on the PR.
 
 ---
