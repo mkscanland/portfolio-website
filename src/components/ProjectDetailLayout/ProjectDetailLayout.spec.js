@@ -16,9 +16,9 @@ describe('ProjectDetailLayout', () => {
     })
 
     expect(wrapper.get('h1').text()).toBe('A project')
-    expect(wrapper.get('.col-lg-6 p').text()).toBe('Short introduction')
-    expect(wrapper.get('.border-bottom p').text()).toBe('Overview')
-    expect(wrapper.get('.col-md-4 h2').text()).toBe('Technology')
+    expect(wrapper.get('[data-testid="project-subtitle"] p').text()).toBe('Short introduction')
+    expect(wrapper.get('[data-testid="project-intro"] p').text()).toBe('Overview')
+    expect(wrapper.get('[data-testid="project-sidebar"] h2').text()).toBe('Technology')
     expect(wrapper.get('article h2').text()).toBe('Details')
   })
 })

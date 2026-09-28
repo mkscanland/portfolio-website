@@ -11,6 +11,10 @@
    ```
 
    If either fails, fix the issue and rerun the affected check. Report a check you could not run and why. Run `npm run build` as well when changing app code, routing, build configuration, or assets.
+   For changes to templates, CSS, or assets, also run `npm run test:visual:compare -- origin/main`.
+   It builds the base ref in a temporary git worktree and compares screenshots against the current build.
+   Expect zero failures unless the change intentionally alters the appearance. In the cloud container,
+   use `PW_CHROMIUM_PATH=/opt/pw-browsers/chromium` before the command.
 5. Summarize the changed files, the reason for the change, and the check results in the PR. Follow the branch prefixes in [conventions.md](conventions.md).
 
-Pull requests into `main` run build, unit tests, and the nonmutating lint check. Deployment only runs on a successful push to `main`.
+Pull requests into `main` run build, unit tests, the nonmutating lint check, and visual regression tests. Deployment only runs on a successful push to `main`.
