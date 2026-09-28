@@ -1,11 +1,15 @@
 import { describe, expect, it } from 'vitest'
-import { mount } from '@vue/test-utils'
+import { flushPromises, mount } from '@vue/test-utils'
 
 import NavBar from './NavBar.vue'
+import { createTestRouter } from '@/test-utils/router'
 
 describe('NavBar', () => {
-  it('renders the primary navigation and project links', () => {
-    const wrapper = mount(NavBar)
+  it('renders the primary navigation and project links', async () => {
+    const router = createTestRouter()
+    await router.push('/')
+    await router.isReady()
+    const wrapper = mount(NavBar, { global: { plugins: [router] } })
 
     expect(wrapper.get('a[href="/"]').text()).toBe('Home')
     expect(wrapper.get('a[href="/appraisals"]').text()).toBe('Digital Appraisals Platform')
@@ -17,13 +21,43 @@ describe('NavBar', () => {
     expect(wrapper.get('a[href="/itsystems"]').text()).toBe('IT Systems')
   })
 
-  it('provides resume, guide, and contact destinations', () => {
-    const wrapper = mount(NavBar)
+  it('provides resume, guide, and contact destinations', async () => {
+    const router = createTestRouter()
+    await router.push('/')
+    await router.isReady()
+    const wrapper = mount(NavBar, { global: { plugins: [router] } })
 
     expect(wrapper.find('a[href="/files/Scanland-Matthew_Resume.pdf"]').exists()).toBe(true)
     expect(wrapper.find('a[href="/files/Scanland-Matthew_Resume.docx"]').exists()).toBe(true)
     expect(wrapper.find('a[href="/files/Azure-Data-Lake-Plan_Public Copy.pdf"]').exists()).toBe(true)
     expect(wrapper.find('a[href="https://www.linkedin.com/in/matthew-scanland/"]').exists()).toBe(true)
     expect(wrapper.find('a[href="mailto:mkscanland@gmail.com"]').exists()).toBe(true)
+  })
+
+  it('opens the mobile menu and closes it after route navigation', async () => {
+    const router = createTestRouter()
+    await router.push('/')
+    await router.isReady()
+    const wrapper = mount(NavBar, { global: { plugins: [router] } })
+
+    await wrapper.get('button[aria-label="Toggle navigation"]').trigger('click')
+    expect(wrapper.get('#navbarNavDropdown').classes()).toContain('show')
+
+    await router.push('/webapps')
+    await flushPromises()
+    expect(wrapper.get('#navbarNavDropdown').classes()).not.toContain('show')
+  })
+
+  it('opens the Portfolio dropdown on click', async () => {
+    const router = createTestRouter()
+    await router.push('/')
+    await router.isReady()
+    const wrapper = mount(NavBar, { global: { plugins: [router] } })
+
+    const portfolio = wrapper.findAll('button').find((button) => button.text() === 'Portfolio')
+    expect(portfolio).toBeDefined()
+    await portfolio.trigger('click')
+    await flushPromises()
+    expect(portfolio.classes()).toContain('show')
   })
 })

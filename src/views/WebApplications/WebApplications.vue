@@ -1,5 +1,14 @@
 <script setup>
 import { ref } from 'vue'
+import {
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogOverlay,
+  DialogPortal,
+  DialogRoot,
+  DialogTitle,
+} from 'reka-ui'
 import ProjectCard from '@/components/ProjectCard/ProjectCard.vue'
 import computerBgImage from '@/assets/images/computer-bg.jpg'
 import lightbulbBgImage from '@/assets/images/lightbulb-bg.jpg'
@@ -8,9 +17,17 @@ import { webApplicationProjects } from '@/content/webApplications'
 const keyCpesProjects = webApplicationProjects.filter((project) => project.group === 'key')
 const otherProjects = webApplicationProjects.filter((project) => project.group === 'other')
 const selectedProject = ref(null)
+const modalOpen = ref(false)
 
 function selectProject(project) {
   selectedProject.value = project
+  modalOpen.value = true
+}
+
+// Match Bootstrap: focus the dialog container, not the close button (which would show a focus ring).
+function focusModal(event) {
+  event.preventDefault()
+  document.getElementById('infoModal')?.focus()
 }
 </script>
 
@@ -100,8 +117,6 @@ function selectProject(project) {
                 :alt="project.alt"
                 :title="project.title"
                 interactive
-                data-bs-toggle="modal"
-                data-bs-target="#infoModal"
                 @select="selectProject(project)"
               >
                 <template #meta>
@@ -121,7 +136,7 @@ function selectProject(project) {
       <div class="col-lg-12 col-md-12 mx-auto text-center">
         <p>
           Please enjoy various web applications that I've created throughout the years! If you have
-          any further questions please feel free to <a href="/#contact">Contact me</a>.
+          any further questions please feel free to <RouterLink to="/#contact">Contact me</RouterLink>.
         </p>
       </div>
     </div>
@@ -136,8 +151,6 @@ function selectProject(project) {
                 :alt="project.alt"
                 :title="project.title"
                 interactive
-                data-bs-toggle="modal"
-                data-bs-target="#infoModal"
                 @select="selectProject(project)"
               >
                 <template #meta>
@@ -151,38 +164,42 @@ function selectProject(project) {
       </div>
     </div>
   </div>
-  <div
-    class="modal fade"
-    id="infoModal"
-    tabindex="-1"
-    aria-labelledby="infoModalTitle"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="infoModalTitle">{{ selectedProject?.title }}</h3>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+  <DialogRoot v-model:open="modalOpen">
+    <DialogPortal>
+      <DialogOverlay class="modal-backdrop show" />
+      <DialogContent
+        id="infoModal"
+        class="modal show"
+        style="display: block"
+        @open-auto-focus="focusModal"
+        @click.self="modalOpen = false"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <DialogTitle as="h3" class="modal-title">
+                {{ selectedProject?.title }}
+              </DialogTitle>
+              <DialogClose class="btn-close" aria-label="Close" />
+            </div>
+            <div class="modal-body" id="infoModalBody">
+              <img
+                v-if="selectedProject"
+                :src="selectedProject.image"
+                :alt="selectedProject.title"
+                class="img-fluid ulShadow mx-auto d-block"
+              />
+              <DialogDescription class="intro mt-5">
+                {{ selectedProject?.intro || selectedProject?.description }}
+              </DialogDescription>
+              <b>Details:</b>
+              <p class="details mt-1">{{ selectedProject?.details }}</p>
+            </div>
+          </div>
         </div>
-        <div class="modal-body" id="infoModalBody">
-          <img
-            v-if="selectedProject"
-            :src="selectedProject.image"
-            :alt="selectedProject.title"
-            class="img-fluid ulShadow mx-auto d-block"
-          />
-          <p class="intro mt-5">{{ selectedProject?.intro || selectedProject?.description }}</p>
-          <b>Details:</b>
-          <p class="details mt-1">{{ selectedProject?.details }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+      </DialogContent>
+    </DialogPortal>
+  </DialogRoot>
 </template>
 
 <style scoped>
