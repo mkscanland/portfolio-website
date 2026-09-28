@@ -8,6 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test:unit": "vitest",
+    "test:visual": "playwright test",
+    "test:visual:compare": "bash scripts/visual-compare.sh",
     "lint": "run-s lint:oxlint lint:eslint",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
@@ -25,6 +27,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
+    "@playwright/test": "1.63.0",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vitest/eslint-plugin": "^1.6.9",
     "@vue/test-utils": "^2.4.6",

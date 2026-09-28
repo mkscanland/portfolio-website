@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+    types: [opened, synchronize, reopened, labeled, unlabeled]
 
 permissions:
   contents: read
@@ -38,6 +39,44 @@ jobs:
 
       - name: Check lint
         run: npm run lint:check
+
+  visual:
+    name: Visual regression
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.63.0-noble
+    # A maintainer adds this label after reviewing an intentional visual change.
+    continue-on-error: ${{ contains(github.event.pull_request.labels.*.name, 'visual-change-approved') }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Trust workspace
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Compare screenshots with the base branch
+        run: npm run test:visual:compare -- "origin/${{ github.base_ref }}"
+
+      - name: Upload report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 14
 
   deploy:
     needs: build-and-test

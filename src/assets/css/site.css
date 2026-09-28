@@ -10,34 +10,8 @@
   }
 }
 
-.blue {
-  color: skyblue;
-}
-
-.blue.textBorder {
-  color: skyblue;
-  font-weight: bold;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-}
-
 .ulShadow {
   box-shadow: 0 8px 6px -6px black;
-}
-
-.mainWrapper {
-  flex-direction: column !important;
-  min-height: calc(100vh - 56px) !important;
-  display: flex !important;
-  background-color: #212529;
-}
-
-.projectImg {
-  min-height: 20em;
-  max-height: 30em;
 }
 
 body {

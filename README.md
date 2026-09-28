@@ -61,3 +61,14 @@ npm run lint
 ```
 
 `npm run lint` applies available fixes. To check without changing files, run `npm run lint:check`.
+
+### Visual regression tests
+
+Compare screenshots from the current build with a build of `origin/main`:
+
+```sh
+npm run test:visual:compare -- origin/main
+```
+
+This builds the base branch in a temporary git worktree and runs Playwright against both builds.
+Install Chromium with `npx playwright install chromium` if it is not already available.
