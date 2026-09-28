@@ -64,4 +64,30 @@ describe('WebApplications', () => {
       wrapper.unmount()
     }
   })
+
+  it('keeps the modal open after dragging from details and closes on a backdrop press', async () => {
+    const router = createTestRouter()
+    await router.push('/')
+    await router.isReady()
+    const wrapper = mount(WebApplications, {
+      global: { plugins: [router] },
+    })
+
+    try {
+      await wrapper.get('#internalRebuild').trigger('click')
+      await flushPromises()
+      const modal = new DOMWrapper(document.querySelector('#infoModal'))
+
+      await modal.get('.details').trigger('pointerdown')
+      await modal.trigger('click')
+      expect(document.querySelector('#infoModal')).not.toBeNull()
+
+      await modal.trigger('pointerdown')
+      await modal.trigger('click')
+      await flushPromises()
+      expect(document.querySelector('#infoModal')).toBeNull()
+    } finally {
+      wrapper.unmount()
+    }
+  })
 })

@@ -70,6 +70,9 @@ jobs:
       - name: Compare screenshots with the base branch
         run: npm run test:visual:compare -- "origin/${{ github.base_ref }}"
 
+      - name: Check browser behavior
+        run: npm run test:behavior
+
       - name: Upload report
         if: failure()
         uses: actions/upload-artifact@v4

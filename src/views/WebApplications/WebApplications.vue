@@ -18,6 +18,7 @@ const keyCpesProjects = webApplicationProjects.filter((project) => project.group
 const otherProjects = webApplicationProjects.filter((project) => project.group === 'other')
 const selectedProject = ref(null)
 const modalOpen = ref(false)
+let pointerStartedOnBackdrop = false
 
 function selectProject(project) {
   selectedProject.value = project
@@ -28,6 +29,15 @@ function selectProject(project) {
 function focusModal(event) {
   event.preventDefault()
   document.getElementById('infoModal')?.focus()
+}
+
+function trackBackdropPress(event) {
+  pointerStartedOnBackdrop = event.target === event.currentTarget
+}
+
+function closeOnBackdropClick(event) {
+  if (pointerStartedOnBackdrop && event.target === event.currentTarget) modalOpen.value = false
+  pointerStartedOnBackdrop = false
 }
 </script>
 
@@ -172,7 +182,8 @@ function focusModal(event) {
         class="modal show"
         style="display: block"
         @open-auto-focus="focusModal"
-        @click.self="modalOpen = false"
+        @pointerdown="trackBackdropPress"
+        @click.self="closeOnBackdropClick"
       >
         <div class="modal-dialog modal-xl modal-dialog-centered">
           <div class="modal-content">
