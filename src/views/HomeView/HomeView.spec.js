@@ -2,10 +2,14 @@ import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 
 import HomeView from './HomeView.vue'
+import { createTestRouter } from '@/test-utils/router'
 
 describe('HomeView', () => {
-  it('renders the portfolio introduction and current projects', () => {
-    const wrapper = mount(HomeView)
+  it('renders the portfolio introduction and current projects', async () => {
+    const router = createTestRouter()
+    await router.push('/')
+    await router.isReady()
+    const wrapper = mount(HomeView, { global: { plugins: [router] } })
 
     expect(wrapper.get('h1').text()).toBe('Matthew Scanland')
     expect(wrapper.text()).toContain('Software Engineer')
@@ -17,8 +21,11 @@ describe('HomeView', () => {
     expect(wrapper.find('a[href="/rulesengine"]').exists()).toBe(true)
   })
 
-  it('exposes the resume and contact destinations', () => {
-    const wrapper = mount(HomeView)
+  it('exposes the resume and contact destinations', async () => {
+    const router = createTestRouter()
+    await router.push('/')
+    await router.isReady()
+    const wrapper = mount(HomeView, { global: { plugins: [router] } })
 
     expect(wrapper.find('a[href="/files/Scanland-Matthew_Resume.pdf"]').exists()).toBe(true)
     expect(wrapper.find('a[href="mailto:mkscanland@gmail.com"]').exists()).toBe(true)

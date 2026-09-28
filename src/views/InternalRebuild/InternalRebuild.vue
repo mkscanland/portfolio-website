@@ -147,7 +147,7 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     <h3>Applications</h3>
     <p>
       You can see more information about the support website (and other) applications in other pages
-      on the <a href="/webapps">Web Apps Page</a>.
+      on the <RouterLink to="/webapps">Web Apps Page</RouterLink>.
     </p>
   </ProjectDetailLayout>
 </template>

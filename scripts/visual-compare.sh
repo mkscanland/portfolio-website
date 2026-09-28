@@ -18,7 +18,7 @@ git worktree add --detach "$BASE_DIR" "$BASE_REF"
 (cd "$BASE_DIR" && npm ci --no-audit --no-fund && npm run build)
 
 rm -rf e2e/__screenshots__
-VISUAL_DIST_DIR="$BASE_DIR/dist" npx playwright test --update-snapshots=all --reporter=list
+VISUAL_DIST_DIR="$BASE_DIR/dist" npx playwright test e2e/visual.spec.js --update-snapshots=all --reporter=list
 
 npm run build
-VISUAL_DIST_DIR="$ROOT/dist" npx playwright test
+VISUAL_DIST_DIR="$ROOT/dist" npx playwright test e2e/visual.spec.js

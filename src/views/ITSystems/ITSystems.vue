@@ -19,7 +19,7 @@ import cpesSiteImage from '@/assets/images/cpes-site.png'
       <div class="col-lg-12 col-md-12 mx-auto text-center">
         <p>
           This page lists various IT Systems that I've worked on over the years. If you have any
-          further questions please feel free to <a href="/#contact">Contact me</a>.
+          further questions please feel free to <RouterLink to="/#contact">Contact me</RouterLink>.
         </p>
       </div>
     </div>
@@ -71,7 +71,7 @@ import cpesSiteImage from '@/assets/images/cpes-site.png'
                   PHPCas login system to restrict login to only CPES personell. The main website is
                   open to the public but several files and pages are locked behind a login wall for
                   our member companies.<br />
-                  <a href="/rebuild">Internal Website Rebuild</a>
+                  <RouterLink to="/rebuild">Internal Website Rebuild</RouterLink>
                 </p>
               </ProjectCard>
             </div>

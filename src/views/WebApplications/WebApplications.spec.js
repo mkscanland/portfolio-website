@@ -1,11 +1,17 @@
 import { describe, expect, it } from 'vitest'
-import { mount } from '@vue/test-utils'
+import { DOMWrapper, flushPromises, mount } from '@vue/test-utils'
 
 import WebApplications from './WebApplications.vue'
+import { createTestRouter } from '@/test-utils/router'
 
 describe('WebApplications', () => {
-  it('renders current and archived project sections', () => {
-    const wrapper = mount(WebApplications)
+  it('renders current and archived project sections', async () => {
+    const router = createTestRouter()
+    await router.push('/')
+    await router.isReady()
+    const wrapper = mount(WebApplications, {
+      global: { plugins: [router] },
+    })
 
     expect(wrapper.get('h1').text()).toBe('Web Applications Archive')
     expect(wrapper.text()).toContain('Digital Appraisals Platform')
@@ -15,27 +21,73 @@ describe('WebApplications', () => {
   })
 
   it('populates the project details modal when an archived project is selected', async () => {
-    const wrapper = mount(WebApplications, { attachTo: document.body })
+    const router = createTestRouter()
+    await router.push('/')
+    await router.isReady()
+    const wrapper = mount(WebApplications, {
+      attachTo: document.body,
+      global: { plugins: [router] },
+    })
 
     try {
       await wrapper.get('#internalRebuild').trigger('click')
+      await flushPromises()
 
-      expect(wrapper.get('#infoModalTitle').text()).toBe('Internal Website Rebuild')
-      expect(wrapper.get('#infoModal .intro').text()).toContain('From 2019 to 2023')
-      expect(wrapper.get('#infoModal .details').text()).toContain('This platform was built')
+      const modal = new DOMWrapper(document.querySelector('#infoModal'))
+      expect(modal.get('.modal-title').text()).toBe('Internal Website Rebuild')
+      expect(modal.attributes('aria-labelledby')).toBe(modal.get('.modal-title').attributes('id'))
+      expect(modal.get('.intro').text()).toContain('From 2019 to 2023')
+      expect(modal.get('.details').text()).toContain('This platform was built')
     } finally {
       wrapper.unmount()
     }
   })
 
   it('updates modal content for keyboard selection and renders details as text', async () => {
-    const wrapper = mount(WebApplications)
+    const router = createTestRouter()
+    await router.push('/')
+    await router.isReady()
+    const wrapper = mount(WebApplications, {
+      global: { plugins: [router] },
+    })
 
-    await wrapper.get('#checkout').trigger('keydown.enter')
+    try {
+      await wrapper.get('#checkout').trigger('keydown.enter')
+      await flushPromises()
 
-    expect(wrapper.get('#infoModalTitle').text()).toBe('Checkout Tracker')
-    expect(wrapper.get('#infoModalBody img').attributes('alt')).toBe('Checkout Tracker')
-    expect(wrapper.get('#infoModal .details').text()).toContain('“status”')
-    expect(wrapper.find('#infoModal q').exists()).toBe(false)
+      const modal = new DOMWrapper(document.querySelector('#infoModal'))
+      expect(modal.get('.modal-title').text()).toBe('Checkout Tracker')
+      expect(modal.get('#infoModalBody img').attributes('alt')).toBe('Checkout Tracker')
+      expect(modal.get('.details').text()).toContain('“status”')
+      expect(modal.find('q').exists()).toBe(false)
+    } finally {
+      wrapper.unmount()
+    }
+  })
+
+  it('keeps the modal open after dragging from details and closes on a backdrop press', async () => {
+    const router = createTestRouter()
+    await router.push('/')
+    await router.isReady()
+    const wrapper = mount(WebApplications, {
+      global: { plugins: [router] },
+    })
+
+    try {
+      await wrapper.get('#internalRebuild').trigger('click')
+      await flushPromises()
+      const modal = new DOMWrapper(document.querySelector('#infoModal'))
+
+      await modal.get('.details').trigger('pointerdown')
+      await modal.trigger('click')
+      expect(document.querySelector('#infoModal')).not.toBeNull()
+
+      await modal.trigger('pointerdown')
+      await modal.trigger('click')
+      await flushPromises()
+      expect(document.querySelector('#infoModal')).toBeNull()
+    } finally {
+      wrapper.unmount()
+    }
   })
 })

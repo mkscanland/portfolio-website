@@ -5,7 +5,7 @@
       <div class="col-lg-6 mx-auto">
         <p class="fs-5 mb-4">
           Welcome to my portfolio website. Please take a look around.<br />
-          For any questions feel free to <a href="/#contact">Contact Me</a>.
+          For any questions feel free to <RouterLink to="/#contact">Contact Me</RouterLink>.
         </p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
           <a class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold" href="#significantProjects">My Portfolio</a>
@@ -45,7 +45,7 @@
           </li>
           <li>
             <strong>Leadership:</strong> technical lead on the
-            <a href="/rulesengine">Rules Engine</a>; mentor and collaborator across engineering and
+            <RouterLink to="/rulesengine">Rules Engine</RouterLink>; mentor and collaborator across engineering and
             business teams.
           </li>
           <li>
@@ -59,9 +59,9 @@
           problems. At Sonic Automotive I design and develop back-end services (and some front-end
           features). I try to lend a hand to anyone that is struggling and explain any topics they
           might be having trouble with. As technical lead of the
-          <a href="/rulesengine">Rules Engine project</a>, I design services and APIs consumed by
+          <RouterLink to="/rulesengine">Rules Engine project</RouterLink>, I design services and APIs consumed by
           multiple teams. I also contribute to initiatives for the
-          <a href="/appraisals">Appraisals API</a>. Some significant projects are showcased on
+          <RouterLink to="/appraisals">Appraisals API</RouterLink>. Some significant projects are showcased on
           this site - if you'd like more details, <a href="#contact">reach out</a>.
         </p>
 
@@ -85,7 +85,7 @@
                   I help lead the platform and work across FastAPI, Python, Azure API Management, Cosmos DB, Azure
                   Functions, Terraform, and CI/CD.
                 </p>
-                <a href="/appraisals" class="btn btn-info"> Read More </a>
+                <RouterLink to="/appraisals" class="btn btn-info"> Read More </RouterLink>
               </div>
             </div>
             <div class="col d-flex align-items-start">
@@ -97,7 +97,7 @@
                   .NET and SQL systems, improving the UI and search experience, and moving rule management toward a more
                   maintainable architecture.
                 </p>
-                <a href="/rulesengine" class="btn btn-info"> Read More </a>
+                <RouterLink to="/rulesengine" class="btn btn-info"> Read More </RouterLink>
               </div>
             </div>
             <div class="col d-flex align-items-start">
@@ -108,7 +108,7 @@
                   Earlier full-stack and infrastructure work at Virginia Tech, including the internal website rebuild,
                   Lab Validations, and administrative applications.
                 </p>
-                <a href="/webapps" class="btn btn-info"> See CPES archive </a>
+                <RouterLink to="/webapps" class="btn btn-info"> See CPES archive </RouterLink>
               </div>
             </div>
           </div>

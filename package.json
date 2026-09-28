@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test:unit": "vitest",
-    "test:visual": "playwright test",
+    "test:visual": "playwright test e2e/visual.spec.js",
+    "test:behavior": "playwright test e2e/behavior.spec.js",
     "test:visual:compare": "bash scripts/visual-compare.sh",
     "lint": "run-s lint:oxlint lint:eslint",
     "lint:oxlint": "oxlint . --fix",
@@ -22,6 +23,7 @@
     "@fortawesome/fontawesome-free": "^7.2.0",
     "bootstrap": "^5.3.8",
     "core-js": "^3.48.0",
+    "reka-ui": "^2.10.5",
     "vue": "^3.5.28",
     "vue-router": "^5.0.2"
   },
