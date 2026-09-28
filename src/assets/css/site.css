@@ -91,20 +91,29 @@ body {
 /*Titles*/
 .title {
   font-size: 0.9em;
-  width: 25em;
+  /* Leave room for the 35px shadows on each side so narrow screens do not scroll sideways. */
+  width: min(25em, 100% - 70px);
   height: 3.25em;
   top: -3.25em;
   line-height: 3.25em;
   margin-bottom: -3.25em;
-  margin-left: -12.5em;
+  margin-inline: auto;
   padding-top: 0.5em;
   position: absolute;
-  left: 50%;
+  left: 0;
+  right: 0;
   text-align: center;
   text-transform: uppercase;
   display: block;
   font-weight: 700;
   letter-spacing: 0.25em;
+}
+
+/* Tighten the spacing so titles still fit the narrower tab on the smallest phones. */
+@media (max-width: 359.98px) {
+  .title {
+    letter-spacing: 0.15em;
+  }
 }
 .bg-orange .title {
   --bs-bg-opacity: 1;
