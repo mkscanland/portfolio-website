@@ -97,11 +97,6 @@ body {
   }
 }
 
-/*Bootstrap Additions*/
-.bottom-20 {
-  bottom: 20% !important;
-}
-
 .whiteBox {
   padding: 2em;
   border-radius: 0.35em;
