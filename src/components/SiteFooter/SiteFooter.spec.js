@@ -9,7 +9,7 @@ describe('SiteFooter', () => {
 
     expect(wrapper.get('footer').exists()).toBe(true)
     expect(wrapper.text()).toContain('Vue.js')
-    expect(wrapper.text()).toContain('Bootstrap')
+    expect(wrapper.text()).toContain('Tailwind CSS')
     expect(wrapper.get('a[href="mailto:mkscanland@gmail.com"]').exists()).toBe(true)
   })
 })
