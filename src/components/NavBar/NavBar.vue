@@ -30,7 +30,7 @@ watch(() => route.fullPath, closeMenus)
 
 <template>
   <nav
-    class="navbar navbar-expand-lg navbar-dark tw:bg-dark tw:sticky tw:top-0 tw:z-[1020]"
+    class="navbar navbar-expand-lg navbar-dark bg-dark sticky top-0 z-[1020]"
     @click="closeMenusOnLink"
   >
     <CollapsibleRoot v-model:open="menuOpen" class="container-fluid">

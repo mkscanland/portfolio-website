@@ -1,44 +1,44 @@
 <template>
-  <div class="wrapperSection section-spotlight tw:text-secondary tw:px-6 tw:text-center">
-    <div class="tw:py-12">
-      <h1 class="display-5 tw:font-bold tw:text-white">Matthew Scanland</h1>
-      <div class="tw:mx-auto tw:lg:w-1/2">
-        <p class="tw:text-[1.25rem] tw:mb-6">
+  <div class="wrapperSection section-spotlight text-secondary px-6 text-center">
+    <div class="py-12">
+      <h1 class="display-5 font-bold text-white">Matthew Scanland</h1>
+      <div class="mx-auto lg:w-1/2">
+        <p class="text-[1.25rem] mb-6">
           Welcome to my portfolio website. Please take a look around.<br />
           For any questions feel free to <RouterLink to="/#contact">Contact Me</RouterLink>.
         </p>
-        <div class="tw:grid tw:gap-2 tw:sm:flex tw:sm:justify-center">
-          <a class="btn btn-outline-info btn-lg tw:px-6 tw:sm:me-4 tw:font-bold" href="#significantProjects">My Portfolio</a>
-          <a class="btn btn-outline-light btn-lg tw:px-6" href="/files/Scanland-Matthew_Resume.pdf"><i
+        <div class="grid gap-2 sm:flex sm:justify-center">
+          <a class="btn btn-outline-info btn-lg px-6 sm:me-4 font-bold" href="#significantProjects">My Portfolio</a>
+          <a class="btn btn-outline-light btn-lg px-6" href="/files/Scanland-Matthew_Resume.pdf"><i
               class="fa fa-file-pdf"></i> Resume</a>
         </div>
       </div>
     </div>
   </div>
-  <div class="wrapperSection section-orange tw:relative tw:text-white tw:px-6 tw:text-center">
+  <div class="wrapperSection section-orange relative text-white px-6 text-center">
     <div class="title">Career</div>
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:lg:py-12">
-      <div class="whiteBox tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto tw:md:w-8/12 tw:lg:w-6/12">
+    <div class="flex flex-wrap -mx-3 lg:py-12">
+      <div class="whiteBox w-full shrink-0 px-3 mx-auto md:w-8/12 lg:w-6/12">
         <h1>Software Engineer</h1>
-        <p class="lead tw:mb-2">
+        <p class="lead mb-2">
           6+ years building back-end systems and leading cross-functional teams.
         </p>
         <p>
           <span class="small">Bachelor's degree in Computer Science from Virginia Tech</span>
         </p>
-        <a class="btn btn-outline-light btn-lg tw:px-6" href="/files/Scanland-Matthew_Resume.pdf"><i
+        <a class="btn btn-outline-light btn-lg px-6" href="/files/Scanland-Matthew_Resume.pdf"><i
             class="fa fa-file-pdf"></i> Resume</a>
       </div>
     </div>
   </div>
-  <div class="wrapperSection section-light tw:relative tw:text-dark tw:px-6">
+  <div class="wrapperSection section-light relative text-dark px-6">
     <div class="title">About Me</div>
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:lg:py-12">
-      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto tw:md:w-10/12 tw:lg:w-8/12">
-        <img src="~@/assets/images/scanland_matthew.jpg" class="tw:max-w-full tw:h-auto tw:rounded-md tw:mx-auto tw:block"
+    <div class="flex flex-wrap -mx-3 lg:py-12">
+      <div class="w-full shrink-0 px-3 mx-auto md:w-10/12 lg:w-8/12">
+        <img src="~@/assets/images/scanland_matthew.jpg" class="max-w-full h-auto rounded-md mx-auto block"
           alt="Headshot of Matthew Scanland" />
         <br />
-        <ul class="tw:text-muted tw:list-none tw:pl-0 tw:mx-12">
+        <ul class="text-muted list-none pl-0 mx-12">
           <li>
             <strong>Core strengths:</strong> backend architecture, API design, and translating business needs into
             technical solutions.
@@ -54,7 +54,7 @@
           </li>
         </ul>
 
-        <p class="tw:text-muted tw:mx-12">
+        <p class="text-muted mx-12">
           I'm recognized for exceeding goals and delivering maintainable solutions for complex
           problems. At Sonic Automotive I design and develop back-end services (and some front-end
           features). I try to lend a hand to anyone that is struggling and explain any topics they
@@ -69,14 +69,14 @@
     </div>
   </div>
   <a id="significantProjects"></a>
-  <div class="wrapperSection section-grey tw:relative tw:text-dark tw:px-6 tw:pb-0">
+  <div class="wrapperSection section-grey relative text-dark px-6 pb-0">
     <div class="title">Significant Projects</div>
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:lg:py-12">
-      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto tw:md:w-10/12 tw:lg:w-8/12">
-        <div class="bs-container tw:px-6">
-          <h2 class="tw:pb-2 tw:border-b tw:border-bs-border">Backend Development</h2>
-          <div class="tw:grid tw:grid-cols-1 tw:lg:grid-cols-3 tw:gap-6 tw:py-12">
-            <div class="tw:flex tw:items-start">
+    <div class="flex flex-wrap -mx-3 lg:py-12">
+      <div class="w-full shrink-0 px-3 mx-auto md:w-10/12 lg:w-8/12">
+        <div class="bs-container px-6">
+          <h2 class="pb-2 border-b border-bs-border">Backend Development</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 py-12">
+            <div class="flex items-start">
               <div>
                 <h2><i class="fa fa-server small"></i> Digital Appraisals Platform</h2>
                 <p>
@@ -88,7 +88,7 @@
                 <RouterLink to="/appraisals" class="btn btn-info"> Read More </RouterLink>
               </div>
             </div>
-            <div class="tw:flex tw:items-start">
+            <div class="flex items-start">
               <div>
                 <h2><i class="fa fa-object-group small"></i> Rules Engine / Self Service</h2>
                 <p>
@@ -100,7 +100,7 @@
                 <RouterLink to="/rulesengine" class="btn btn-info"> Read More </RouterLink>
               </div>
             </div>
-            <div class="tw:flex tw:items-start">
+            <div class="flex items-start">
               <div>
                 <h2><i class="fa fa-book-open small"></i> CPES Projects</h2>
                 <p>
@@ -116,13 +116,13 @@
       </div>
     </div>
   </div>
-  <div class="section-lightgrey tw:relative tw:text-dark tw:px-6 tw:pb-12">
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:lg:py-12">
-      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto tw:md:w-10/12 tw:lg:w-8/12">
-        <div class="bs-container tw:px-6">
-          <h2 class="tw:pb-2 tw:border-b tw:border-bs-border">Current Goals</h2>
-          <div class="tw:grid tw:grid-cols-1 tw:lg:grid-cols-3 tw:gap-6 tw:py-12">
-            <div class="tw:flex tw:items-start">
+  <div class="section-lightgrey relative text-dark px-6 pb-12">
+    <div class="flex flex-wrap -mx-3 lg:py-12">
+      <div class="w-full shrink-0 px-3 mx-auto md:w-10/12 lg:w-8/12">
+        <div class="bs-container px-6">
+          <h2 class="pb-2 border-b border-bs-border">Current Goals</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 py-12">
+            <div class="flex items-start">
               <div>
                 <h2><i class="fa fa-brain small"></i> Self Improvement</h2>
                 <p>
@@ -141,7 +141,7 @@
                 </p>
               </div>
             </div>
-            <div class="tw:flex tw:items-start">
+            <div class="flex items-start">
               <div>
                 <h2><i class="fa fa-object-group small"></i> DAP Improvements</h2>
                 <p>
@@ -152,7 +152,7 @@
                 </p>
               </div>
             </div>
-            <div class="tw:flex tw:items-start">
+            <div class="flex items-start">
               <div>
                 <h2><i class="fa fa-cloud small"></i> AWS/Azure</h2>
                 <p>
@@ -173,16 +173,16 @@
       </div>
     </div>
   </div>
-  <div class="section-dark tw:relative tw:text-light tw:px-6 tw:pb-12">
+  <div class="section-dark relative text-light px-6 pb-12">
     <div class="title">Important Practices &amp; Goals</div>
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:lg:py-12">
-      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto tw:md:w-10/12 tw:lg:w-8/12">
-        <div class="bs-container tw:px-6 tw:py-12">
-          <h2 class="tw:pb-2 tw:border-b tw:border-bs-border">Practices</h2>
-          <div class="tw:grid tw:grid-cols-1 tw:sm:grid-cols-2 tw:md:grid-cols-3 tw:gap-6 tw:py-2">
-            <div class="tw:flex tw:items-start">
+    <div class="flex flex-wrap -mx-3 lg:py-12">
+      <div class="w-full shrink-0 px-3 mx-auto md:w-10/12 lg:w-8/12">
+        <div class="bs-container px-6 py-12">
+          <h2 class="pb-2 border-b border-bs-border">Practices</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 py-2">
+            <div class="flex items-start">
               <div>
-                <h4 class="tw:font-bold tw:mb-0"><i class="fa fa-eye small"></i> Readability</h4>
+                <h4 class="font-bold mb-0"><i class="fa fa-eye small"></i> Readability</h4>
                 <p>
                   Writing code that others are able to understand and read easily is one of my
                   biggest goals. With my code I can ensure future updates are more easily
@@ -190,9 +190,9 @@
                 </p>
               </div>
             </div>
-            <div class="tw:flex tw:items-start">
+            <div class="flex items-start">
               <div>
-                <h4 class="tw:font-bold tw:mb-0">
+                <h4 class="font-bold mb-0">
                   <i class="fa fa-list-check small"></i> Project Management
                 </h4>
                 <p>
@@ -201,9 +201,9 @@
                 </p>
               </div>
             </div>
-            <div class="tw:flex tw:items-start">
+            <div class="flex items-start">
               <div>
-                <h4 class="tw:font-bold tw:mb-0"><i class="fa fa-comments small"></i> Communication</h4>
+                <h4 class="font-bold mb-0"><i class="fa fa-comments small"></i> Communication</h4>
                 <p>
                   Working with a team comes into play in nearly every aspect of Software
                   Development. Great communication skills drastically improve morale, coordination,
@@ -212,10 +212,10 @@
               </div>
             </div>
           </div>
-          <div class="tw:grid tw:grid-cols-1 tw:gap-6 tw:py-6">
-            <div class="tw:flex tw:items-start">
+          <div class="grid grid-cols-1 gap-6 py-6">
+            <div class="flex items-start">
               <div>
-                <h4 class="tw:font-bold tw:mb-0"><i class="fa fa-robot small"></i> AI/ML</h4>
+                <h4 class="font-bold mb-0"><i class="fa fa-robot small"></i> AI/ML</h4>
                 <p>
                   As AI (machine learning) becomes more prevelant in my career I try to stay
                   up-to-date on the latest developments. I believe that AI is a good <b>tool</b> to
@@ -232,15 +232,15 @@
         </div>
       </div>
     </div>
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:py-0">
-      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto tw:md:w-10/12 tw:lg:w-8/12">
-        <div class="bs-container tw:px-6">
-          <h2 class="tw:pb-2 tw:border-b tw:border-bs-border">Goals</h2>
-          <div class="album tw:py-12">
-            <div class="tw:grid tw:grid-cols-1 tw:sm:grid-cols-2 tw:md:grid-cols-3 tw:gap-4 tw:text-dark">
+    <div class="flex flex-wrap -mx-3 py-0">
+      <div class="w-full shrink-0 px-3 mx-auto md:w-10/12 lg:w-8/12">
+        <div class="bs-container px-6">
+          <h2 class="pb-2 border-b border-bs-border">Goals</h2>
+          <div class="album py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-dark">
               <div>
-                <div class="card tw:shadow-bs-sm">
-                  <img src="~@/assets/images/problem-solving.png" class="tw:max-w-full tw:h-auto"
+                <div class="card shadow-bs-sm">
+                  <img src="~@/assets/images/problem-solving.png" class="max-w-full h-auto"
                     alt="Problem solving illustration" />
                   <div class="card-body">
                     <p class="card-text">
@@ -256,8 +256,8 @@
                 </div>
               </div>
               <div>
-                <div class="card tw:shadow-bs-sm">
-                  <img src="~@/assets/images/marble.png" class="tw:max-w-full tw:h-auto" alt="Attention to detail illustration" />
+                <div class="card shadow-bs-sm">
+                  <img src="~@/assets/images/marble.png" class="max-w-full h-auto" alt="Attention to detail illustration" />
                   <div class="card-body">
                     <p class="card-text">
                       <b>Attention to Detail</b><br />
@@ -271,8 +271,8 @@
                 </div>
               </div>
               <div>
-                <div class="card tw:shadow-bs-sm">
-                  <img src="~@/assets/images/analysis.png" class="tw:max-w-full tw:h-auto" alt="Analysis illustration" />
+                <div class="card shadow-bs-sm">
+                  <img src="~@/assets/images/analysis.png" class="max-w-full h-auto" alt="Analysis illustration" />
                   <div class="card-body">
                     <p class="card-text">
                       <b>Analysis</b><br />
@@ -286,8 +286,8 @@
                 </div>
               </div>
               <div>
-                <div class="card tw:shadow-bs-sm">
-                  <img src="~@/assets/images/reactiveness-hand.png" class="tw:max-w-full tw:h-auto"
+                <div class="card shadow-bs-sm">
+                  <img src="~@/assets/images/reactiveness-hand.png" class="max-w-full h-auto"
                     alt="Responsiveness illustration" />
                   <div class="card-body">
                     <p class="card-text">
@@ -305,8 +305,8 @@
                 </div>
               </div>
               <div>
-                <div class="card tw:shadow-bs-sm">
-                  <img src="~@/assets/images/ux-feeling.png" class="tw:max-w-full tw:h-auto" alt="Patterns illustration" />
+                <div class="card shadow-bs-sm">
+                  <img src="~@/assets/images/ux-feeling.png" class="max-w-full h-auto" alt="Patterns illustration" />
                   <div class="card-body">
                     <p class="card-text">
                       <b>Patterns</b><br />
@@ -321,8 +321,8 @@
                 </div>
               </div>
               <div>
-                <div class="card tw:shadow-bs-sm">
-                  <img src="~@/assets/images/usability-coming-together.png" class="tw:max-w-full tw:h-auto"
+                <div class="card shadow-bs-sm">
+                  <img src="~@/assets/images/usability-coming-together.png" class="max-w-full h-auto"
                     alt="Usability and responsiveness illustration" />
                   <div class="card-body">
                     <p class="card-text">
@@ -343,38 +343,38 @@
     </div>
   </div>
   <a id="contact"></a>
-  <div class="wrapperSection section-grey tw:relative tw:text-dark tw:px-6 tw:pb-0">
+  <div class="wrapperSection section-grey relative text-dark px-6 pb-0">
     <div class="title">Contact Info</div>
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:lg:py-12">
-      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto tw:md:w-10/12 tw:lg:w-8/12">
-        <div class="bs-container tw:px-6 tw:py-12">
-          <h2 class="tw:pb-2 tw:border-b tw:border-bs-border">Feel Free to Use Any!</h2>
-          <div class="tw:grid tw:grid-cols-1 tw:sm:grid-cols-2 tw:md:grid-cols-4 tw:gap-6 tw:py-12">
-            <div class="tw:flex tw:items-start">
+    <div class="flex flex-wrap -mx-3 lg:py-12">
+      <div class="w-full shrink-0 px-3 mx-auto md:w-10/12 lg:w-8/12">
+        <div class="bs-container px-6 py-12">
+          <h2 class="pb-2 border-b border-bs-border">Feel Free to Use Any!</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 py-12">
+            <div class="flex items-start">
               <div>
-                <h4 class="tw:font-bold tw:mb-0">
+                <h4 class="font-bold mb-0">
                   <a href="https://www.linkedin.com/in/matthew-scanland/"><i class="fa-brands fa-linkedin small"></i>
                     LinkedIn</a>
                 </h4>
               </div>
             </div>
-            <div class="tw:flex tw:items-start">
+            <div class="flex items-start">
               <div>
-                <h4 class="tw:font-bold tw:mb-0"><i class="fa fa-inbox small"></i> Email</h4>
+                <h4 class="font-bold mb-0"><i class="fa fa-inbox small"></i> Email</h4>
                 <p>
                   <a href="mailto:mkscanland@gmail.com">mkscanland@gmail.com</a>
                 </p>
               </div>
             </div>
-            <div class="tw:flex tw:items-start">
+            <div class="flex items-start">
               <div>
-                <h4 class="tw:font-bold tw:mb-0"><i class="fa fa-phone small"></i> Phone</h4>
+                <h4 class="font-bold mb-0"><i class="fa fa-phone small"></i> Phone</h4>
                 <p>(540) 267-5538</p>
               </div>
             </div>
-            <div class="tw:flex tw:items-start">
+            <div class="flex items-start">
               <div>
-                <h4 class="tw:font-bold tw:mb-0"><i class="fa fa-crow small"></i> Carrier Pigeon</h4>
+                <h4 class="font-bold mb-0"><i class="fa fa-crow small"></i> Carrier Pigeon</h4>
                 <p>Send to <q>The Bird Man</q>. He will relay the message shortly.</p>
               </div>
             </div>

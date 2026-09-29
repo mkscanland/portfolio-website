@@ -5,21 +5,21 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
 <template>
   <ProjectDetailLayout title="Internal Website Rebuild">
     <template #subtitle>
-      <p class="tw:text-[1.25rem] tw:mb-6">Supporting CPES staff, students, and faculty</p>
+      <p class="text-[1.25rem] mb-6">Supporting CPES staff, students, and faculty</p>
     </template>
     <template #intro>
-      <div class="tw:overflow-hidden" style="max-height: 30vh">
-        <div class="bs-container tw:px-12 tw:text-center">
+      <div class="overflow-hidden" style="max-height: 30vh">
+        <div class="bs-container px-12 text-center">
           <img
             src="~@/assets/images/support-site-navbar.png"
-            class="tw:max-w-full tw:h-auto tw:border tw:border-bs-border tw:rounded-lg tw:shadow-bs-lg tw:mb-6"
+            class="max-w-full h-auto border border-bs-border rounded-lg shadow-bs-lg mb-6"
             alt="Example image"
             loading="lazy"
           />
         </div>
       </div>
-      <div class="tw:mx-auto tw:lg:w-full">
-        <p class="lead tw:mb-6">
+      <div class="mx-auto lg:w-full">
+        <p class="lead mb-6">
           From 2019 to 2023, I designed and expanded this internal support website for CPES at
           Virginia Tech. It began as a simple HTML site for housing forms. I imported the core code
           from the main CPES website and modified it for the support site, implementing a MySQL
@@ -35,8 +35,8 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     </template>
     <template #sidebar>
       <div>
-        <div class="tw:p-6 tw:mb-4 tw:bg-light tw:rounded-md">
-          <h4 class="tw:italic">Development</h4>
+        <div class="p-6 mb-4 bg-light rounded-md">
+          <h4 class="italic">Development</h4>
           <p>
             The internal support website was developed on an Apache server using a MySQL database
             that interacted with a PHP SQL connection. The design used a base Bootstrap 3 CSS and
@@ -44,9 +44,9 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
             JavaScript.
           </p>
         </div>
-        <div class="tw:p-6 tw:mb-4 tw:bg-light tw:rounded-md">
-          <h4 class="tw:italic">The Team</h4>
-          <ol class="tw:list-none tw:pl-0">
+        <div class="p-6 mb-4 bg-light rounded-md">
+          <h4 class="italic">The Team</h4>
+          <ol class="list-none pl-0">
             <li>
               <b>Matthew Scanland</b><br />
               In charge of planning, analysis, design, implementation, and maintenance.
@@ -57,8 +57,8 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
             </li>
           </ol>
         </div>
-        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
-          <h4 class="tw:italic">Implementation Decisions</h4>
+        <div class="p-6 border-b border-bs-border bg-light rounded-md">
+          <h4 class="italic">Implementation Decisions</h4>
           <p>
             <b>Back-end</b><br />
             MySQL can handle large datasets and has fast query processing. The main website was
@@ -67,7 +67,7 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
             since Virginia Tech already provides the 2-factor authentication.
           </p>
         </div>
-        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
+        <div class="p-6 border-b border-bs-border bg-light rounded-md">
           <p>
             <b>Front-end</b><br />
             Bootstrap, JQuery, and Javascript is free and we already had a rough custom-built
@@ -75,21 +75,21 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
             applications could be created with ease.
           </p>
         </div>
-        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
+        <div class="p-6 border-b border-bs-border bg-light rounded-md">
           <p>
             <b>Ease-of-use</b><br />
             Designing the web applications to be easy to use is a primary goal. These applications
             are meant to make life easier, not harder.
           </p>
         </div>
-        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
+        <div class="p-6 border-b border-bs-border bg-light rounded-md">
           <p>
             <b>Forward compatibility</b><br />
             I designed the systems with future changes in mind so that they could last as long as
             CPES needed them with few modifications.
           </p>
         </div>
-        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
+        <div class="p-6 border-b border-bs-border bg-light rounded-md">
           <p>
             <b>Project Outcome</b><br />
             The support website connected the applications and made it easier for CPES personnel to
@@ -106,17 +106,17 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     </p>
     <hr />
     <h3>Design</h3>
-    <div class="tw:overflow-hidden" style="max-height: 40vh">
-      <div class="bs-container tw:px-12 tw:text-center">
+    <div class="overflow-hidden" style="max-height: 40vh">
+      <div class="bs-container px-12 text-center">
         <img
           src="~@/assets/images/support-site-home.png"
-          class="tw:max-w-full tw:h-auto tw:border tw:border-bs-border tw:rounded-lg tw:shadow-bs-lg tw:mb-6"
+          class="max-w-full h-auto border border-bs-border rounded-lg shadow-bs-lg mb-6"
           alt="Example image"
           loading="lazy"
         />
       </div>
     </div>
-    <p class="tw:pt-6">
+    <p class="pt-6">
       The website was built similarly to other web applications, as shown in the censored image
       above. It had a navigational menu at the top that took users to different sections. Each page
       contained applications or information. The design was made to be simple and intuitive while
@@ -124,17 +124,17 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     </p>
     <hr />
     <h3>Functionality</h3>
-    <div class="tw:overflow-hidden" style="max-height: 40vh">
-      <div class="bs-container tw:px-12 tw:text-center">
+    <div class="overflow-hidden" style="max-height: 40vh">
+      <div class="bs-container px-12 text-center">
         <img
           src="~@/assets/images/lab-validations-help.png"
-          class="tw:max-w-full tw:h-auto tw:border tw:border-bs-border tw:rounded-lg tw:shadow-bs-lg tw:mb-6"
+          class="max-w-full h-auto border border-bs-border rounded-lg shadow-bs-lg mb-6"
           alt="Example image"
           loading="lazy"
         />
       </div>
     </div>
-    <p class="tw:pt-6">
+    <p class="pt-6">
       The functionality of an application is just as important, if not moreso, than the design. The
       internal website is designed to function as a set of separate systems that can be tied
       together if needed.<br />
