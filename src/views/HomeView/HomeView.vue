@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapperSection bg-spotlight text-secondary px-4 text-center">
+  <div class="wrapperSection section-spotlight text-secondary px-4 text-center">
     <div class="py-5">
       <h1 class="display-5 fw-bold text-white">Matthew Scanland</h1>
       <div class="col-lg-6 mx-auto">
@@ -15,7 +15,7 @@
       </div>
     </div>
   </div>
-  <div class="wrapperSection bg-orange position-relative text-white px-4 text-center">
+  <div class="wrapperSection section-orange position-relative text-white px-4 text-center">
     <div class="title">Career</div>
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto whiteBox">
@@ -31,7 +31,7 @@
       </div>
     </div>
   </div>
-  <div class="wrapperSection bg-light position-relative text-dark px-4">
+  <div class="wrapperSection section-light position-relative text-dark px-4">
     <div class="title">About Me</div>
     <div class="row py-lg-5">
       <div class="col-lg-8 col-md-10 mx-auto">
@@ -69,7 +69,7 @@
     </div>
   </div>
   <a id="significantProjects"></a>
-  <div class="wrapperSection bg-grey position-relative text-dark px-4 pb-0">
+  <div class="wrapperSection section-grey position-relative text-dark px-4 pb-0">
     <div class="title">Significant Projects</div>
     <div class="row py-lg-5">
       <div class="col-lg-8 col-md-10 mx-auto">
@@ -116,7 +116,7 @@
       </div>
     </div>
   </div>
-  <div class="bg-lightGrey position-relative text-dark px-4 pb-5">
+  <div class="section-lightgrey position-relative text-dark px-4 pb-5">
     <div class="row py-lg-5">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="container px-4">
@@ -173,7 +173,7 @@
       </div>
     </div>
   </div>
-  <div class="bg-dark position-relative text-light px-4 pb-5">
+  <div class="section-dark position-relative text-light px-4 pb-5">
     <div class="title">Important Practices &amp; Goals</div>
     <div class="row py-lg-5">
       <div class="col-lg-8 col-md-10 mx-auto">
@@ -343,7 +343,7 @@
     </div>
   </div>
   <a id="contact"></a>
-  <div class="wrapperSection bg-grey position-relative text-dark px-4 pb-0">
+  <div class="wrapperSection section-grey position-relative text-dark px-4 pb-0">
     <div class="title">Contact Info</div>
     <div class="row py-lg-5">
       <div class="col-lg-8 col-md-10 mx-auto">

@@ -6,14 +6,14 @@ import cpesSiteImage from '@/assets/images/cpes-site.png'
 </script>
 
 <template>
-  <div class="wrapperSection bg-computer text-secondary px-4 text-center position-relative">
+  <div class="wrapperSection section-computer text-secondary px-4 text-center position-relative">
     <div class="py-5">
       <div class="col-lg-6 mx-auto position-absolute bottom-20 start-50 translate-middle-x">
         <h1 class="display-5 fw-bold text-white">IT Systems</h1>
       </div>
     </div>
   </div>
-  <div class="wrapperSection py-0 pb-5 bg-lightGrey position-relative text-secondary px-4">
+  <div class="wrapperSection py-0 pb-5 section-lightgrey position-relative text-secondary px-4">
     <div class="title">Projects</div>
     <div class="row pt-5 pb-3">
       <div class="col-lg-12 col-md-12 mx-auto text-center">

@@ -19,62 +19,72 @@ body {
   height: 100%;
 }
 
-.bg-lightGrey {
-  --bs-bg-opacity: 1;
-  background: #e9ecef url('@/assets/images/overlay.png');
-}
-
-.bg-orange {
-  --bs-bg-opacity: 1;
-  background: #e97770 url('@/assets/images/overlay.png');
-}
-
 .wrapperSection {
   padding-top: 5em;
   padding-bottom: 10em;
 }
 
-.wrapperSection.bg-orange {
-  --bs-bg-opacity: 1;
+/* Section backgrounds (formerly bg-* classes; effective colors preserved, including
+   Bootstrap's !important .bg-light #f8f9fa on sections). */
+.section-spotlight {
+  background: url('@/assets/images/banner.jpg') center center / cover;
+}
+
+.section-lightbulb {
+  background: url('@/assets/images/lightbulb-bg.jpg') center center / cover;
+}
+
+.section-computer {
+  background: url('@/assets/images/computer-bg.jpg') center center / cover;
+}
+
+.section-orange {
   background: #e97770 url('@/assets/images/overlay.png');
 }
 
-.wrapperSection.bg-light {
-  --bs-bg-opacity: 1;
-  background: #ffffff url('@/assets/images/overlay.png');
+.section-light {
+  background: #f8f9fa url('@/assets/images/overlay.png');
 }
 
-.wrapperSection.bg-dark {
-  --bs-bg-opacity: 1;
-  background: #212529 url('@/assets/images/overlay.png');
-}
-
-.wrapperSection.bg-grey {
-  --bs-bg-opacity: 1;
+.section-grey {
   background: #f3f3f3 url('@/assets/images/overlay.png');
 }
 
-.wrapperSection.bg-lightGrey {
-  --bs-bg-opacity: 1;
+.section-lightgrey {
   background: #e9ecef url('@/assets/images/overlay.png');
 }
 
-.wrapperSection.bg-spotlight {
-  background: url('@/assets/images/banner.jpg') center center;
-  background-size: auto;
-  background-size: cover;
+.section-dark {
+  background-color: #212529;
 }
 
-.wrapperSection.bg-lightbulb {
-  background: url('@/assets/images/lightbulb-bg.jpg') center center;
-  background-size: auto;
-  background-size: cover;
+.section-white {
+  background-color: #fff;
 }
 
-.wrapperSection.bg-computer {
-  background: url('@/assets/images/computer-bg.jpg') center center;
-  background-size: auto;
-  background-size: cover;
+/* Bootstrap 5.3 .container, renamed because Tailwind's `container` utility uses different widths. */
+.bs-container {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .bs-container { max-width: 540px; }
+}
+@media (min-width: 768px) {
+  .bs-container { max-width: 720px; }
+}
+@media (min-width: 992px) {
+  .bs-container { max-width: 960px; }
+}
+@media (min-width: 1200px) {
+  .bs-container { max-width: 1140px; }
+}
+@media (min-width: 1400px) {
+  .bs-container { max-width: 1320px; }
 }
 
 /*Bootstrap Additions*/
@@ -115,32 +125,27 @@ body {
     letter-spacing: 0.15em;
   }
 }
-.bg-orange .title {
-  --bs-bg-opacity: 1;
+.section-orange .title {
   background: #e97770 url('@/assets/images/overlay.png');
   color: #fff;
 }
 
-.bg-dark .title {
-  --bs-bg-opacity: 1;
+.section-dark .title {
   background: #212529 url('@/assets/images/overlay.png');
   color: #fff;
 }
 
-.bg-light .title {
-  --bs-bg-opacity: 1;
+.section-light .title {
   background: #f8f9fa url('@/assets/images/overlay.png');
   color: #000;
 }
 
-.bg-grey .title {
-  --bs-bg-opacity: 1;
+.section-grey .title {
   background: #f3f3f3 url('@/assets/images/overlay.png');
   color: #000;
 }
 
-.bg-lightGrey .title {
-  --bs-bg-opacity: 1;
+.section-lightgrey .title {
   background: #e9ecef url('@/assets/images/overlay.png');
   color: #000;
 }
