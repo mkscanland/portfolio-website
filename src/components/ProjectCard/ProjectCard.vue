@@ -40,7 +40,7 @@ function activateFromKeyboard(event) {
     @keydown.enter="interactive && activateFromKeyboard($event)"
     @keydown.space="interactive && activateFromKeyboard($event)"
   >
-    <img :src="image" class="img-fluid rounded" :alt="alt" />
+    <img :src="image" class="tw:max-w-full tw:rounded-md" :alt="alt" />
     <div class="overlay">
       <slot name="meta" />
       <p class="h4 projectTitle">{{ title }}</p>

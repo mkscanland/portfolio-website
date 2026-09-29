@@ -42,14 +42,14 @@ function closeOnBackdropClick(event) {
 </script>
 
 <template>
-  <div class="wrapperSection bg-lightbulb text-secondary px-4 text-center position-relative">
+  <div class="wrapperSection section-lightbulb text-secondary px-4 text-center position-relative">
     <div class="py-5">
       <div class="col-lg-6 mx-auto position-absolute bottom-20 start-50 translate-middle-x">
         <h1 class="display-5 fw-bold text-white">Web Applications Archive</h1>
       </div>
     </div>
   </div>
-  <div class="wrapperSection py-0 pb-5 bg-white position-relative text-secondary px-4">
+  <div class="wrapperSection py-0 pb-5 section-white position-relative text-secondary px-4">
     <div class="title">Key Current Projects</div>
     <div class="row pt-5 pb-3">
       <div class="col-lg-12 col-md-12 mx-auto text-center">
@@ -105,7 +105,7 @@ function closeOnBackdropClick(event) {
       </div>
     </div>
   </div>
-  <div class="wrapperSection py-0 pb-5 bg-lightGrey position-relative text-secondary px-4">
+  <div class="wrapperSection py-0 pb-5 section-lightgrey position-relative text-secondary px-4">
     <div class="title">Key CPES Projects</div>
     <div class="row pt-5 pb-3">
       <div class="col-lg-12 col-md-12 mx-auto text-center">
@@ -140,7 +140,7 @@ function closeOnBackdropClick(event) {
       </div>
     </div>
   </div>
-  <div class="wrapperSection py-0 pb-5 bg-grey position-relative text-secondary px-4">
+  <div class="wrapperSection py-0 pb-5 section-grey position-relative text-secondary px-4">
     <div class="title">Other Projects</div>
     <div class="row pt-5 pb-3">
       <div class="col-lg-12 col-md-12 mx-auto text-center">
