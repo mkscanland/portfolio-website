@@ -1,20 +1,8 @@
-/* Layer order: Tailwind theme variables, then Bootstrap + site styles, then Tailwind utilities.
-   Utilities always win over non-!important Bootstrap/site rules. The tw: prefix avoids
+/* legacy.css declares the layer order before this stylesheet loads. The tw: prefix avoids
    class-name collisions while Bootstrap is still loaded. */
-@layer theme, legacy, utilities;
 @import 'tailwindcss/theme.css' layer(theme) prefix(tw);
-@import './site.css' layer(legacy);
-@import 'bootstrap/dist/css/bootstrap.min.css' layer(legacy);
 @import 'tailwindcss/utilities.css' layer(utilities);
-
-/* Keep Bootstrap's three-column width exact; Tailwind's CSS optimizer rounds its percentage. */
-@layer legacy {
-  @media (min-width: 768px) {
-    .row-cols-md-3 > * {
-      width: calc(100% / var(--bs-three, 3));
-    }
-  }
-}
+@source not '../../../docs';
 
 @theme {
   --breakpoint-*: initial;

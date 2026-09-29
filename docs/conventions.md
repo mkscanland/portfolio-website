@@ -13,7 +13,7 @@
 
 ## Styling
 
-During the migration, use the `tw:` prefix for new Tailwind utilities so they do not collide with Bootstrap classes. `src/assets/css/main.css` loads both frameworks; reuse the existing `site.css` rules and retained component classes where appropriate. Keep component-specific rules scoped when appropriate, as in `src/App/App.vue`.
+During the migration, use the `tw:` prefix for new Tailwind utilities so they do not collide with Bootstrap classes. `src/assets/css/legacy.css` loads `site.css` and Bootstrap in the legacy layer, before `main.css` loads Tailwind's theme and utilities. Reuse the existing `site.css` rules and retained component classes where appropriate. Scoped component `<style>` blocks and Font Awesome are unlayered, so their normal rules take priority over both Bootstrap and Tailwind utilities. Keep component-specific rules scoped when appropriate, as in `src/App/App.vue`.
 
 | Bootstrap spacing step | Size | Tailwind spacing step |
 | --- | --- | --- |
@@ -26,7 +26,7 @@ During the migration, use the `tw:` prefix for new Tailwind utilities so they do
 
 This applies to `p`, `m`, `px`, `py`, `pt`, `pb`, `mb`, `mt`, `mx`, `me`, and `gap`. Put responsive breakpoints first: `py-lg-5` becomes `tw:lg:py-12`. Do not use `@apply`. Avoid combining `py-*` with `pt-*` or `pb-*` on the same element; use side-specific utilities instead. For font sizes, use bracketed values such as `tw:text-[1.25rem]` when a named utility would also change line height.
 
-The following classes remain in templates after the migration. In PR 6 they are supplied by the extracted Bootstrap component CSS, `site.css`, or Font Awesome:
+The following classes remain in templates after Bootstrap is removed. Their styles are supplied by the extracted Bootstrap component CSS, `site.css`, or Font Awesome:
 
 - Buttons: `btn`, `btn-lg`, `btn-sm`, `btn-info`, `btn-outline-info`, `btn-outline-light`, `btn-close`.
 - Cards: `card`, `card-body`, `card-text`.

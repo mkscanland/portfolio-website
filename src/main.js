@@ -1,3 +1,4 @@
+import './assets/css/legacy.css'
 import './assets/css/main.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
