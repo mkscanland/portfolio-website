@@ -12,7 +12,8 @@ for (const viewport of [
       await expect(page).toHaveURL(/\/#contact$/)
       await expect.poll(async () => {
         const box = await page.locator('#contact').boundingBox()
-        return box && box.y < viewport.height && box.y + box.height > 0
+        // The empty anchor can land a fraction of a pixel above the viewport after scrolling.
+        return box && box.y < viewport.height && box.y + box.height > -1
       }).toBe(true)
     })
   }
