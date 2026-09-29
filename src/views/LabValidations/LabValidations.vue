@@ -5,21 +5,21 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
 <template>
   <ProjectDetailLayout title="Lab Validations">
     <template #subtitle>
-      <p class="fs-5 mb-4">Validating/Viewing students' working hours and vacation.</p>
+      <p class="tw:text-[1.25rem] tw:mb-6">Validating/Viewing students' working hours and vacation.</p>
     </template>
     <template #intro>
-      <div class="overflow-hidden" style="max-height: 30vh">
-        <div class="container px-5 text-center">
+      <div class="tw:overflow-hidden" style="max-height: 30vh">
+        <div class="bs-container tw:px-12 tw:text-center">
           <img
             src="~@/assets/images/lab-validations-nav.png"
-            class="img-fluid border rounded-3 shadow-lg mb-4"
+            class="tw:max-w-full tw:h-auto tw:border tw:border-bs-border tw:rounded-lg tw:shadow-bs-lg tw:mb-6"
             alt="Example image"
             loading="lazy"
           />
         </div>
       </div>
-      <div class="col-lg-12 mx-auto">
-        <p class="lead mb-4">
+      <div class="tw:mx-auto tw:lg:w-full">
+        <p class="lead tw:mb-6">
           Lab validations serve as a way to validate hours that students have worked. This system
           was created as an easy way for students to confirm the days that they worked in the labs.
           Before 2016 CPES collected papers from students that detailed the number of days worked
@@ -33,8 +33,8 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     </template>
     <template #sidebar>
       <div>
-        <div class="p-4 mb-3 bg-light rounded">
-          <h4 class="fst-italic">Development</h4>
+        <div class="tw:p-6 tw:mb-4 tw:bg-light tw:rounded-md">
+          <h4 class="tw:italic">Development</h4>
           <p>
             The Lab Validation System interacts with the Support website MySQL database by using a
             custom REST API with several XMLHttpRequests. During the development cycle I used a bit
@@ -43,9 +43,9 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
             abilities of the website to suit the new needs of the project.
           </p>
         </div>
-        <div class="p-4 mb-3 bg-light rounded">
-          <h4 class="fst-italic">The Team</h4>
-          <ol class="list-unstyled">
+        <div class="tw:p-6 tw:mb-4 tw:bg-light tw:rounded-md">
+          <h4 class="tw:italic">The Team</h4>
+          <ol class="tw:list-none tw:pl-0">
             <li>
               <b>Matthew Scanland</b><br />
               In charge of planning, analysis, design, implementation, and maintenance.
@@ -56,8 +56,8 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
             </li>
           </ol>
         </div>
-        <div class="p-4 border-bottom bg-light rounded">
-          <h4 class="fst-italic">Implementation Decisions</h4>
+        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
+          <h4 class="tw:italic">Implementation Decisions</h4>
           <p>
             <b>Back-end</b><br />
             A MySQL database is ideal for this type of application. An ability to store and retrieve
@@ -66,7 +66,7 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
             minimal changes in the core mysqli functionality were needed.
           </p>
         </div>
-        <div class="p-4 border-bottom bg-light rounded">
+        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
           <p>
             <b>Front-end</b><br />
             The system needed to be consistent with other apps on the Support website. Given the
@@ -76,7 +76,7 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
             CSVs for external departments to review and parse when auditing.
           </p>
         </div>
-        <div class="p-4 border-bottom bg-light rounded">
+        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
           <p>
             <b>Ease-of-use</b><br />
             Good UX design is integral to any application but not many people think about the speed
@@ -87,7 +87,7 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
             huge difference over time for the user experience.
           </p>
         </div>
-        <div class="p-4 border-bottom bg-light rounded">
+        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
           <p>
             <b>Forward compatability</b><br />
             The system stores data in as few tables and columns as possible. The relational aspect
@@ -96,7 +96,7 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
             the website) is easily fixed with the click of a button.
           </p>
         </div>
-        <div class="p-4 border-bottom bg-light rounded">
+        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
           <p>
             <b>Project Outcome</b><br />
             The system connected Lab Validation data with other CPES applications. I added
@@ -106,11 +106,11 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
       </div>
     </template>
     <h2 class="blog-post-title">The System</h2>
-    <div class="overflow-hidden" style="max-height: 20vh">
-      <div class="container px-5 text-center">
+    <div class="tw:overflow-hidden" style="max-height: 20vh">
+      <div class="bs-container tw:px-12 tw:text-center">
         <img
           src="~@/assets/images/lab-validations-help.png"
-          class="img-fluid border rounded-3 shadow-lg mb-4"
+          class="tw:max-w-full tw:h-auto tw:border tw:border-bs-border tw:rounded-lg tw:shadow-bs-lg tw:mb-6"
           alt="Example image"
           loading="lazy"
         />
@@ -141,7 +141,7 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     </p>
     <hr />
     <h3>Design</h3>
-    <p class="pt-4">
+    <p class="tw:pt-6">
       This application has a simple design. It's separated into sections based on the funcionality
       of each section.<br />
       There is a main navigational bar that allows the user to search for a specific student, input
@@ -150,17 +150,17 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     </p>
     <hr />
     <h3>Functionality</h3>
-    <div class="overflow-hidden" style="max-height: 40vh">
-      <div class="container px-5 text-center">
+    <div class="tw:overflow-hidden" style="max-height: 40vh">
+      <div class="bs-container tw:px-12 tw:text-center">
         <img
           src="~@/assets/images/lab-validations-statistics.png"
-          class="img-fluid border rounded-3 shadow-lg mb-4"
+          class="tw:max-w-full tw:h-auto tw:border tw:border-bs-border tw:rounded-lg tw:shadow-bs-lg tw:mb-6"
           alt="Example image"
           loading="lazy"
         />
       </div>
     </div>
-    <p class="pt-4">
+    <p class="tw:pt-6">
       A majority of the difficulty in creating this application comes from the back-end
       functionality. Lab Validations being the core of the financial and business department means
       it will interact with and query other application data regularly. Given that, Normalization
