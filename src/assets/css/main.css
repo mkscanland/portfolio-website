@@ -1,6 +1,5 @@
-/* legacy.css declares the layer order before this stylesheet loads. The tw: prefix avoids
-   class-name collisions while Bootstrap is still loaded. */
-@import 'tailwindcss/theme.css' layer(theme) prefix(tw);
+/* legacy.css declares the layer order before this stylesheet loads. */
+@import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
 @source not '../../../docs';
 

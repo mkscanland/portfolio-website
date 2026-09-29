@@ -1,4 +1,4 @@
-/* Keep Bootstrap outside Tailwind's CSS optimizer so its grid widths retain full precision. */
 @layer theme, legacy, utilities;
 @import './site.css' layer(legacy);
-@import 'bootstrap/dist/css/bootstrap.min.css' layer(legacy);
+@import './vendor/bootstrap-reboot.css' layer(legacy);
+@import './vendor/bootstrap-subset.css' layer(legacy);
