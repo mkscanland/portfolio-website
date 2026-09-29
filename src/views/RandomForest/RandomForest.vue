@@ -5,18 +5,18 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
 <template>
   <ProjectDetailLayout title="Random Forest Categorization">
     <template #subtitle>
-      <p class="fs-5 mb-4">
+      <p class="tw:text-[1.25rem] tw:mb-6">
         Solving housing prices using custom-built machine learning. A graduate class project:<br />
         For the full code and README please visit the<br /><a
-          class="btn btn-outline-info btn-sm px-4 me-sm-3 fw-bold"
+          class="btn btn-outline-info btn-sm tw:px-6 tw:sm:me-4 tw:font-bold"
           href="https://github.com/mkscanland/Random-Forest"
           >GitHub Page</a
         >
       </p>
     </template>
     <template #intro>
-      <div class="col-lg-12 mx-auto">
-        <p class="lead mb-4">
+      <div class="tw:mx-auto tw:lg:w-full">
+        <p class="lead tw:mb-6">
           In this project a Random Forest model is presented using Information Gain and Entropy for
           each split on a decision tree. A "batch" method is used to build each decision tree in the
           forest. The model creates X number of decision trees and calculates the average of each
@@ -28,8 +28,8 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     </template>
     <template #sidebar>
       <div>
-        <div class="p-4 mb-3 bg-light rounded">
-          <h4 class="fst-italic">Structure</h4>
+        <div class="tw:p-6 tw:mb-4 tw:bg-light tw:rounded-md">
+          <h4 class="tw:italic">Structure</h4>
           <p>
             A decision tree consists of several <q>Node</q> classes. Every Node contains the
             variables; left, right, data, key, name, numSamples, isString, and colHeaders. The left
@@ -42,8 +42,8 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
             randomized.
           </p>
         </div>
-        <div class="p-4 mb-3 bg-light rounded">
-          <h4 class="fst-italic">Splitting</h4>
+        <div class="tw:p-6 tw:mb-4 tw:bg-light tw:rounded-md">
+          <h4 class="tw:italic">Splitting</h4>
           <p>
             To determine the best split the algorithm takes into consideration the current node's
             data and returns the optimal data column that the split should be made. This is done by
@@ -56,14 +56,14 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
             equal to the best split value for numerical features, or <q>NA</q> values.
           </p>
         </div>
-        <div class="p-4 border-bottom bg-light rounded">
-          <h4 class="fst-italic">Hyperparameter Tuning</h4>
+        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
+          <h4 class="tw:italic">Hyperparameter Tuning</h4>
           <p>
             Hyperparameters are the parameters when building a Random Forest that can help to
             fine-tune predictions. A break-down of each hyperparameter follows:
           </p>
         </div>
-        <div class="p-4 border-bottom bg-light rounded">
+        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
           <ul>
             <li>
               numTrees -- Increases accuracy but increases computational time.
@@ -140,17 +140,17 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     </p>
     <hr />
     <h3>Theoretical Description</h3>
-    <div class="overflow-hidden" style="max-height: 40vh">
-      <div class="container px-5 text-center">
+    <div class="tw:overflow-hidden" style="max-height: 40vh">
+      <div class="bs-container tw:px-12 tw:text-center">
         <img
           src="~@/assets/images/RandomForest-Example.png"
-          class="img-fluid border rounded-3 shadow-lg mb-4"
+          class="tw:max-w-full tw:h-auto tw:border tw:border-bs-border tw:rounded-lg tw:shadow-bs-lg tw:mb-6"
           alt="Example image"
           loading="lazy"
         />
       </div>
     </div>
-    <p class="pt-4">
+    <p class="tw:pt-6">
       The Random Forest model is based on creating several decision trees and comparing their
       results for the best prediction. The process for creating the forest follows:
     </p>
@@ -178,7 +178,7 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     </p>
     <hr />
     <h3>Overview and Data Analysis</h3>
-    <p class="pt-4">
+    <p class="tw:pt-6">
       The program starts by grabbing samples and targets from the CSV file. This function simply
       retrieves the data from the CSV and organizes it into arrays for training features, training
       samples, and testing features. Some unnecessary columns are removed from the training and
@@ -204,11 +204,11 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     </p>
     <hr />
     <h3>Results</h3>
-    <div class="overflow-hidden" style="max-height: 40vh">
-      <div class="container px-5 text-center">
+    <div class="tw:overflow-hidden" style="max-height: 40vh">
+      <div class="bs-container tw:px-12 tw:text-center">
         <img
           src="~@/assets/images/RandomForest-Optimal-Results.png"
-          class="img-fluid border rounded-3 shadow-lg mb-4"
+          class="tw:max-w-full tw:h-auto tw:border tw:border-bs-border tw:rounded-lg tw:shadow-bs-lg tw:mb-6"
           alt="Example image"
           loading="lazy"
         />
