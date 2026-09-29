@@ -29,7 +29,7 @@ watch(() => route.fullPath, closeMenus)
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" @click="closeMenusOnLink">
+  <nav class="navbar navbar-expand-lg navbar-dark tw:bg-dark tw:sticky tw:top-0 tw:z-[1020]" @click="closeMenusOnLink">
     <CollapsibleRoot v-model:open="menuOpen" class="container-fluid">
       <a class="navbar-brand">Matthew Scanland</a>
       <CollapsibleTrigger
@@ -39,7 +39,7 @@ watch(() => route.fullPath, closeMenus)
       >
         <span class="navbar-toggler-icon"></span>
       </CollapsibleTrigger>
-      <div id="navbarNavDropdown" class="collapse navbar-collapse" :class="{ show: menuOpen }">
+      <div id="navbarNavDropdown" class="navbar-collapse" :class="{ show: menuOpen }">
         <!-- Wide-screen hover opening stays in site.css; Reka handles click, keyboard, and dismissal. -->
         <NavigationMenuRoot
           v-model="openMenu"

@@ -298,6 +298,11 @@ body {
   display: contents;
 }
 
+/* Replaces Bootstrap's .collapse:not(.show); .navbar-expand-lg keeps it visible on wide screens. */
+.navbar-collapse:not(.show) {
+  display: none;
+}
+
 /* Project modal enter/exit, matching Bootstrap's .fade (0.15s) and dialog slide (0.3s). */
 .modal[data-state='open'] {
   animation: modal-fade-in 0.15s linear;
