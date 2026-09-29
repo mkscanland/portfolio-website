@@ -6,28 +6,28 @@ import cpesSiteImage from '@/assets/images/cpes-site.png'
 </script>
 
 <template>
-  <div class="wrapperSection section-computer text-secondary px-4 text-center position-relative">
-    <div class="py-5">
-      <div class="col-lg-6 mx-auto position-absolute bottom-20 start-50 translate-middle-x">
-        <h1 class="display-5 fw-bold text-white">IT Systems</h1>
+  <div class="wrapperSection section-computer tw:text-secondary tw:px-6 tw:text-center tw:relative">
+    <div class="tw:py-12">
+      <div class="tw:mx-auto tw:absolute tw:bottom-[20%] tw:left-1/2 tw:-translate-x-1/2 tw:lg:w-1/2">
+        <h1 class="display-5 tw:font-bold tw:text-white">IT Systems</h1>
       </div>
     </div>
   </div>
-  <div class="wrapperSection py-0 pb-5 section-lightgrey position-relative text-secondary px-4">
+  <div class="wrapperSection section-lightgrey tw:pt-0 tw:pb-12 tw:relative tw:text-secondary tw:px-6">
     <div class="title">Projects</div>
-    <div class="row pt-5 pb-3">
-      <div class="col-lg-12 col-md-12 mx-auto text-center">
+    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:pt-12 tw:pb-4">
+      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto tw:text-center">
         <p>
           This page lists various IT Systems that I've worked on over the years. If you have any
           further questions please feel free to <RouterLink to="/#contact">Contact me</RouterLink>.
         </p>
       </div>
     </div>
-    <div class="row py-0">
-      <div class="col-lg-12 col-md-12 mx-auto">
-        <div class="album py-5">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 text-dark">
-            <div class="col">
+    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:py-0">
+      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto">
+        <div class="album tw:py-12">
+          <div class="tw:grid tw:grid-cols-1 tw:sm:grid-cols-2 tw:md:grid-cols-3 tw:gap-4 tw:text-dark">
+            <div>
               <ProjectCard
                 id="azure"
                 :image="azureDatalakeImage"
@@ -43,7 +43,7 @@ import cpesSiteImage from '@/assets/images/cpes-site.png'
                 </p>
               </ProjectCard>
             </div>
-            <div class="col">
+            <div>
               <ProjectCard
                 id="xibo"
                 :image="xiboDockerImage"
@@ -58,7 +58,7 @@ import cpesSiteImage from '@/assets/images/cpes-site.png'
                 </p>
               </ProjectCard>
             </div>
-            <div class="col">
+            <div>
               <ProjectCard
                 id="servers"
                 :image="cpesSiteImage"
