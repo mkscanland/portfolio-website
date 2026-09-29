@@ -1,0 +1,27 @@
+/* legacy.css declares the layer order before this stylesheet loads. The tw: prefix avoids
+   class-name collisions while Bootstrap is still loaded. */
+@import 'tailwindcss/theme.css' layer(theme) prefix(tw);
+@import 'tailwindcss/utilities.css' layer(utilities);
+@source not '../../../docs';
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans',
+    'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+  --color-dark: #212529;
+  --color-light: #f8f9fa;
+  --color-secondary: #6c757d; /* Bootstrap .text-secondary */
+  --color-muted: rgb(33 37 41 / 0.75); /* Bootstrap 5.3 .text-muted */
+  --color-bs-border: #dee2e6;
+
+  --shadow-bs-sm: 0 0.125rem 0.25rem rgb(0 0 0 / 0.075);
+  --shadow-bs-lg: 0 1rem 3rem rgb(0 0 0 / 0.175);
+}

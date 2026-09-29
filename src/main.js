@@ -1,5 +1,5 @@
-import './assets/css/site.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/css/legacy.css'
+import './assets/css/main.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 import { createApp } from 'vue'
