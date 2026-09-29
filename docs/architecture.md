@@ -22,7 +22,7 @@ flowchart TD
 | `src/components/ProjectDetailLayout/` | Shared hero and two-column project page structure. Views fill named subtitle, intro, and sidebar slots, plus the default article slot. |
 | `src/components/ProjectCard/` | Image and overlay frame for project grids. Views supply optional metadata and description slots; interactive cards emit a selection event. |
 | `src/content/` | Static portfolio content shared by a view's cards and modal. Keep one data object per project so displayed summaries and detail content do not drift. |
-| `src/assets/css/legacy.css`, `src/assets/css/main.css`, `src/assets/css/site.css`, `src/assets/images/` | `legacy.css` sets the layer order and loads `site.css` and Bootstrap with their original grid precision. `main.css` supplies Tailwind's theme and utilities. Font Awesome remains an unlayered import in `src/main.js`. |
+| `src/assets/css/legacy.css`, `src/assets/css/main.css`, `src/assets/css/site.css`, `src/assets/css/vendor/`, `src/assets/images/` | `legacy.css` sets the layer order and loads `site.css`, the retained Bootstrap reset, and the component style subset from `vendor/`. Bootstrap is no longer a package dependency. `main.css` supplies Tailwind's theme and utilities. Font Awesome remains an unlayered import in `src/main.js`. |
 | `public/files/` | Files served directly from `/files/...`, including the resume. |
 | `vite.config.js`, `vitest.config.js` | Build/alias and test setup. `@` points to `src/`; Vitest uses jsdom. |
 | `e2e/`, `playwright.config.js`, `scripts/visual-compare.sh` | Playwright screenshot tests compare the current build against a build of the base branch. |
@@ -30,7 +30,7 @@ flowchart TD
 
 ## Trace a page change
 
-For `/rulesengine`, start at the route in `src/router/index.js`, then read `src/views/RulesEngine/RulesEngine.vue` and its colocated `RulesEngine.spec.js`. Check `src/components/NavBar/NavBar.vue` and `src/views/HomeView/HomeView.vue` for links to the page. Reuse the relevant styles in `src/assets/css/site.css` and existing Bootstrap utilities.
+For `/rulesengine`, start at the route in `src/router/index.js`, then read `src/views/RulesEngine/RulesEngine.vue` and its colocated `RulesEngine.spec.js`. Check `src/components/NavBar/NavBar.vue` and `src/views/HomeView/HomeView.vue` for links to the page. Reuse the relevant styles in `src/assets/css/site.css`, the retained component classes, and Tailwind utilities.
 
 When adding a page, create its view directory and colocated test, register the route, and add navigation or project links where appropriate. When changing shared UI, inspect its other callers and test the behavior they depend on.
 

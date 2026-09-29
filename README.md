@@ -1,6 +1,6 @@
 # Portfolio website
 
-Matthew Scanland's portfolio website, built with Vue 3 and Vite.
+Matthew Scanland's portfolio website, built with Vue 3, Vite, and Tailwind CSS v4.
 
 ## Repository guide
 

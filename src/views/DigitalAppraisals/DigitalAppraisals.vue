@@ -5,14 +5,14 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
 <template>
   <ProjectDetailLayout title="Digital Appraisals Platform">
     <template #subtitle>
-      <p class="tw:text-[1.25rem] tw:mb-6">
+      <p class="text-[1.25rem] mb-6">
         Turning vehicle details into contractual offers for internal Sonic applications and external
         partners.
       </p>
     </template>
     <template #intro>
-      <div class="tw:mx-auto tw:lg:w-full">
-        <p class="lead tw:mb-6">
+      <div class="mx-auto lg:w-full">
+        <p class="lead mb-6">
           The Digital Appraisals Platform (DAP) is a vehicle-pricing service for the EchoPark line
           of business at Sonic Automotive. It coordinates the information needed to appraise a
           vehicle, runs the completed appraisal through final-offer logic, and returns a contractual
@@ -22,23 +22,23 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     </template>
     <template #sidebar>
       <div>
-        <div class="tw:p-6 tw:mb-4 tw:bg-light tw:rounded-md">
-          <h4 class="tw:italic">Technology</h4>
+        <div class="p-6 mb-4 bg-light rounded-md">
+          <h4 class="italic">Technology</h4>
           <p>
             FastAPI, Python, Azure App Service, Azure API Management, Azure Cosmos DB, Azure
             Functions, Terraform, and CI/CD.
           </p>
         </div>
-        <div class="tw:p-6 tw:mb-4 tw:bg-light tw:rounded-md">
-          <h4 class="tw:italic">Role</h4>
+        <div class="p-6 mb-4 bg-light rounded-md">
+          <h4 class="italic">Role</h4>
           <p>
             I am one of the primary engineers responsible for the DAP API and its releases. I also
             lead the Rules Engine work that supplies prioritized rulesets used during offer
             generation.
           </p>
         </div>
-        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
-          <h4 class="tw:italic">Architecture</h4>
+        <div class="p-6 border-b border-bs-border bg-light rounded-md">
+          <h4 class="italic">Architecture</h4>
           <p>
             The service is hosted on Azure App Service behind an Azure API Management gateway. Azure
             Cosmos DB is the primary data store for appraisal state while DAP coordinates data from

@@ -42,27 +42,27 @@ function closeOnBackdropClick(event) {
 </script>
 
 <template>
-  <div class="wrapperSection section-lightbulb tw:text-secondary tw:px-6 tw:text-center tw:relative">
-    <div class="tw:py-12">
-      <div class="tw:mx-auto tw:absolute tw:bottom-[20%] tw:left-1/2 tw:-translate-x-1/2 tw:lg:w-1/2">
-        <h1 class="display-5 tw:font-bold tw:text-white">Web Applications Archive</h1>
+  <div class="wrapperSection section-lightbulb text-secondary px-6 text-center relative">
+    <div class="py-12">
+      <div class="mx-auto absolute bottom-[20%] left-1/2 -translate-x-1/2 lg:w-1/2">
+        <h1 class="display-5 font-bold text-white">Web Applications Archive</h1>
       </div>
     </div>
   </div>
-  <div class="wrapperSection section-white tw:pt-0 tw:pb-12 tw:relative tw:text-secondary tw:px-6">
+  <div class="wrapperSection section-white pt-0 pb-12 relative text-secondary px-6">
     <div class="title">Key Current Projects</div>
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:pt-12 tw:pb-4">
-      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto tw:text-center">
+    <div class="flex flex-wrap -mx-3 pt-12 pb-4">
+      <div class="w-full shrink-0 px-3 mx-auto text-center">
         <p>
           Showcasing my current and recent projects that demonstrate my latest expertise and
           technical capabilities.
         </p>
       </div>
     </div>
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:py-0">
-      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto">
-        <div class="album tw:py-12">
-          <div class="tw:grid tw:grid-cols-1 tw:md:grid-cols-2 tw:gap-4 tw:text-dark">
+    <div class="flex flex-wrap -mx-3 py-0">
+      <div class="w-full shrink-0 px-3 mx-auto">
+        <div class="album py-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-dark">
             <div>
               <ProjectCard
                 :image="computerBgImage"
@@ -105,10 +105,10 @@ function closeOnBackdropClick(event) {
       </div>
     </div>
   </div>
-  <div class="wrapperSection section-lightgrey tw:pt-0 tw:pb-12 tw:relative tw:text-secondary tw:px-6">
+  <div class="wrapperSection section-lightgrey pt-0 pb-12 relative text-secondary px-6">
     <div class="title">Key CPES Projects</div>
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:pt-12 tw:pb-4">
-      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto tw:text-center">
+    <div class="flex flex-wrap -mx-3 pt-12 pb-4">
+      <div class="w-full shrink-0 px-3 mx-auto text-center">
         <p>
           The following are two significant projects I worked on while at CPES from 2019 through
           2023. These projects showcase my ability to design and develop complex systems from the
@@ -116,10 +116,10 @@ function closeOnBackdropClick(event) {
         </p>
       </div>
     </div>
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:py-0">
-      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto">
-        <div class="album tw:py-12">
-          <div class="tw:grid tw:grid-cols-1 tw:md:grid-cols-2 tw:gap-4 tw:text-dark">
+    <div class="flex flex-wrap -mx-3 py-0">
+      <div class="w-full shrink-0 px-3 mx-auto">
+        <div class="album py-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-dark">
             <div v-for="project in keyCpesProjects" :key="project.id">
               <ProjectCard
                 :id="project.id"
@@ -140,20 +140,20 @@ function closeOnBackdropClick(event) {
       </div>
     </div>
   </div>
-  <div class="wrapperSection section-grey tw:pt-0 tw:pb-12 tw:relative tw:text-secondary tw:px-6">
+  <div class="wrapperSection section-grey pt-0 pb-12 relative text-secondary px-6">
     <div class="title">Other Projects</div>
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:pt-12 tw:pb-4">
-      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto tw:text-center">
+    <div class="flex flex-wrap -mx-3 pt-12 pb-4">
+      <div class="w-full shrink-0 px-3 mx-auto text-center">
         <p>
           Please enjoy various web applications that I've created throughout the years! If you have
           any further questions please feel free to <RouterLink to="/#contact">Contact me</RouterLink>.
         </p>
       </div>
     </div>
-    <div class="tw:flex tw:flex-wrap tw:-mx-3 tw:py-0">
-      <div class="tw:w-full tw:shrink-0 tw:px-3 tw:mx-auto">
-        <div class="album tw:py-12">
-          <div class="tw:grid tw:grid-cols-1 tw:sm:grid-cols-2 tw:md:grid-cols-3 tw:gap-4 tw:text-dark">
+    <div class="flex flex-wrap -mx-3 py-0">
+      <div class="w-full shrink-0 px-3 mx-auto">
+        <div class="album py-12">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-dark">
             <div v-for="project in otherProjects" :key="project.id">
               <ProjectCard
                 :id="project.id"
@@ -198,13 +198,13 @@ function closeOnBackdropClick(event) {
                 v-if="selectedProject"
                 :src="selectedProject.image"
                 :alt="selectedProject.title"
-                class="ulShadow tw:mx-auto tw:block"
+                class="ulShadow mx-auto block"
               />
-              <DialogDescription class="intro tw:mt-12">
+              <DialogDescription class="intro mt-12">
                 {{ selectedProject?.intro || selectedProject?.description }}
               </DialogDescription>
               <b>Details:</b>
-              <p class="details tw:mt-1">{{ selectedProject?.details }}</p>
+              <p class="details mt-1">{{ selectedProject?.details }}</p>
             </div>
           </div>
         </div>

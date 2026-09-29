@@ -5,11 +5,11 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
 <template>
   <ProjectDetailLayout title="Rules Engine / Self Service">
     <template #subtitle>
-      <p class="tw:text-[1.25rem] tw:mb-6">Managing, prioritizing, and distributing vehicle business rules.</p>
+      <p class="text-[1.25rem] mb-6">Managing, prioritizing, and distributing vehicle business rules.</p>
     </template>
     <template #intro>
-      <div class="tw:mx-auto tw:lg:w-full">
-        <p class="lead tw:mb-6">
+      <div class="mx-auto lg:w-full">
+        <p class="lead mb-6">
           The Rules Engine stores and manages pricing, fee, and vehicle-segmentation rules. It does
           not apply those rules itself; it prepares them so DAP and other consuming systems can use
           a prioritized ruleset efficiently.
@@ -18,22 +18,22 @@ import ProjectDetailLayout from '@/components/ProjectDetailLayout/ProjectDetailL
     </template>
     <template #sidebar>
       <div>
-        <div class="tw:p-6 tw:mb-4 tw:bg-light tw:rounded-md">
-          <h4 class="tw:italic">Technology</h4>
+        <div class="p-6 mb-4 bg-light rounded-md">
+          <h4 class="italic">Technology</h4>
           <p>
             .NET Core, SQL Server, IIS, Azure Functions, Windows Server, Vue, and Azure Storage
             Tables.
           </p>
         </div>
-        <div class="tw:p-6 tw:mb-4 tw:bg-light tw:rounded-md">
-          <h4 class="tw:italic">Role</h4>
+        <div class="p-6 mb-4 bg-light rounded-md">
+          <h4 class="italic">Role</h4>
           <p>
             I lead the Rules Engine work and its evolution into Self Service, including rule
             determination improvements and the current Vue interface modernization.
           </p>
         </div>
-        <div class="tw:p-6 tw:border-b tw:border-bs-border tw:bg-light tw:rounded-md">
-          <h4 class="tw:italic">System Direction</h4>
+        <div class="p-6 border-b border-bs-border bg-light rounded-md">
+          <h4 class="italic">System Direction</h4>
           <p>
             The current modernization effort focuses on the Self Service UI. Longer-term work will
             improve the broader architecture and support more dynamic rule-policy creation.
