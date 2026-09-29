@@ -29,7 +29,10 @@ watch(() => route.fullPath, closeMenus)
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark tw:bg-dark tw:sticky tw:top-0 tw:z-[1020]" @click="closeMenusOnLink">
+  <nav
+    class="navbar navbar-expand-lg navbar-dark tw:bg-dark tw:sticky tw:top-0 tw:z-[1020]"
+    @click="closeMenusOnLink"
+  >
     <CollapsibleRoot v-model:open="menuOpen" class="container-fluid">
       <a class="navbar-brand">Matthew Scanland</a>
       <CollapsibleTrigger

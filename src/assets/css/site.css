@@ -72,19 +72,29 @@ body {
 }
 
 @media (min-width: 576px) {
-  .bs-container { max-width: 540px; }
+  .bs-container {
+    max-width: 540px;
+  }
 }
 @media (min-width: 768px) {
-  .bs-container { max-width: 720px; }
+  .bs-container {
+    max-width: 720px;
+  }
 }
 @media (min-width: 992px) {
-  .bs-container { max-width: 960px; }
+  .bs-container {
+    max-width: 960px;
+  }
 }
 @media (min-width: 1200px) {
-  .bs-container { max-width: 1140px; }
+  .bs-container {
+    max-width: 1140px;
+  }
 }
 @media (min-width: 1400px) {
-  .bs-container { max-width: 1320px; }
+  .bs-container {
+    max-width: 1320px;
+  }
 }
 
 /*Bootstrap Additions*/
